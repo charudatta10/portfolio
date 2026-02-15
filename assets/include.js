@@ -9,13 +9,13 @@ async function loadComponent(id, file) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  loadComponent("header-placeholder", "/components/header.html");
-  loadComponent("footer-placeholder", "/components/footer.html");
+  loadComponent("header-placeholder", "../components/header.html");
+  loadComponent("footer-placeholder", "../components/footer.html");
 });
 
 
 
-loadComponent("header-placeholder", "/components/header.html")
+loadComponent("header-placeholder", "../components/header.html")
   .then(() => {
     if (window.PagefindUI) {
       new PagefindUI({ element: "#search" });
@@ -31,7 +31,7 @@ loadComponent("header-placeholder", "/components/header.html")
 document.addEventListener("DOMContentLoaded", async function () {
 
   // Load header first
-  await loadComponent("header-placeholder", "/components/header.html");
+  await loadComponent("header-placeholder", "../components/header.html");
 
   // Now initialize Pagefind AFTER header exists
   if (window.PagefindUI) {
@@ -42,5 +42,5 @@ document.addEventListener("DOMContentLoaded", async function () {
   }
 
   // Load footer
-  await loadComponent("footer-placeholder", "/components/footer.html");
+  await loadComponent("footer-placeholder", "../components/footer.html");
 });
