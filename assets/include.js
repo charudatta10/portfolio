@@ -17,3 +17,10 @@ document.addEventListener("DOMContentLoaded", async function () {
 
   await loadComponent("footer-placeholder", "footer.html");
 });
+
+loadComponent("header-placeholder", "header.html")
+  .then(() => {
+    if (window.PagefindUI) {
+      new PagefindUI({ element: "#search" });
+    }
+  });
