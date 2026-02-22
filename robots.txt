@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://charudatta10.github.io/portfolio/sitemap.xml
