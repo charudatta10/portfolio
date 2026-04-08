@@ -40,14 +40,14 @@ document.addEventListener("DOMContentLoaded", async function () {
   await loadComponent("footer-placeholder", "footer.html");
 });
 
-
+document.addEventListener("DOMContentLoaded", () => {
 const toggle = document.querySelector(".menu-toggle");
 const menu = document.querySelector(".menu");
 
 toggle.addEventListener("click", () => {
   menu.classList.toggle("active");
 });
-
+}
 // Mobile dropdown toggle
 document.querySelectorAll(".dropdown > .dropbtn").forEach(link => {
   link.addEventListener("click", function (e) {
