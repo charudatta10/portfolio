@@ -40,20 +40,15 @@ document.addEventListener("DOMContentLoaded", async function () {
   await loadComponent("footer-placeholder", "footer.html");
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-const toggle = document.querySelector(".menu-toggle");
-const menu = document.querySelector(".menu");
+document.addEventListener("click", (e) => {
 
-toggle.addEventListener("click", () => {
-  menu.classList.toggle("active");
-});
-}
-// Mobile dropdown toggle
-document.querySelectorAll(".dropdown > .dropbtn").forEach(link => {
-  link.addEventListener("click", function (e) {
-    if (window.innerWidth <= 768) {
-      e.preventDefault();
-      this.parentElement.classList.toggle("open");
-    }
-  });
+  if (e.target.matches(".menu-toggle")) {
+    document.querySelector(".menu")?.classList.toggle("active");
+  }
+
+  if (e.target.matches(".dropdown > .dropbtn") && window.innerWidth <= 768) {
+    e.preventDefault();
+    e.target.parentElement.classList.toggle("open");
+  }
+
 });
