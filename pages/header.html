@@ -1,12 +1,17 @@
 <header class="site-header">
+
   <h1 class="logo">Charudatta Archive</h1>
+
+  <!-- Hamburger -->
+  <button class="menu-toggle" aria-label="Toggle menu">☰</button>
 
   <nav class="nav">
     <ul class="menu">
+
       <li><a href="../index.html">Home</a></li>
-     
+
       <li class="dropdown">
-        <button class="dropbtn"><a href="../pages/about.html">About</a></button>
+        <a class="dropbtn" href="../pages/about.html">About</a>
         <ul class="dropdown-content">
           <li><a href="../pages/about.html#mission">Mission</a></li>
           <li><a href="../pages/about.html#education">Education</a></li>
@@ -15,8 +20,9 @@
           <li><a href="../pages/about.html#achievements">Achievements</a></li>
         </ul>
       </li>
+
       <li class="dropdown">
-        <button class="dropbtn"><a href="../pages/work.html">Work</a></button>
+        <a class="dropbtn" href="../pages/work.html">Work</a>
         <ul class="dropdown-content">
           <li><a href="../pages/work.html#opensource">Open source</a></li>
           <li><a href="../pages/work.html#research">Research</a></li>
@@ -24,8 +30,9 @@
           <li><a href="../pages/work.html#experiment">Experiments</a></li>
         </ul>
       </li>
+
       <li class="dropdown">
-        <button class="dropbtn"><a href="../pages/writing.html">Writing</a></button>
+        <a class="dropbtn" href="../pages/writing.html">Writing</a>
         <ul class="dropdown-content">
           <li><a href="../pages/writing.html#notes">Notes & Knowledge base</a></li>
           <li><a href="../pages/writing.html#documentation">Documentation</a></li>
@@ -34,8 +41,9 @@
           <li><a href="../pages/writing.html#philosophy-wiki">Philosophy wiki</a></li>
         </ul>
       </li>
+
       <li class="dropdown">
-        <button class="dropbtn"><a href="../pages/now.html">Now</a></button>
+        <a class="dropbtn" href="../pages/now.html">Now</a>
         <ul class="dropdown-content">
           <li><a href="../pages/now.html#focus">Focus</a></li>
           <li><a href="../pages/now.html#research-progress">Research Progress</a></li>
@@ -44,8 +52,9 @@
           <li><a href="../pages/now.html#long-term">Long Term Goals</a></li>
         </ul>
       </li>
+
       <li class="dropdown">
-        <button class="dropbtn"><a href="../pages/gallery.html">Gallery</a></button>
+        <a class="dropbtn" href="../pages/gallery.html">Gallery</a>
         <ul class="dropdown-content">
           <li><a href="../pages/gallery.html">All Posts</a></li>
           <li><a href="../pages/gallery.html#research">Research</a></li>
@@ -53,8 +62,31 @@
           <li><a href="../pages/gallery.html#projects">Projects</a></li>
         </ul>
       </li>
-        <button class="dropbtn"><a href="../pages/contact.html">Contact</a></button>
+
+      <li><a href="../pages/contact.html">Contact</a></li>
+
     </ul>
   </nav>
- <div id="search" class="search-box"></div>
+
+  <div id="search" class="search-box"></div>
+
 </header>
+
+<script>
+  const toggle = document.querySelector(".menu-toggle");
+  const menu = document.querySelector(".menu");
+
+  toggle.addEventListener("click", () => {
+    menu.classList.toggle("active");
+  });
+
+  // Mobile dropdown toggle
+  document.querySelectorAll(".dropdown > .dropbtn").forEach(link => {
+    link.addEventListener("click", function (e) {
+      if (window.innerWidth <= 768) {
+        e.preventDefault();
+        this.parentElement.classList.toggle("open");
+      }
+    });
+  });
+</script>

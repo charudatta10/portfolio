@@ -346,18 +346,19 @@ footer {
   border-bottom: 1px solid #ddd;
 }
 
-/* Prevent overflow bugs */
 .site-header * {
   min-width: 0;
 }
 
-/* Logo */
 .logo {
   margin: 0;
   font-size: 1.4rem;
 }
 
-/* Nav */
+/* ========================
+   Navigation
+======================== */
+
 .menu {
   list-style: none;
   display: flex;
@@ -371,18 +372,19 @@ footer {
   position: relative;
 }
 
-/* Links & Buttons */
 .menu a,
 .dropbtn {
   text-decoration: none;
-  background: none;
-  border: none;
+  color: black;
   font: inherit;
   cursor: pointer;
-  color: black;
+  display: inline-block;
 }
 
-/* Dropdown */
+/* ========================
+   Dropdown (Desktop)
+======================== */
+
 .dropdown-content {
   display: none;
   position: absolute;
@@ -409,31 +411,18 @@ footer {
 }
 
 /* ========================
-   Search Box (FIXED)
+   Search Box
 ======================== */
 
 .search-box {
   width: clamp(150px, 18vw, 220px);
-}
-
-.search-box input {
-  font-size: 0.9rem;
-  padding: 6px 10px;
-}
-
-
-/* Anchor container */
-.search-box {
   position: relative;
-  display: inline-block;
 }
 
-/* Remove default block spacing */
 .search-box .pagefind-ui {
   margin: 0;
 }
 
-/* Make results dropdown */
 .search-box .pagefind-ui__results-area {
   position: absolute;
   top: 110%;
@@ -447,5 +436,85 @@ footer {
   border-radius: 10px;
   padding: 1rem;
   z-index: 9999;
+}
+
+/* ========================
+   Hamburger Button
+======================== */
+
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* ========================
+   Mobile Styles
+======================== */
+
+@media (max-width: 768px) {
+
+  .site-header {
+    grid-template-columns: auto auto;
+  }
+
+  .menu-toggle {
+    display: block;
+    justify-self: end;
+  }
+
+  .nav {
+    grid-column: 1 / -1;
+  }
+
+  .menu {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    display: none;
+    padding-top: 1rem;
+    width: 100%;
+  }
+
+  .menu.active {
+    display: flex;
+  }
+
+  .menu li {
+    width: 100%;
+  }
+
+  .menu a,
+  .dropbtn {
+    width: 100%;
+    padding: 0.75rem 0;
+  }
+
+  /* Dropdown mobile */
+  .dropdown-content {
+    position: static;
+    border: none;
+    box-shadow: none;
+    display: none;
+    padding-left: 1rem;
+  }
+
+  .dropdown.open .dropdown-content {
+    display: block;
+  }
+
+  /* Search full width */
+  .search-box {
+    grid-column: 1 / -1;
+    width: 100%;
+  }
+
+  .search-box .pagefind-ui__results-area {
+    width: 100%;
+    left: 0;
+    right: auto;
+  }
 }
 
