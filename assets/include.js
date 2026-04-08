@@ -39,3 +39,21 @@ document.addEventListener("DOMContentLoaded", async function () {
   // 4️⃣ Load footer
   await loadComponent("footer-placeholder", "footer.html");
 });
+
+
+const toggle = document.querySelector(".menu-toggle");
+const menu = document.querySelector(".menu");
+
+toggle.addEventListener("click", () => {
+  menu.classList.toggle("active");
+});
+
+// Mobile dropdown toggle
+document.querySelectorAll(".dropdown > .dropbtn").forEach(link => {
+  link.addEventListener("click", function (e) {
+    if (window.innerWidth <= 768) {
+      e.preventDefault();
+      this.parentElement.classList.toggle("open");
+    }
+  });
+});
