@@ -11,25 +11,15 @@ async function loadComponent(id, file) {
 
 document.addEventListener("DOMContentLoaded", async function () {
 
-  // 1️⃣ Load header first
+  // 1️⃣ Load header
   await loadComponent("header-placeholder", "header.html");
 
-  // 2️⃣ Wait until Pagefind script is actually available
-  function waitForPagefind() {
-    return new Promise((resolve) => {
-      if (window.PagefindUI) return resolve();
-      const interval = setInterval(() => {
-        if (window.PagefindUI) {
-          clearInterval(interval);
-          resolve();
-        }
-      }, 50);
-    });
-  }
+  // 🔥 2️⃣ NOW attach events (IMPORTANT)
+  initHeaderInteractions();
 
+  // 3️⃣ Wait for Pagefind
   await waitForPagefind();
 
-  // 3️⃣ Now initialize search
   new window.PagefindUI({
     element: "#search",
     showSubResults: true,
@@ -40,15 +30,40 @@ document.addEventListener("DOMContentLoaded", async function () {
   await loadComponent("footer-placeholder", "footer.html");
 });
 
-document.addEventListener("click", (e) => {
 
-  if (e.target.matches(".menu-toggle")) {
-    document.querySelector(".menu")?.classList.toggle("active");
+// ✅ Move all header JS here
+function initHeaderInteractions() {
+
+  const toggle = document.querySelector(".menu-toggle");
+  const menu = document.querySelector(".menu");
+
+  if (toggle && menu) {
+    toggle.addEventListener("click", () => {
+      menu.classList.toggle("active");
+    });
   }
 
-  if (e.target.matches(".dropdown > .dropbtn") && window.innerWidth <= 768) {
-    e.preventDefault();
-    e.target.parentElement.classList.toggle("open");
-  }
+  // Dropdowns
+  document.querySelectorAll(".dropdown > .dropbtn").forEach(link => {
+    link.addEventListener("click", function (e) {
+      if (window.innerWidth <= 768) {
+        e.preventDefault();
+        this.parentElement.classList.toggle("open");
+      }
+    });
+  });
+}
 
-});
+
+// Pagefind wait
+function waitForPagefind() {
+  return new Promise((resolve) => {
+    if (window.PagefindUI) return resolve();
+    const interval = setInterval(() => {
+      if (window.PagefindUI) {
+        clearInterval(interval);
+        resolve();
+      }
+    }, 50);
+  });
+}
