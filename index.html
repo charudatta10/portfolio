@@ -1,388 +1,1009 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Charudatta Korde</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Charudatta Korde — Researcher · Engineer · Educator</title>
 
-<link rel="stylesheet" href="assets/style.css" />
+  <meta name="description" content="Research and engineering portfolio of Charudatta Korde — resource-efficient AI, FPGA acceleration, GAN hardware architectures, cybersecurity teaching and open-source software." />
+  <meta name="author" content="Charudatta Korde" />
+  <link rel="canonical" href="https://charudatta10.github.io/portfolio/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Charudatta Korde" />
+  <meta property="og:title" content="Charudatta Korde — Researcher · Engineer · Educator" />
+  <meta property="og:description" content="Efficient AI, FPGA acceleration, cybersecurity, teaching and open-source software." />
+  <meta property="og:url" content="https://charudatta10.github.io/portfolio/" />
+  <meta property="og:image" content="https://charudatta10.github.io/portfolio/assets/images/svg/favicon.svg" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Charudatta Korde — Researcher · Engineer · Educator" />
+  <meta name="twitter:description" content="Efficient AI, FPGA acceleration, cybersecurity, teaching and open-source software." />
+
+  <link rel="icon" type="image/svg+xml" href="assets/images/svg/favicon.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link href="pagefind/pagefind-ui.css" rel="stylesheet" />
+  <script src="pagefind/pagefind-ui.js" defer></script>
+
+  <script>document.documentElement.classList.add('js');</script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Charudatta Korde",
+    "jobTitle": "Researcher · Engineer · Educator",
+    "url": "https://charudatta10.github.io/portfolio/",
+    "sameAs": [
+      "https://github.com/charudatta10",
+      "https://www.linkedin.com/in/charudatta-korde/",
+      "https://orcid.org/0000-0003-0055-4997",
+      "https://scholar.google.com/citations?user=wdLkz5MAAAAJ&hl",
+      "https://www.scopus.com/authid/detail.uri?authorId=57209272684",
+      "https://www.webofscience.com/wos/author/record/PMW-8170-2026"
+    ],
+    "alumniOf": [
+      { "@type": "CollegeOrUniversity", "name": "National Institute of Technology Goa" },
+      { "@type": "CollegeOrUniversity", "name": "Goa University" }
+    ]
+  }
+  </script>
 </head>
 
 <body>
+  <!-- Header loads here -->
+  <div id="header-placeholder"></div>
 
-<nav>
-  <a href="#home">Home</a>
-  <a href="#about">About</a>
-  <a href="#work">Work</a>
-  <a href="#projects">Projects</a>
-  <a href="#Archives">Archives</a>
-  <a href="#contact">Contact</a>
-</nav>
+  <main>
+    <!-- =============================== HERO =============================== -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-bg" aria-hidden="true">
+        <svg class="diagram" viewBox="0 0 540 460" data-animate aria-hidden="true">
+          <defs>
+            <linearGradient id="hero-chip" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="var(--primary-soft)"/>
+              <stop offset="1" stop-color="var(--secondary-soft)"/>
+            </linearGradient>
+            <radialGradient id="hero-glow" cx="0.5" cy="0.35" r="0.75">
+              <stop offset="0" stop-color="var(--primary)" stop-opacity="0.18"/>
+              <stop offset="1" stop-color="var(--primary)" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
 
-<main>
+          <!-- soft glow -->
+          <rect x="0" y="0" width="540" height="460" rx="28" fill="url(#hero-glow)"/>
 
-<section id="home" class="hero">
-  <h1>Charudatta<br>Korde</h1>
-  <div class="roles">
-    <span class="role-pill">Engineer</span>
-    <span class="role-pill">Educator</span>
-    <span class="role-pill">Programmer</span>
-    <span class="role-pill">Researcher</span>
+          <!-- neural mesh nodes -->
+          <g>
+            <path class="diagram-line" d="M80 80 L200 50 M200 50 L320 80 M320 80 L440 50 M80 80 L110 160 M200 50 L260 140 M320 80 L390 160 M440 50 L390 160 M110 160 L260 140 M260 140 L390 160 M110 160 L260 210 M390 160 L260 210"/>
+            <path class="diagram-flow" data-dash d="M110 160 L260 140 M260 140 L390 160"/>
+            <path class="diagram-flow-2" data-dash d="M200 50 L260 140 M260 210 L260 252"/>
+            <circle cx="80" cy="80" r="9" class="diagram-dot"/>
+            <circle cx="200" cy="50" r="9" class="diagram-dot-2"/>
+            <circle cx="320" cy="80" r="9" class="diagram-dot"/>
+            <circle cx="440" cy="50" r="9" class="diagram-dot-2"/>
+            <circle cx="110" cy="160" r="7" class="diagram-dot"/>
+            <circle cx="260" cy="140" r="7" class="diagram-dot-2"/>
+            <circle cx="390" cy="160" r="7" class="diagram-dot"/>
+            <circle cx="260" cy="210" r="10" class="diagram-node-hot"/>
+            <text x="274" y="215" class="diagram-sub">AI</text>
+          </g>
+
+          <!-- chip die -->
+          <g>
+            <rect x="90" y="250" width="360" height="150" rx="20" fill="var(--surface)" stroke="var(--border-strong)" stroke-width="1.5"/>
+            <rect x="110" y="270" width="320" height="110" rx="12" fill="url(#hero-chip)" opacity="0.6"/>
+            <rect x="130" y="292" width="86" height="66" rx="10" class="diagram-node-hot"/>
+            <rect x="228" y="292" width="86" height="66" rx="10" class="diagram-node"/>
+            <rect x="326" y="292" width="86" height="66" rx="10" class="diagram-node-cool"/>
+            <text x="173" y="333" class="diagram-title" text-anchor="middle">G</text>
+            <text x="271" y="333" class="diagram-title" text-anchor="middle">D</text>
+            <text x="369" y="333" class="diagram-title" text-anchor="middle">MFDFA</text>
+            <text x="270" y="280" class="diagram-sub" text-anchor="middle">AMD Kintex-7 · KC705</text>
+            <g fill="var(--border-strong)">
+              <rect x="120" y="400" width="12" height="16" rx="2"/>
+              <rect x="152" y="400" width="12" height="16" rx="2"/>
+              <rect x="184" y="400" width="12" height="16" rx="2"/>
+              <rect x="216" y="400" width="12" height="16" rx="2"/>
+              <rect x="248" y="400" width="12" height="16" rx="2"/>
+              <rect x="280" y="400" width="12" height="16" rx="2"/>
+              <rect x="312" y="400" width="12" height="16" rx="2"/>
+              <rect x="344" y="400" width="12" height="16" rx="2"/>
+              <rect x="376" y="400" width="12" height="16" rx="2"/>
+              <rect x="408" y="400" width="12" height="16" rx="2"/>
+            </g>
+          </g>
+        </svg>
+      </div>
+
+      <div class="container hero-inner">
+        <div>
+          <h1 class="hero-name" id="hero-title">
+            Charudatta<br /><span class="accent">Korde</span>
+          </h1>
+
+          <div class="hero-roles" role="list">
+            <span class="chip chip-primary" role="listitem">Researcher</span>
+            <span class="chip chip-primary" role="listitem">Engineer</span>
+            <span class="chip chip-primary" role="listitem">Educator</span>
+          </div>
+
+          <p class="hero-tagline">
+            Researching resource-efficient artificial intelligence and hardware
+            acceleration — building open-source tools for AI, security,
+            education and knowledge systems.
+          </p>
+
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="pages/work.html#publications">Publications</a>
+            <a class="btn btn-primary" href="pages/work.html#flagship">Projects</a>
+            <a class="btn btn-ghost" href="assets/CharudattaKorde.pdf" download="CharudattaKorde.pdf">Download CV</a>
+          </div>
+
+          <ul class="hero-meta">
+            <li><a class="btn btn-ghost btn-sm" href="https://github.com/charudatta10" rel="noopener" target="_blank">GitHub</a></li>
+            <li><a class="btn btn-ghost btn-sm" href="https://scholar.google.com/citations?user=wdLkz5MAAAAJ&hl" rel="noopener" target="_blank">Google Scholar</a></li>
+            <li><a class="btn btn-ghost btn-sm" href="https://orcid.org/0000-0003-0055-4997" rel="noopener" target="_blank">ORCID</a></li>
+            <li><a class="btn btn-ghost btn-sm" href="https://www.linkedin.com/in/charudatta-korde/" rel="noopener" target="_blank">LinkedIn</a></li>
+          </ul>
+        </div>
+
+        <div class="hero-figure reveal">
+          <svg class="diagram" viewBox="0 0 520 380" data-animate aria-hidden="true">
+            <defs>
+              <linearGradient id="hw-g" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="var(--primary)"/>
+                <stop offset="1" stop-color="var(--secondary)"/>
+              </linearGradient>
+            </defs>
+            <rect x="10" y="10" width="500" height="360" rx="24" fill="var(--surface-2)"/>
+            <rect x="10" y="10" width="500" height="360" rx="24" fill="none" stroke="var(--border)" stroke-width="1.5"/>
+
+            <text x="260" y="48" class="diagram-title" text-anchor="middle">Hardware-accelerated GAN pipeline</text>
+
+            <!-- input -->
+            <rect x="30" y="150" width="72" height="60" rx="12" class="diagram-node-cool"/>
+            <text x="66" y="183" class="diagram-text" text-anchor="middle">latent z</text>
+
+            <!-- generator -->
+            <rect x="136" y="150" width="76" height="60" rx="12" class="diagram-node-hot"/>
+            <text x="174" y="173" class="diagram-title" text-anchor="middle">G</text>
+            <text x="174" y="189" class="diagram-sub" text-anchor="middle">generator</text>
+
+            <!-- fake -->
+            <rect x="246" y="150" width="72" height="60" rx="12" class="diagram-node-cool"/>
+            <text x="282" y="183" class="diagram-text" text-anchor="middle">image</text>
+
+            <!-- discriminator -->
+            <rect x="352" y="120" width="86" height="120" rx="12" class="diagram-node"/>
+            <text x="395" y="168" class="diagram-title" text-anchor="middle">D</text>
+            <text x="395" y="184" class="diagram-sub" text-anchor="middle">wavelet /</text>
+            <text x="395" y="198" class="diagram-sub" text-anchor="middle">MFDFA</text>
+
+            <!-- real -->
+            <rect x="246" y="258" width="72" height="60" rx="12" class="diagram-node-cool"/>
+            <text x="282" y="291" class="diagram-text" text-anchor="middle">real</text>
+
+            <!-- flows -->
+            <path class="diagram-flow" data-dash d="M102 180 L136 180"/>
+            <path class="diagram-flow" data-dash d="M212 180 L246 180"/>
+            <path class="diagram-flow" data-dash d="M318 180 L352 180"/>
+            <path class="diagram-flow-2" data-dash d="M282 258 L282 210"/>
+            <path class="diagram-flow-2" d="M282 210 L352 180" opacity="0.5"/>
+            <path class="diagram-flow" d="M395 120 C 395 70, 60 70, 174 148" opacity="0.35" stroke-dasharray="4 5"/>
+
+            <text x="60" y="345" class="diagram-sub">training signal</text>
+            <text x="398" y="345" class="diagram-sub" text-anchor="end">real / fake</text>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================= RESEARCH HIGHLIGHTS ====================== -->
+    <section class="section" id="research" aria-labelledby="research-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Research</span>
+          <h2 class="section-title" id="research-title">Resource-efficient AI on edge hardware</h2>
+          <p class="section-sub">
+            Doctoral research (NIT Goa) on hardware acceleration of Generative
+            Adversarial Networks for FPGA-based edge devices — evolutionary and
+            multifractal methods to stabilise training, and hardware-aware
+            design for low-latency, low-power inference.
+          </p>
+        </div>
+
+        <div class="metric-strip reveal">
+          <div class="metric">
+            <div class="metric-value">92.05%</div>
+            <div class="metric-label">latency reduction · MFDFA GAN</div>
+          </div>
+          <div class="metric">
+            <div class="metric-value">86.03%</div>
+            <div class="metric-label">power reduction · MFDFA GAN</div>
+          </div>
+          <div class="metric">
+            <div class="metric-value">85%</div>
+            <div class="metric-label">FID improvement · 2D-MFDFA GAN</div>
+          </div>
+          <div class="metric">
+            <div class="metric-value">138&nbsp;µs</div>
+            <div class="metric-label">inference latency @ Kintex-7 (vs 570 µs)</div>
+          </div>
+          <div class="metric">
+            <div class="metric-value">24&nbsp;mW</div>
+            <div class="metric-label">on-chip power (vs 47 mW)</div>
+          </div>
+          <div class="metric">
+            <div class="metric-value">20%</div>
+            <div class="metric-label">faster training · wavelet GAN</div>
+          </div>
+        </div>
+
+        <div class="grid grid-3">
+          <article class="card research-card reveal">
+            <div class="research-art">
+              <svg class="diagram" viewBox="0 0 400 190" data-animate aria-hidden="true">
+                <rect x="12" y="12" width="376" height="166" rx="14" fill="none" stroke="var(--border)" stroke-width="1.5"/>
+                <path class="diagram-flow-2" data-dash d="M40 150 L70 118 L100 134 L130 84 L160 102 L190 60 L220 96 L250 76 L280 104 L310 66 L340 88 L360 70"/>
+                <path class="diagram-flow" data-dash d="M40 176 L70 168 L100 172 L130 164 L160 170 L190 162 L220 168 L250 160 L280 166 L310 158 L340 164 L360 156" opacity="0.35"/>
+                <text x="60" y="30" class="diagram-title">Multifractal spectrum</text>
+                <path class="diagram-line" d="M70 120 L70 140 M200 120 L200 140 M330 120 L330 140"/>
+                <text x="70" y="116" class="diagram-sub" text-anchor="middle">q&lt;0</text>
+                <text x="200" y="116" class="diagram-sub" text-anchor="middle">q=0</text>
+                <text x="330" y="116" class="diagram-sub" text-anchor="middle">q&gt;0</text>
+              </svg>
+            </div>
+            <div class="card-pad">
+              <h3 class="card-title">MFDFA-Enhanced GAN</h3>
+              <p class="card-body">
+                Multifractal Detrended Fluctuation Analysis embedded in the
+                discriminator for stable, hardware-optimised synthetic image
+                generation — without changing the core GAN architecture.
+              </p>
+              <div class="research-metrics">
+                <span class="chip chip-good chip-mono">−92.05% latency</span>
+                <span class="chip chip-good chip-mono">−86.03% power</span>
+              </div>
+              <div class="chips" style="margin-bottom: 14px">
+                <span class="chip">GAN</span>
+                <span class="chip">MFDFA</span>
+                <span class="chip">FPGA</span>
+                <span class="chip">Edge AI</span>
+              </div>
+              <div class="research-links">
+                <a href="https://doi.org/10.1109/ACCESS.2026.3677066" rel="noopener" target="_blank">Paper →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card research-card reveal">
+            <div class="research-art">
+              <svg class="diagram" viewBox="0 0 400 190" data-animate aria-hidden="true">
+                <rect x="12" y="12" width="376" height="166" rx="14" fill="none" stroke="var(--border)" stroke-width="1.5"/>
+                <rect x="28" y="80" width="60" height="50" rx="10" class="diagram-node-cool"/>
+                <text x="58" y="109" class="diagram-sub" text-anchor="middle">z</text>
+                <rect x="112" y="80" width="60" height="50" rx="10" class="diagram-node-hot"/>
+                <text x="142" y="109" class="diagram-title" text-anchor="middle">G</text>
+                <rect x="196" y="80" width="60" height="50" rx="10" class="diagram-node-cool"/>
+                <text x="226" y="109" class="diagram-sub" text-anchor="middle">img</text>
+                <rect x="296" y="62" width="80" height="86" rx="10" class="diagram-node"/>
+                <text x="336" y="98" class="diagram-title" text-anchor="middle">D</text>
+                <text x="336" y="114" class="diagram-sub" text-anchor="middle">wavelet</text>
+                <path class="diagram-flow" data-dash d="M88 105 L112 105 M172 105 L196 105 M256 105 L296 105"/>
+                <text x="58" y="168" class="diagram-sub">genetic algorithm</text>
+                <path class="diagram-flow" d="M112 130 C 112 160, 50 160, 56 130" opacity="0.4"/>
+              </svg>
+            </div>
+            <div class="card-pad">
+              <h3 class="card-title">Evolutionary-Enhanced GAN</h3>
+              <p class="card-body">
+                Genetic-algorithm-optimised generator with wavelet-based
+                discrimination, synthesised on the AMD Kintex-7 KC705 with the
+                lowest area footprint among compared implementations.
+              </p>
+              <div class="research-metrics">
+                <span class="chip chip-good chip-mono">138 µs vs 570 µs</span>
+                <span class="chip chip-good chip-mono">24 mW vs 47 mW</span>
+              </div>
+              <div class="chips" style="margin-bottom: 14px">
+                <span class="chip">GAN</span>
+                <span class="chip">Wavelet</span>
+                <span class="chip">FPGA</span>
+                <span class="chip">Edge AI</span>
+              </div>
+              <div class="research-links">
+                <a href="https://doi.org/10.1109/ACCESS.2025.3642041" rel="noopener" target="_blank">Paper →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card research-card reveal">
+            <div class="research-art">
+              <svg class="diagram" viewBox="0 0 400 190" data-animate aria-hidden="true">
+                <rect x="12" y="12" width="376" height="166" rx="14" fill="none" stroke="var(--border)" stroke-width="1.5"/>
+                <rect x="24" y="74" width="62" height="52" rx="10" class="diagram-node-cool"/>
+                <text x="55" y="103" class="diagram-sub" text-anchor="middle">image</text>
+                <rect x="112" y="74" width="62" height="52" rx="10" class="diagram-node"/>
+                <text x="143" y="96" class="diagram-sub" text-anchor="middle">quantise</text>
+                <rect x="200" y="74" width="62" height="52" rx="10" class="diagram-node"/>
+                <text x="231" y="96" class="diagram-sub" text-anchor="middle">tiling</text>
+                <rect x="288" y="74" width="80" height="52" rx="10" class="diagram-node-hot"/>
+                <text x="328" y="96" class="diagram-title" text-anchor="middle">DSP</text>
+                <path class="diagram-flow" data-dash d="M86 100 L112 100 M174 100 L200 100 M262 100 L288 100"/>
+                <text x="60" y="160" class="diagram-sub">NNGen deployment · KC705</text>
+              </svg>
+            </div>
+            <div class="card-pad">
+              <h3 class="card-title">2D-MFDFA GAN</h3>
+              <p class="card-body">
+                A 2D multifractal discriminator for fast synthetic-data
+                generation, deployed on the Kintex-7 KC705 through the NNGen
+                framework with verified hardware results.
+              </p>
+              <div class="research-metrics">
+                <span class="chip chip-good chip-mono">+85% FID</span>
+                <span class="chip chip-good chip-mono">94% faster</span>
+                <span class="chip chip-good chip-mono">−81% power</span>
+              </div>
+              <div class="chips" style="margin-bottom: 14px">
+                <span class="chip">MFDFA</span>
+                <span class="chip">GAN</span>
+                <span class="chip">NNGen</span>
+                <span class="chip">FPGA</span>
+              </div>
+              <div class="research-links">
+                <a href="https://doi.org/10.1109/ACCESS.2025.3603332" rel="noopener" target="_blank">Paper →</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <p class="reveal" style="margin-top: 28px">
+          <a href="pages/work.html#research">All research areas →</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ========================= RESEARCH → CODE ========================== -->
+    <section class="section" id="research-code" aria-labelledby="rc-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Research → code</span>
+          <h2 class="section-title" id="rc-title">From publication to implementation</h2>
+          <p class="section-sub">
+            Research and software are treated as one pipeline. Each paper is
+            linked to its method, implementation and (where it exists) source
+            code.
+          </p>
+        </div>
+
+        <div class="card card-pad reveal">
+          <div class="pipeline" role="list">
+            <div class="pipe-step" role="listitem">
+              <div class="pipe-icon" aria-hidden="true">🔬</div>
+              <div class="pipe-label">Research problem</div>
+              <div class="pipe-sub">GAN instability on edge hardware</div>
+            </div>
+            <div class="pipe-arrow" aria-hidden="true">→</div>
+            <div class="pipe-step" role="listitem">
+              <div class="pipe-icon" aria-hidden="true">🧬</div>
+              <div class="pipe-label">Method</div>
+              <div class="pipe-sub">evolutionary · wavelet · MFDFA</div>
+            </div>
+            <div class="pipe-arrow" aria-hidden="true">→</div>
+            <div class="pipe-step" role="listitem">
+              <div class="pipe-icon" aria-hidden="true">⚙️</div>
+              <div class="pipe-label">Implementation</div>
+              <div class="pipe-sub">PyTorch · Python · HDL</div>
+            </div>
+            <div class="pipe-arrow" aria-hidden="true">→</div>
+            <div class="pipe-step" role="listitem">
+              <div class="pipe-icon" aria-hidden="true">📊</div>
+              <div class="pipe-label">Results</div>
+              <div class="pipe-sub">latency · power · FID</div>
+            </div>
+            <div class="pipe-arrow" aria-hidden="true">→</div>
+            <div class="pipe-step" role="listitem">
+              <div class="pipe-icon" aria-hidden="true">📄</div>
+              <div class="pipe-label">Publication</div>
+              <div class="pipe-sub">IEEE Access · iSES · INDICON</div>
+            </div>
+            <div class="pipe-arrow" aria-hidden="true">→</div>
+            <div class="pipe-step" role="listitem">
+              <div class="pipe-icon" aria-hidden="true">🧑‍💻</div>
+              <div class="pipe-label">Source code</div>
+              <div class="pipe-sub">open research repos</div>
+            </div>
+          </div>
+          <p style="margin: 18px 0 0; font-size: 0.9rem">
+            Some publications have no public code yet — those are listed as
+            paper-only rather than inventing links. Verified implementations are
+            shown with their exact repository.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================= FEATURED PROJECTS ======================== -->
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Projects</span>
+          <h2 class="section-title" id="projects-title">Featured open source</h2>
+          <p class="section-sub">
+            A selection from the <a href="https://github.com/charudatta10" rel="noopener" target="_blank">charudatta10</a>
+            profile — tools, frameworks and teaching resources built and maintained in the open.
+          </p>
+        </div>
+
+        <div class="grid grid-3">
+          <article class="card project-card card-pad reveal">
+            <div class="project-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <rect x="4" y="4" width="16" height="16" rx="4"/>
+                <path d="M9 9v6M15 9v6M9 12h6"/>
+              </svg>
+            </div>
+            <span class="project-status">Flagship · pinned</span>
+            <h3 class="card-title">orbit</h3>
+            <p class="card-body">
+              A ~160-line minimalist LLM framework for Lua. Zero dependencies,
+              zero vendor lock-in; agents, workflows and RAG in one file.
+            </p>
+            <div class="chips" style="margin-bottom: 14px">
+              <span class="chip">Lua</span>
+              <span class="chip">LLM</span>
+              <span class="chip">Agents</span>
+            </div>
+            <div class="card-footer project-actions">
+              <a href="https://github.com/charudatta10/orbit" rel="noopener" target="_blank">Source →</a>
+              <a href="https://charudatta10.github.io/orbit/" rel="noopener" target="_blank">Docs →</a>
+            </div>
+          </article>
+
+          <article class="card project-card card-pad reveal">
+            <div class="project-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <circle cx="12" cy="12" r="9"/>
+                <path d="M8 12l3 3 5-6"/>
+              </svg>
+            </div>
+            <span class="project-status">Flagship · pinned</span>
+            <h3 class="card-title">forensic-fathers-library</h3>
+            <p class="card-body">
+              Static site with a client-only RAG chatbot over the founding
+              figures of forensic science — WebLLM in the browser, no server,
+              no API keys.
+            </p>
+            <div class="chips" style="margin-bottom: 14px">
+              <span class="chip">HTML</span>
+              <span class="chip">RAG</span>
+              <span class="chip">WebLLM</span>
+            </div>
+            <div class="card-footer project-actions">
+              <a href="https://github.com/charudatta10/forensic-fathers-library" rel="noopener" target="_blank">Source →</a>
+              <a href="https://charudatta10.github.io/forensic-fathers-library/" rel="noopener" target="_blank">Live →</a>
+            </div>
+          </article>
+
+          <article class="card project-card card-pad reveal">
+            <div class="project-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M12 3l7 4v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V7z"/>
+                <path d="M9 12l2 2 4-4"/>
+              </svg>
+            </div>
+            <span class="project-status">Notable · pinned</span>
+            <h3 class="card-title">license · MPLS</h3>
+            <p class="card-body">
+              A composable, SPDX-compatible licensing framework — modular legal
+              clauses instead of rewriting licenses, with monetisation built in.
+            </p>
+            <div class="chips" style="margin-bottom: 14px">
+              <span class="chip">Python</span>
+              <span class="chip">Licensing</span>
+              <span class="chip">Open source</span>
+            </div>
+            <div class="card-footer project-actions">
+              <a href="https://github.com/charudatta10/license" rel="noopener" target="_blank">Source →</a>
+            </div>
+          </article>
+
+          <article class="card project-card card-pad reveal">
+            <div class="project-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <circle cx="6" cy="6" r="2.5"/>
+                <circle cx="18" cy="6" r="2.5"/>
+                <circle cx="12" cy="18" r="2.5"/>
+                <path d="M8 7l2.5 8.5M16 7l-2.5 8.5M6 8.5v.5a3 3 0 0 0 3 3h6a3 3 0 0 0 3-3v-.5"/>
+              </svg>
+            </div>
+            <span class="project-status">Knowledge · pinned</span>
+            <h3 class="card-title">link-net</h3>
+            <p class="card-body">
+              Aggregated link hub — a curated, categorised collection of useful
+              resources with custom link icons and fast setup.
+            </p>
+            <div class="chips" style="margin-bottom: 14px">
+              <span class="chip">Python</span>
+              <span class="chip">Flask</span>
+              <span class="chip">Jinja2</span>
+            </div>
+            <div class="card-footer project-actions">
+              <a href="https://github.com/charudatta10/link-net" rel="noopener" target="_blank">Source →</a>
+              <a href="https://charudatta10.github.io/link-net/" rel="noopener" target="_blank">Live →</a>
+            </div>
+          </article>
+
+          <article class="card project-card card-pad reveal">
+            <div class="project-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M7 3h10a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"/>
+                <path d="M9 8h6M9 12h6M9 16h4"/>
+              </svg>
+            </div>
+            <span class="project-status">Research · academic</span>
+            <h3 class="card-title">Devanagari Recognizer</h3>
+            <p class="card-body">
+              Handwritten Devanagari script recognition system from the
+              Bachelor's project (2015) — the same line of work as the ISVLSI
+              publication on FPGA pre-processing.
+            </p>
+            <div class="chips" style="margin-bottom: 14px">
+              <span class="chip">MATLAB</span>
+              <span class="chip">OCR</span>
+              <span class="chip">ML</span>
+            </div>
+            <div class="card-footer project-actions">
+              <a href="https://github.com/charudatta10/devanagari-handwriting-recognizer" rel="noopener" target="_blank">Source →</a>
+            </div>
+          </article>
+
+          <article class="card project-card card-pad reveal">
+            <div class="project-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M4 19V5a1 1 0 0 1 1-1h9l6 6v9a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1z"/>
+                <path d="M13 4v6h6"/>
+              </svg>
+            </div>
+            <span class="project-status">Tooling</span>
+            <h3 class="card-title">ai-doc-gen</h3>
+            <p class="card-body">
+              Generate project documentation with a local LLM (Ollama/Llama) —
+              structured inputs become readable technical docs.
+            </p>
+            <div class="chips" style="margin-bottom: 14px">
+              <span class="chip">Python</span>
+              <span class="chip">Ollama</span>
+              <span class="chip">Docs</span>
+            </div>
+            <div class="card-footer project-actions">
+              <a href="https://github.com/charudatta10/ai-doc-gen" rel="noopener" target="_blank">Source →</a>
+              <a href="https://charudatta10.github.io/ai-doc-gen/" rel="noopener" target="_blank">Docs →</a>
+            </div>
+          </article>
+        </div>
+
+        <p class="reveal" style="margin-top: 28px">
+          <a href="pages/work.html#flagship">Full project audit →</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ========================= PUBLICATIONS ============================= -->
+    <section class="section" id="publications" aria-labelledby="pubs-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Publications</span>
+          <h2 class="section-title" id="pubs-title">Selected publications</h2>
+          <p class="section-sub">
+            Verified from ORCID and Crossref. All seven archived papers are
+            preserved, alongside the newest hardware-optimised GAN work.
+          </p>
+        </div>
+
+        <ul class="pub-list">
+          <li class="pub-item reveal">
+            <span class="pub-year">2026</span>
+            <div>
+              <h3 class="pub-title">MFDFA-Enhanced GAN: A Hardware-Optimized Architecture for Efficient Synthetic Image Generation</h3>
+              <p class="pub-authors">C. G. Korde, K. G. Shreeharsha, R. K. Siddharth, M. H. Vasantha, Y. B. Nithin Kumar</p>
+              <p class="pub-meta"><span class="pub-badge pub-badge-open">IEEE Access</span>&nbsp; vol. 14, pp. 46700–46713</p>
+              <div class="pub-links">
+                <a href="https://doi.org/10.1109/ACCESS.2026.3677066" rel="noopener" target="_blank">DOI</a>
+              </div>
+            </div>
+          </li>
+
+          <li class="pub-item reveal">
+            <span class="pub-year">2025</span>
+            <div>
+              <h3 class="pub-title">Evolutionary-Enhanced GAN With Wavelet-Based Discrimination: A Hardware-Accelerated Architecture for Efficient Synthetic Image Generation</h3>
+              <p class="pub-authors">C. G. Korde, K. G. Shreeharsha, R. K. Siddharth, M. H. Vasantha, Y. B. Nithin Kumar</p>
+              <p class="pub-meta"><span class="pub-badge pub-badge-open">IEEE Access</span>&nbsp; vol. 13, pp. 209009–209022</p>
+              <div class="pub-links">
+                <a href="https://doi.org/10.1109/ACCESS.2025.3642041" rel="noopener" target="_blank">DOI</a>
+              </div>
+            </div>
+          </li>
+
+          <li class="pub-item reveal">
+            <span class="pub-year">2025</span>
+            <div>
+              <h3 class="pub-title">Generating Synthetic Data Using 2D Multifractal Detrended Fluctuation Analysis Generative Adversarial Networks</h3>
+              <p class="pub-authors">C. G. Korde, K. G. Shreeharsha, R. K. Siddharth, M. H. Vasantha, Y. B. Nithin Kumar</p>
+              <p class="pub-meta"><span class="pub-badge pub-badge-open">IEEE Access</span>&nbsp; vol. 13, pp. 150794–150805</p>
+              <div class="pub-links">
+                <a href="https://doi.org/10.1109/ACCESS.2025.3603332" rel="noopener" target="_blank">DOI</a>
+              </div>
+            </div>
+          </li>
+
+          <li class="pub-item reveal">
+            <span class="pub-year">2021</span>
+            <div>
+              <h3 class="pub-title">Training of Generative Adversarial Networks using Particle Swarm Optimization Algorithm</h3>
+              <p class="pub-authors">K. G. Shreeharsha, C. G. Korde, M. H. Vasantha, Y. B. Nithin Kumar</p>
+              <p class="pub-meta"><span class="pub-badge pub-badge-conf">IEEE iSES</span>&nbsp; pp. 127–130 · 5× fewer iterations to plausible images</p>
+              <div class="pub-links">
+                <a href="https://doi.org/10.1109/iSES52644.2021.00038" rel="noopener" target="_blank">DOI</a>
+              </div>
+            </div>
+          </li>
+
+          <li class="pub-item reveal">
+            <span class="pub-year">2019</span>
+            <div>
+              <h3 class="pub-title">Training of Generative Adversarial Networks with Hybrid Evolutionary Optimization Technique</h3>
+              <p class="pub-authors">C. G. Korde, K. Manikantta Reddy, M. H. Vasantha, Y. B. Nithin Kumar</p>
+              <p class="pub-meta"><span class="pub-badge pub-badge-conf">IEEE INDICON</span>&nbsp; pp. 1–4</p>
+              <div class="pub-links">
+                <a href="https://doi.org/10.1109/INDICON47234.2019.9030352" rel="noopener" target="_blank">DOI</a>
+              </div>
+            </div>
+          </li>
+
+          <li class="pub-item reveal">
+            <span class="pub-year">2018</span>
+            <div>
+              <h3 class="pub-title">FPGA Implementation of Square and Cube Architecture Using Vedic Mathematics</h3>
+              <p class="pub-authors">S. Barve, S. Raveendran, C. Korde, T. Panigrahi, Y. B. Nithin Kumar, M. H. Vasantha</p>
+              <p class="pub-meta"><span class="pub-badge pub-badge-conf">IEEE iSES</span>&nbsp; pp. 6–10</p>
+              <div class="pub-links">
+                <a href="https://doi.org/10.1109/iSES.2018.00012" rel="noopener" target="_blank">DOI</a>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <p class="reveal" style="margin-top: 24px">
+          <a href="pages/work.html#publications">All nine publications (incl. 2017, 2015, 2024) →</a>
+          · <a href="https://orcid.org/0000-0003-0055-4997" rel="noopener" target="_blank">ORCID</a>
+          · <a href="https://scholar.google.com/citations?user=wdLkz5MAAAAJ&hl" rel="noopener" target="_blank">Google Scholar</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ========================= TEACHING ================================= -->
+    <section class="section" id="teaching" aria-labelledby="teaching-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Teaching</span>
+          <h2 class="section-title" id="teaching-title">Research-led teaching</h2>
+          <p class="section-sub">
+            Teaching is treated as research: build the simplest system that
+            makes a hard idea clear, then let students break it and rebuild it.
+          </p>
+        </div>
+
+        <div class="grid grid-3">
+          <article class="card card-pad reveal">
+            <span class="project-status">2024 — present</span>
+            <h3 class="card-title">Lecturer, National Forensic Sciences University</h3>
+            <p class="card-body">
+              Incident Response and Vulnerability Assessment &amp; Penetration
+              Testing (VAPT) — applied cybersecurity practice with system-level
+              analysis and research-informed instruction.
+            </p>
+          </article>
+
+          <article class="card card-pad reveal">
+            <span class="project-status">2017 — 2026</span>
+            <h3 class="card-title">Research Scholar &amp; Teaching Assistant, NIT Goa</h3>
+            <p class="card-body">
+              Doctoral research in FPGA-based AI acceleration. Mentored
+              students and guided laboratory work; 6 postgraduate theses
+              supervised across AI and hardware-accelerated architectures.
+            </p>
+          </article>
+
+          <article class="card card-pad reveal">
+            <span class="project-status">2024</span>
+            <h3 class="card-title">Visiting Faculty, Goa Polytechnic College</h3>
+            <p class="card-body">
+              Laboratory instruction in Basic Electronics — circuit
+              fundamentals, measurement techniques and applied engineering.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================= OPEN SOURCE ============================== -->
+    <section class="section" id="opensource" aria-labelledby="os-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Open source</span>
+          <h2 class="section-title" id="os-title">A small, focused ecosystem</h2>
+          <p class="section-sub">
+            Tools built for research workflows, teaching and knowledge systems.
+            No organisations claimed — everything here is owned and maintained
+            under <strong>charudatta10</strong>.
+          </p>
+        </div>
+
+        <div class="grid grid-3">
+          <article class="card card-pad reveal">
+            <span class="project-status">Automation</span>
+            <h3 class="card-title">task-runner-SDLC</h3>
+            <p class="card-body">
+              Automates init, deploy, licence, readme and maintenance tasks
+              across projects (now maintained as PowerShell modules).
+            </p>
+            <div class="card-footer project-actions">
+              <a href="https://github.com/charudatta10/task-runner-SDLC" rel="noopener" target="_blank">Source →</a>
+            </div>
+          </article>
+
+          <article class="card card-pad reveal">
+            <span class="project-status">AI tooling</span>
+            <h3 class="card-title">ai-orb · ai-rag · ai-translate</h3>
+            <p class="card-body">
+              Agent framework, retrieval-augmented generation and code
+              translation, each running on local models.
+            </p>
+            <div class="card-footer project-actions">
+              <a href="https://github.com/charudatta10/ai-orb" rel="noopener" target="_blank">ai-orb →</a>
+              <a href="https://github.com/charudatta10/ai-rag" rel="noopener" target="_blank">ai-rag →</a>
+              <a href="https://github.com/charudatta10/ai-translate" rel="noopener" target="_blank">ai-translate →</a>
+            </div>
+          </article>
+
+          <article class="card card-pad reveal">
+            <span class="project-status">Security</span>
+            <h3 class="card-title">one-time-share · sandLua</h3>
+            <p class="card-body">
+              Secure single-download file sharing, and a Lua reverse-engineering
+              sandbox with static and dynamic analysis.
+            </p>
+            <div class="card-footer project-actions">
+              <a href="https://github.com/charudatta10/one-time-share" rel="noopener" target="_blank">one-time-share →</a>
+              <a href="https://github.com/charudatta10/sandLua" rel="noopener" target="_blank">sandLua →</a>
+            </div>
+          </article>
+
+          <article class="card card-pad reveal">
+            <span class="project-status">Knowledge</span>
+            <h3 class="card-title">wiki-notes · ibrain</h3>
+            <p class="card-body">
+              Foam + Raito personal knowledge graph, and a Docsify-powered notes
+              &amp; wiki site.
+            </p>
+            <div class="card-footer project-actions">
+              <a href="https://github.com/charudatta10/wiki-notes" rel="noopener" target="_blank">wiki-notes →</a>
+              <a href="https://charudatta10.github.io/ibrain/" rel="noopener" target="_blank">ibrain →</a>
+            </div>
+          </article>
+
+          <article class="card card-pad reveal">
+            <span class="project-status">Dev tools</span>
+            <h3 class="card-title">project-tile · pypwa · file-tagger</h3>
+            <p class="card-body">
+              Showcase projects as tiles, ship any Python script as a
+              single-file PWA, and organise files by tags.
+            </p>
+            <div class="card-footer project-actions">
+              <a href="https://charudatta10.github.io/project-tile/" rel="noopener" target="_blank">project-tile →</a>
+              <a href="https://github.com/charudatta10/pypwa" rel="noopener" target="_blank">pypwa →</a>
+              <a href="https://github.com/charudatta10/file-tagger" rel="noopener" target="_blank">file-tagger →</a>
+            </div>
+          </article>
+
+          <article class="card card-pad reveal">
+            <span class="project-status">Research</span>
+            <h3 class="card-title">PGAN-DNN</h3>
+            <p class="card-body">
+              2019 GAN research implementation (perceptual adversarial
+              training experiments) — part of the doctoral exploration into
+              stable GAN training.
+            </p>
+            <div class="card-footer project-actions">
+              <a href="https://github.com/charudatta10/PGAN-DNN" rel="noopener" target="_blank">Source →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================= WRITING ================================== -->
+    <section class="section" id="writing" aria-labelledby="writing-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Writing</span>
+          <h2 class="section-title" id="writing-title">Notes, articles &amp; knowledge systems</h2>
+          <p class="section-sub">
+            Writing to make complex topics learnable — for students, for the
+            open-source community and for myself.
+          </p>
+        </div>
+
+        <div class="grid grid-2">
+          <article class="card card-pad reveal">
+            <h3 class="card-title">Articles (dev.to)</h3>
+            <ul class="link-list">
+              <li>
+                <a href="https://dev.to/charudatta10/introduction-to-digital-note-taking-a-beginners-guide-9p2" rel="noopener" target="_blank">
+                  <span>Introduction to Digital Note-Taking</span><span class="chev" aria-hidden="true">→</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://dev.to/charudatta10/why-obsidian-falls-short-as-a-note-taking-tool-3ef2" rel="noopener" target="_blank">
+                  <span>Why Obsidian Falls Short as a Note-Taking Tool</span><span class="chev" aria-hidden="true">→</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://dev.to/charudatta10/exploring-the-legendary-dollop-repository-an-svg-generator-4388" rel="noopener" target="_blank">
+                  <span>Exploring the Legendary Dollop Repository — an SVG Generator</span><span class="chev" aria-hidden="true">→</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://dev.to/charudatta10/vscode-setup-with-foam-and-logseq-for-digital-note-taking-2953" rel="noopener" target="_blank">
+                  <span>VS Code Setup with Foam and Logseq</span><span class="chev" aria-hidden="true">→</span>
+                </a>
+              </li>
+            </ul>
+          </article>
+
+          <article class="card card-pad reveal">
+            <h3 class="card-title">Knowledge systems</h3>
+            <ul class="link-list">
+              <li>
+                <a href="https://charudatta10.github.io/ibrain/" rel="noopener" target="_blank">
+                  <span>Personal knowledge base (Docsify)</span><span class="chev" aria-hidden="true">→</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/charudatta10/wiki-notes" rel="noopener" target="_blank">
+                  <span>Foam + Raito knowledge graph</span><span class="chev" aria-hidden="true">→</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://charudatta10.github.io/forensic-fathers-library/" rel="noopener" target="_blank">
+                  <span>Forensic fathers — RAG library</span><span class="chev" aria-hidden="true">→</span>
+                </a>
+              </li>
+              <li>
+                <a href="pages/writing.html" >
+                  <span>Full writing archive</span><span class="chev" aria-hidden="true">→</span>
+                </a>
+              </li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================= ABOUT ==================================== -->
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <div class="grid grid-2">
+          <div class="section-head reveal" style="margin-bottom: 0">
+            <span class="eyebrow">About</span>
+            <h2 class="section-title" id="about-title">Systems that scale intellectually</h2>
+            <p class="section-sub">
+              I design architectures that scale intellectually as well as
+              technically — systems that teach, explain and endure.
+            </p>
+            <p>
+              Engineer with an Electrical &amp; Electronics background; PhD
+              research (thesis submitted) at NIT Goa on VLSI and reconfigurable
+              computing for GAN acceleration on FPGA-based edge devices. I teach
+              cybersecurity at NFSU, build open-source tools, and write about
+              AI, hardware and knowledge systems.
+            </p>
+            <p>
+              <a class="btn btn-ghost btn-sm" href="pages/about.html">Full bio →</a>
+            </p>
+          </div>
+
+          <article class="card card-pad reveal">
+            <h3 class="card-title">Focus areas</h3>
+            <div class="chips" style="margin-bottom: 18px">
+              <span class="chip chip-primary">Efficient AI</span>
+              <span class="chip chip-primary">Hardware Acceleration</span>
+              <span class="chip chip-primary">Cybersecurity</span>
+              <span class="chip chip-primary">Intelligent Systems</span>
+            </div>
+            <h3 class="card-title">Supporting interests</h3>
+            <div class="chips">
+              <span class="chip">FPGA / VLSI</span>
+              <span class="chip">Edge AI</span>
+              <span class="chip">Machine Learning</span>
+              <span class="chip">Generative AI</span>
+              <span class="chip">Security</span>
+              <span class="chip">Open Source</span>
+              <span class="chip">Developer Tools</span>
+              <span class="chip">Knowledge Systems</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================= CONTACT ================================== -->
+    <section class="section" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Contact</span>
+          <h2 class="section-title" id="contact-title">Open to collaboration</h2>
+          <p class="section-sub">
+            Research collaboration, hardware-accelerated ML, security education
+            and mentorship.
+          </p>
+        </div>
+
+        <div class="channel-grid reveal">
+          <a class="card channel-card card-hover" href="mailto:charudatta.korde@nfsu.edu.in" style="text-decoration: none">
+            <div class="project-icon" aria-hidden="true">✉</div>
+            <div>
+              <div class="channel-name">Email</div>
+              <div class="channel-desc">charudatta.korde@nfsu.edu.in</div>
+            </div>
+          </a>
+          <a class="card channel-card card-hover" href="https://github.com/charudatta10" rel="noopener" target="_blank" style="text-decoration: none">
+            <div class="project-icon" aria-hidden="true">⌥</div>
+            <div>
+              <div class="channel-name">GitHub</div>
+              <div class="channel-desc">charudatta10 · 46 original repos</div>
+            </div>
+          </a>
+          <a class="card channel-card card-hover" href="https://scholar.google.com/citations?user=wdLkz5MAAAAJ&hl" rel="noopener" target="_blank" style="text-decoration: none">
+            <div class="project-icon" aria-hidden="true">🎓</div>
+            <div>
+              <div class="channel-name">Google Scholar</div>
+              <div class="channel-desc">h-index 4 · 35 citations</div>
+            </div>
+          </a>
+          <a class="card channel-card card-hover" href="https://orcid.org/0000-0003-0055-4997" rel="noopener" target="_blank" style="text-decoration: none">
+            <div class="project-icon" aria-hidden="true">🆔</div>
+            <div>
+              <div class="channel-name">ORCID</div>
+              <div class="channel-desc">0000-0003-0055-4997</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer loads here -->
+  <div id="footer-placeholder"></div>
+
+  <script src="assets/include.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <!-- Floating CTA -->
+  <div class="floating-cta">
+    <a class="btn btn-primary" href="assets/CharudattaKorde.pdf" download="CharudattaKorde.pdf">Download CV</a>
+    <a class="btn btn-ghost" href="mailto:charudatta.korde@nfsu.edu.in">Contact</a>
   </div>
-</section>
-
-<section id="about">
-  <h2>About</h2>
-  <div class="content-block">
-    <p>
-      I work at the intersection of software systems, education, and research.
-      I design architectures that scale intellectually as well as technically —
-      systems that teach, explain, and endure.
-    </p>
-  </div>
-</section>
-<section id="projects">
-  <h2>Projects</h2>
-
-  <div class="project-grid">
-
-    <!-- Project 1 -->
-    <div class="project-card">
-      <div class="project-header">
-        <div class="project-title">Custom Rust Blockchain</div>
-        <div class="project-status">Research</div>
-      </div>
-
-      <div class="project-desc">
-        Experimental distributed governance architecture modeling a DAO-driven
-        educational infrastructure with federated node participation.
-      </div>
-
-      <div class="project-tags">
-        <span class="tag">Rust</span>
-        <span class="tag">Blockchain</span>
-        <span class="tag">Distributed Systems</span>
-        <span class="tag">Governance</span>
-      </div>
-
-      <a class="project-link" href="https://github.com/charudatta10" target="_blank">
-        → View Repository
-      </a>
-    </div>
-
-    <!-- Project 2 -->
-    <div class="project-card">
-      <div class="project-header">
-        <div class="project-title">Federated LLM Architecture</div>
-        <div class="project-status">System</div>
-      </div>
-
-      <div class="project-desc">
-        Torrent-based decentralized training and inference framework designed
-        for distributed model collaboration without centralized control.
-      </div>
-
-      <div class="project-tags">
-        <span class="tag">LLM</span>
-        <span class="tag">P2P</span>
-        <span class="tag">Federated Learning</span>
-      </div>
-
-      <a class="project-link" href="https://github.com/charudatta10" target="_blank">
-        → View Repository
-      </a>
-    </div>
-
-    <!-- Project 3 -->
-    <div class="project-card">
-      <div class="project-header">
-        <div class="project-title">Devanagari Handwriting Recognizer</div>
-        <div class="project-status">Research</div>
-      </div>
-
-      <div class="project-desc">
-        OCR pipeline for handwritten Devanagari script integrating neural
-        architectures and preprocessing optimization techniques.
-      </div>
-
-      <div class="project-tags">
-        <span class="tag">TensorFlow</span>
-        <span class="tag">OCR</span>
-        <span class="tag">ML</span>
-      </div>
-
-      <a class="project-link" href="https://github.com/charudatta10" target="_blank">
-        → View Repository
-      </a>
-    </div>
-
-    <!-- Project 4 -->
-    <div class="project-card">
-      <div class="project-header">
-        <div class="project-title">AI Documentation Generator</div>
-        <div class="project-status">Tooling</div>
-      </div>
-
-      <div class="project-desc">
-        Local AI-powered documentation engine that converts structured
-        project inputs into readable technical documentation.
-      </div>
-
-      <div class="project-tags">
-        <span class="tag">Python</span>
-        <span class="tag">LLM</span>
-        <span class="tag">Automation</span>
-      </div>
-
-      <a class="project-link" href="https://github.com/charudatta10" target="_blank">
-        → View Repository
-      </a>
-    </div>
-
-    <!-- Project 5 -->
-    <div class="project-card">
-      <div class="project-header">
-        <div class="project-title">Secure One-Time Share</div>
-        <div class="project-status">Infrastructure</div>
-      </div>
-
-      <div class="project-desc">
-        Minimal backend system for secure, time-bound file sharing with
-        ephemeral storage and controlled access logic.
-      </div>
-
-      <div class="project-tags">
-        <span class="tag">Backend</span>
-        <span class="tag">Security</span>
-        <span class="tag">API</span>
-      </div>
-
-      <a class="project-link" href="https://github.com/charudatta10" target="_blank">
-        → View Repository
-      </a>
-    </div>
-
-    <!-- Project 6 -->
-    <div class="project-card">
-      <div class="project-header">
-        <div class="project-title">Task Runner SDLC</div>
-        <div class="project-status">Tooling</div>
-      </div>
-
-      <div class="project-desc">
-        Workflow automation framework to streamline build, commit,
-        testing, and deployment processes across research projects.
-      </div>
-
-      <div class="project-tags">
-        <span class="tag">Python</span>
-        <span class="tag">Automation</span>
-        <span class="tag">DevOps</span>
-      </div>
-
-      <a class="project-link" href="https://github.com/charudatta10" target="_blank">
-        → View Repository
-      </a>
-    </div>
-
-  </div>
-</section>
-
-            <section id="work">
-                <h2>Work</h2>
-
-                <div class="project-grid">
-                    <!-- Project 1 -->
-                    <div class="project-card">
-                        <div class="project-header">
-                            <div class="project-title">Engineer</div>
-                            <div class="project-status">
-                                Electrical and Electronics
-                            </div>
-                        </div>
-
-                        <div class="project-desc">
-                            Electrical and Electronics Engineering background
-                            with emphasis on secure computation, signal
-                            processing, and embedded intelligence. Bridging
-                            hardware systems with scalable software
-                            architectures.
-                        </div>
-
-                        <div class="project-tags">
-                            <span class="tag">Signal Processing</span>
-                            <span class="tag">Embedded Systems</span>
-                            <span class="tag">Cryptography</span>
-                            <span class="tag">Hardware-Software Co-design</span>
-                        </div>
-
-                        <a
-                            class="project-link"
-                            href="https://github.com/charudatta10"
-                            target="_blank"
-                        >
-                            → View work
-                        </a>
-                    </div>
-
-                    <!-- Project 2 -->
-                    <div class="project-card">
-                        <div class="project-header">
-                            <div class="project-title">Researcher</div>
-                            <div class="project-status">
-                                VLSI & AI Hardware Acceleration
-                            </div>
-                        </div>
-
-                        <div class="project-desc">
-                            Research background in VLSI system design with
-                            doctoral work focused on hardware acceleration of
-                            Generative Adversarial Networks (GANs) on FPGA-based
-                            edge devices. Investigates resource-efficient neural
-                            architectures, quantized computation, and
-                            hardware-software co-design strategies to enable
-                            low-latency, power-aware AI deployment in
-                            constrained environments.
-                        </div>
-
-                        <div class="project-tags">
-                            <span class="tag">VLSI Design</span>
-                            <span class="tag">FPGA Acceleration</span>
-                            <span class="tag">GAN Architectures</span>
-                            <span class="tag">Edge AI</span>
-                            <span class="tag">Hardware-Software Co-design</span>
-                        </div>
-
-                        <a
-                            class="project-link"
-                            href="https://github.com/charudatta10"
-                            target="_blank"
-                        >
-                            → View Research Work
-                        </a>
-                    </div>
-
-                    <!-- Project 3 -->
-                    <div class="project-card">
-                        <div class="project-header">
-                            <div class="project-title">Educator</div>
-                            <div class="project-status">
-                                Cybersecurity & Intelligent Systems
-                            </div>
-                        </div>
-
-                        <div class="project-desc">
-                            Teaching and mentoring at NFSU in areas spanning
-                            Malware Analysis, Artificial Intelligence, Natural
-                            Language Processing, Vulnerability Assessment &
-                            Penetration Testing (VAPT), Incident Response, and
-                            Applied Cryptography. Emphasis on bridging
-                            theoretical foundations with hands-on system-level
-                            implementation, preparing students for real-world
-                            security and AI challenges.
-                        </div>
-
-                        <div class="project-tags">
-                            <span class="tag">Malware Analysis</span>
-                            <span class="tag">Artificial Intelligence</span>
-                            <span class="tag">Natural Language Processing</span>
-                            <span class="tag">VAPT</span>
-                            <span class="tag">Incident Response</span>
-                            <span class="tag">Applied Cryptography</span>
-                        </div>
-
-                        <a
-                            class="project-link"
-                            href="https://github.com/charudatta10"
-                            target="_blank"
-                        >
-                            → View Academic Contributions
-                        </a>
-                    </div>
-
-                    <!-- Project 4 -->
-                    <div class="project-card">
-                        <div class="project-header">
-                            <div class="project-title">Developer</div>
-                            <div class="project-status">
-                                AI & Distributed Systems
-                            </div>
-                        </div>
-
-                        <div class="project-desc">
-                            Software developer specializing in Python-based
-                            AI/ML systems, web application development, and
-                            decentralized architectures. Builds scalable
-                            backends, intelligent automation pipelines, and
-                            peer-to-peer blockchain frameworks with focus on
-                            modular design, performance optimization, and secure
-                            deployment.
-                        </div>
-
-                        <div class="project-tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">Machine Learning</span>
-                            <span class="tag">Artificial Intelligence</span>
-                            <span class="tag">Web Development</span>
-                            <span class="tag">Blockchain</span>
-                            <span class="tag">Peer-to-Peer Systems</span>
-                        </div>
-
-                        <a
-                            class="project-link"
-                            href="https://github.com/charudatta10"
-                            target="_blank"
-                        >
-                            → View Development Work
-                        </a>
-                    </div>
-                </div>
-            </section>
-<section id="Archives">
-  <h2>Archives</h2>
-  <div class="content-block">
-    <p>
-      Explore complete research archive →
-      <a href="pages/about.html"
-" target="_blank">
-        portfolio
-      </a>
-    </p>
-  </div>
-</section>
-<section id="contact">
-  <h2>Contact</h2>
-  <div class="content-block">
-    <p>
-      GitHub:
-      <a href="https://github.com/charudatta10" target="_blank">
-        github.com/charudatta10
-      </a>
-    </p>
-  </div>
-</section>
-
-<footer>
-  © 2026 — Built as an evolving archive.
-</footer>
-
-</main>
-<!-- =========================
-     FLOATING CTA BUTTONS
-========================= -->
-<div class="floating-cta">
-  <a href="assets/CharudattaKorde.pdf" class="cta-btn" download>
-    ⬇ Download CV
-  </a>
-
-  <a href="mailto:charudatta.korde@nfsu.edu.in" class="cta-btn">
-    ✉ Contact Me
-  </a>
-
-  <a href="pages/about.html" class="cta-btn secondary">
-    📚 Visit Archive
-  </a> 
-</div>
-
 </body>
 </html>

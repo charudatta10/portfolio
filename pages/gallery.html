@@ -1,143 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gallery</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery — Charudatta Korde</title>
 
-  <link rel="stylesheet" href="../assets/style.css">
+  <meta name="description" content="Hand-crafted visualizations of the research behind Charudatta Korde — GAN hardware acceleration, MFDFA, wavelet discrimination and FPGA pipelines." />
+  <meta name="author" content="Charudatta Korde" />
+  <link rel="canonical" href="https://charudatta10.github.io/portfolio/pages/gallery.html" />
 
-  <link href="../pagefind/pagefind-ui.css" rel="stylesheet">
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Charudatta Korde" />
+  <meta property="og:title" content="Gallery — Charudatta Korde" />
+  <meta property="og:description" content="Visualizations of GAN hardware acceleration, MFDFA and FPGA pipelines." />
+  <meta property="og:url" content="https://charudatta10.github.io/portfolio/pages/gallery.html" />
+  <meta property="og:image" content="https://charudatta10.github.io/portfolio/assets/images/svg/favicon.svg" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Gallery — Charudatta Korde" />
+  <meta name="twitter:description" content="Visualizations of GAN hardware acceleration, MFDFA and FPGA pipelines." />
+
+  <link rel="icon" type="image/svg+xml" href="../assets/images/svg/favicon.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link href="../pagefind/pagefind-ui.css" rel="stylesheet" />
   <script src="../pagefind/pagefind-ui.js" defer></script>
+
+  <script>document.documentElement.classList.add('js');</script>
 </head>
 
 <body>
-
   <!-- Header loads here -->
   <div id="header-placeholder"></div>
 
   <main>
-
-    <section id="research-visuals">
-      <h2>Research Visualizations</h2>
-
-      <div class="project-grid">
-
-        <div class="project-card">
-          <img src="../assets/images/img2.png" alt="GAN Architecture Diagram">
-          <div class="project-desc">
-            Wavelet-Based GAN Discriminator Architecture Diagram
-          </div>
+    <section class="section" aria-labelledby="gallery-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Gallery</span>
+          <h1 class="section-title" id="gallery-title">Research visualizations</h1>
+          <p class="section-sub">
+            Hand-crafted diagrams of the work in this portfolio — every figure
+            here is generated inline (SVG), not stock imagery.
+          </p>
         </div>
 
-        <div class="project-card">
-          <img src="../assets/images/img4.png" alt="MFDFA Analysis">
-          <div class="project-desc">
-            2D MFDFA Synthetic Data Pattern Visualization
-          </div>
-        </div>
+        <div class="grid grid-2">
+          <article class="card project-card card-pad reveal">
+            <svg class="diagram" viewBox="0 0 520 380" data-animate aria-hidden="true">
+              <defs>
+                <linearGradient id="gal-g" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="var(--primary)"/>
+                  <stop offset="1" stop-color="var(--secondary)"/>
+                </linearGradient>
+              </defs>
+              <rect x="10" y="10" width="500" height="360" rx="24" fill="var(--surface-2)"/>
+              <rect x="10" y="10" width="500" height="360" rx="24" fill="none" stroke="var(--border)" stroke-width="1.5"/>
+              <text x="260" y="48" class="diagram-title" text-anchor="middle">Hardware-accelerated GAN pipeline</text>
+              <rect x="30" y="150" width="72" height="60" rx="12" class="diagram-node-cool"/>
+              <text x="66" y="183" class="diagram-text" text-anchor="middle">latent z</text>
+              <rect x="136" y="150" width="76" height="60" rx="12" class="diagram-node-hot"/>
+              <text x="174" y="173" class="diagram-title" text-anchor="middle">G</text>
+              <text x="174" y="189" class="diagram-sub" text-anchor="middle">generator</text>
+              <rect x="246" y="150" width="72" height="60" rx="12" class="diagram-node-cool"/>
+              <text x="282" y="183" class="diagram-text" text-anchor="middle">image</text>
+              <rect x="352" y="120" width="86" height="120" rx="12" class="diagram-node"/>
+              <text x="395" y="168" class="diagram-title" text-anchor="middle">D</text>
+              <text x="395" y="184" class="diagram-sub" text-anchor="middle">wavelet /</text>
+              <text x="395" y="198" class="diagram-sub" text-anchor="middle">MFDFA</text>
+              <rect x="246" y="258" width="72" height="60" rx="12" class="diagram-node-cool"/>
+              <text x="282" y="291" class="diagram-text" text-anchor="middle">real</text>
+              <path class="diagram-flow" data-dash d="M102 180 L136 180"/>
+              <path class="diagram-flow" data-dash d="M212 180 L246 180"/>
+              <path class="diagram-flow" data-dash d="M318 180 L352 180"/>
+              <path class="diagram-flow-2" data-dash d="M282 258 L282 210"/>
+              <path class="diagram-flow-2" d="M282 210 L352 180" opacity="0.5"/>
+              <path class="diagram-flow" d="M395 120 C 395 70, 60 70, 174 148" opacity="0.35" stroke-dasharray="4 5"/>
+              <text x="60" y="345" class="diagram-sub">training signal</text>
+              <text x="398" y="345" class="diagram-sub" text-anchor="end">real / fake</text>
+            </svg>
+            <div>
+              <h2 class="card-title" style="margin: 14px 0 4px">GAN pipeline on edge hardware</h2>
+              <p class="card-body">
+                Generator → image → discriminator with wavelet/MFDFA scoring, as
+                deployed in the hardware-accelerated architectures.
+              </p>
+            </div>
+          </article>
 
+          <article class="card project-card card-pad reveal">
+            <svg class="diagram" viewBox="0 0 400 190" data-animate aria-hidden="true">
+              <rect x="12" y="12" width="376" height="166" rx="14" fill="none" stroke="var(--border)" stroke-width="1.5"/>
+              <path class="diagram-flow-2" data-dash d="M40 150 L70 118 L100 134 L130 84 L160 102 L190 60 L220 96 L250 76 L280 104 L310 66 L340 88 L360 70"/>
+              <path class="diagram-flow" data-dash d="M40 176 L70 168 L100 172 L130 164 L160 170 L190 162 L220 168 L250 160 L280 166 L310 158 L340 164 L360 156" opacity="0.35"/>
+              <text x="60" y="30" class="diagram-title">Multifractal spectrum</text>
+              <path class="diagram-line" d="M70 120 L70 140 M200 120 L200 140 M330 120 L330 140"/>
+              <text x="70" y="116" class="diagram-sub" text-anchor="middle">q&lt;0</text>
+              <text x="200" y="116" class="diagram-sub" text-anchor="middle">q=0</text>
+              <text x="330" y="116" class="diagram-sub" text-anchor="middle">q&gt;0</text>
+            </svg>
+            <div>
+              <h2 class="card-title" style="margin: 14px 0 4px">Multifractal spectrum</h2>
+              <p class="card-body">
+                MFDFA embedded in the discriminator — the mechanism behind the
+                92.05% latency and 86.03% power reductions.
+              </p>
+            </div>
+          </article>
+
+          <article class="card project-card card-pad reveal">
+            <svg class="diagram" viewBox="0 0 400 190" data-animate aria-hidden="true">
+              <rect x="12" y="12" width="376" height="166" rx="14" fill="none" stroke="var(--border)" stroke-width="1.5"/>
+              <rect x="28" y="80" width="60" height="50" rx="10" class="diagram-node-cool"/>
+              <text x="58" y="109" class="diagram-sub" text-anchor="middle">z</text>
+              <rect x="112" y="80" width="60" height="50" rx="10" class="diagram-node-hot"/>
+              <text x="142" y="109" class="diagram-title" text-anchor="middle">G</text>
+              <rect x="196" y="80" width="60" height="50" rx="10" class="diagram-node-cool"/>
+              <text x="226" y="109" class="diagram-sub" text-anchor="middle">img</text>
+              <rect x="296" y="62" width="80" height="86" rx="10" class="diagram-node"/>
+              <text x="336" y="98" class="diagram-title" text-anchor="middle">D</text>
+              <text x="336" y="114" class="diagram-sub" text-anchor="middle">wavelet</text>
+              <path class="diagram-flow" data-dash d="M88 105 L112 105 M172 105 L196 105 M256 105 L296 105"/>
+              <text x="58" y="168" class="diagram-sub">genetic algorithm</text>
+              <path class="diagram-flow" d="M112 130 C 112 160, 50 160, 56 130" opacity="0.4"/>
+            </svg>
+            <div>
+              <h2 class="card-title" style="margin: 14px 0 4px">Evolutionary-enhanced GAN</h2>
+              <p class="card-body">
+                Genetic-algorithm-optimised generator with wavelet discrimination —
+                138 µs inference at 24 mW on the Kintex-7 KC705.
+              </p>
+            </div>
+          </article>
+
+          <article class="card project-card card-pad reveal">
+            <svg class="diagram" viewBox="0 0 400 190" data-animate aria-hidden="true">
+              <rect x="12" y="12" width="376" height="166" rx="14" fill="none" stroke="var(--border)" stroke-width="1.5"/>
+              <rect x="24" y="74" width="62" height="52" rx="10" class="diagram-node-cool"/>
+              <text x="55" y="103" class="diagram-sub" text-anchor="middle">image</text>
+              <rect x="112" y="74" width="62" height="52" rx="10" class="diagram-node"/>
+              <text x="143" y="96" class="diagram-sub" text-anchor="middle">quantise</text>
+              <rect x="200" y="74" width="62" height="52" rx="10" class="diagram-node"/>
+              <text x="231" y="96" class="diagram-sub" text-anchor="middle">tiling</text>
+              <rect x="288" y="74" width="80" height="52" rx="10" class="diagram-node-hot"/>
+              <text x="328" y="96" class="diagram-title" text-anchor="middle">DSP</text>
+              <path class="diagram-flow" data-dash d="M86 100 L112 100 M174 100 L200 100 M262 100 L288 100"/>
+              <text x="60" y="160" class="diagram-sub">NNGen deployment · KC705</text>
+            </svg>
+            <div>
+              <h2 class="card-title" style="margin: 14px 0 4px">2D-MFDFA GAN</h2>
+              <p class="card-body">
+                Quantisation → tiling → DSP through the NNGen framework —
+                85% FID improvement and 94% faster generation.
+              </p>
+            </div>
+          </article>
+
+          <article class="card project-card card-pad reveal">
+            <svg class="diagram" viewBox="0 0 540 460" data-animate aria-hidden="true">
+              <defs>
+                <linearGradient id="gal-chip" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="var(--primary-soft)"/>
+                  <stop offset="1" stop-color="var(--secondary-soft)"/>
+                </linearGradient>
+                <radialGradient id="gal-glow" cx="0.5" cy="0.35" r="0.75">
+                  <stop offset="0" stop-color="var(--primary)" stop-opacity="0.18"/>
+                  <stop offset="1" stop-color="var(--primary)" stop-opacity="0"/>
+                </radialGradient>
+              </defs>
+              <rect x="0" y="0" width="540" height="460" rx="28" fill="url(#gal-glow)"/>
+              <g>
+                <path class="diagram-line" d="M80 80 L200 50 M200 50 L320 80 M320 80 L440 50 M80 80 L110 160 M200 50 L260 140 M320 80 L390 160 M440 50 L390 160 M110 160 L260 140 M260 140 L390 160 M110 160 L260 210 M390 160 L260 210"/>
+                <path class="diagram-flow" data-dash d="M110 160 L260 140 M260 140 L390 160"/>
+                <path class="diagram-flow-2" data-dash d="M200 50 L260 140 M260 210 L260 252"/>
+                <circle cx="80" cy="80" r="9" class="diagram-dot"/>
+                <circle cx="200" cy="50" r="9" class="diagram-dot-2"/>
+                <circle cx="320" cy="80" r="9" class="diagram-dot"/>
+                <circle cx="440" cy="50" r="9" class="diagram-dot-2"/>
+                <circle cx="110" cy="160" r="7" class="diagram-dot"/>
+                <circle cx="260" cy="140" r="7" class="diagram-dot-2"/>
+                <circle cx="390" cy="160" r="7" class="diagram-dot"/>
+                <circle cx="260" cy="210" r="10" class="diagram-node-hot"/>
+                <text x="274" y="215" class="diagram-sub">AI</text>
+              </g>
+              <g>
+                <rect x="90" y="250" width="360" height="150" rx="20" fill="var(--surface)" stroke="var(--border-strong)" stroke-width="1.5"/>
+                <rect x="110" y="270" width="320" height="110" rx="12" fill="url(#gal-chip)" opacity="0.6"/>
+                <rect x="130" y="292" width="86" height="66" rx="10" class="diagram-node-hot"/>
+                <rect x="228" y="292" width="86" height="66" rx="10" class="diagram-node"/>
+                <rect x="326" y="292" width="86" height="66" rx="10" class="diagram-node-cool"/>
+                <text x="173" y="333" class="diagram-title" text-anchor="middle">G</text>
+                <text x="271" y="333" class="diagram-title" text-anchor="middle">D</text>
+                <text x="369" y="333" class="diagram-title" text-anchor="middle">MFDFA</text>
+                <text x="270" y="280" class="diagram-sub" text-anchor="middle">AMD Kintex-7 · KC705</text>
+                <g fill="var(--border-strong)">
+                  <rect x="120" y="400" width="12" height="16" rx="2"/>
+                  <rect x="152" y="400" width="12" height="16" rx="2"/>
+                  <rect x="184" y="400" width="12" height="16" rx="2"/>
+                  <rect x="216" y="400" width="12" height="16" rx="2"/>
+                  <rect x="248" y="400" width="12" height="16" rx="2"/>
+                  <rect x="280" y="400" width="12" height="16" rx="2"/>
+                  <rect x="312" y="400" width="12" height="16" rx="2"/>
+                  <rect x="344" y="400" width="12" height="16" rx="2"/>
+                  <rect x="376" y="400" width="12" height="16" rx="2"/>
+                  <rect x="408" y="400" width="12" height="16" rx="2"/>
+                </g>
+              </g>
+            </svg>
+            <div>
+              <h2 class="card-title" style="margin: 14px 0 4px">Neural mesh over chip die</h2>
+              <p class="card-body">
+                Generator, discriminator and MFDFA blocks on the AMD Kintex-7
+                KC705 — the target platform for the doctoral research.
+              </p>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
-
-
-    <section id="conference">
-      <h2>Conferences & Presentations</h2>
-
-      <div class="project-grid">
-
-        <div class="project-card">
-          <img src="../assets/images/img2.png" alt="Poster Presentation">
-          <div class="project-desc">
-            Poster Presentation - Edge Computing Optimization
-          </div>
-        </div>
-
-        <div class="project-card">
-          <img src="../assets/images/img4.png" alt="Conference Stage">
-          <div class="project-desc">
-            IEEE Conference Participation
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-
-    <section id="lab">
-      <h2>Lab & Experiments</h2>
-
-      <div class="project-grid">
-
-        <div class="project-card">
-          <img src="../assets/images/img1.png" alt="FPGA Setup">
-          <div class="project-desc">
-            FPGA Experimental Setup
-          </div>
-        </div>
-
-        <div class="project-card">
-          <img src="../assets/images/img3.png" alt="P2P Network">
-          <div class="project-desc">
-            P2P Distributed Architecture Model
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-
-    <section id="personal">
-      <h2>Personal Milestones</h2>
-
-      <div class="project-grid">
-
-        <div class="project-card">
-          <img src="../assets/images/5k-marathon.jpg" alt="5K Marathon">
-          <div class="project-desc">
-            5K Marathon Completion
-          </div>
-        </div>
-
-        <div class="project-card">
-          <img src="../assets/images/chess-tournament.jpg" alt="Chess Tournament">
-          <div class="project-desc">
-            State-Level Chess Tournament Participation
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-
-    <section id="contact">
-      <h2>Contact</h2>
-
-      <div class="content-block">
-        <p>
-          GitHub:
-          <a href="https://github.com/charudatta10" target="_blank">
-            github.com/charudatta10
-          </a>
-        </p>
-      </div>
-    </section>
-
   </main>
 
   <!-- Footer loads here -->
   <div id="footer-placeholder"></div>
 
   <script src="../assets/include.js"></script>
+  <script src="../assets/js/main.js"></script>
 
   <!-- Floating CTA -->
   <div class="floating-cta">
-    <a href="mailto:charudatta.korde@nfsu.edu.in" class="cta-btn">
-      ✉ Contact Me
-    </a>
+    <a class="btn btn-primary" href="../assets/CharudattaKorde.pdf" download="CharudattaKorde.pdf">Download CV</a>
+    <a class="btn btn-ghost" href="mailto:charudatta.korde@nfsu.edu.in">Contact</a>
   </div>
-
 </body>
-
 </html>

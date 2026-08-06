@@ -1,17 +1,17 @@
 <header class="site-header">
+  <a class="logo" href="../index.html" aria-label="Charudatta Korde — home">
+    <span class="logo-mark" aria-hidden="true">CK</span>
+    <span>Charudatta Korde</span>
+  </a>
 
-  <h1 class="logo">Charudatta Archive</h1>
-
-  <!-- Hamburger -->
-  <button class="menu-toggle" aria-label="Toggle menu">☰</button>
-
-  <nav class="nav">
+  <nav class="nav" id="site-nav" aria-label="Primary">
     <ul class="menu">
-
-      <li><a href="../index.html">Home</a></li>
+      <li><a href="../index.html" data-nav="home">Home</a></li>
 
       <li class="dropdown">
-        <a class="dropbtn" href="../pages/about.html">About</a>
+        <button class="dropbtn" type="button" aria-expanded="false">
+          About <span class="caret" aria-hidden="true">▾</span>
+        </button>
         <ul class="dropdown-content">
           <li><a href="../pages/about.html#mission">Mission</a></li>
           <li><a href="../pages/about.html#education">Education</a></li>
@@ -22,53 +22,62 @@
       </li>
 
       <li class="dropdown">
-        <a class="dropbtn" href="../pages/work.html">Work</a>
+        <button class="dropbtn" type="button" aria-expanded="false">
+          Research <span class="caret" aria-hidden="true">▾</span>
+        </button>
         <ul class="dropdown-content">
-          <li><a href="../pages/work.html#opensource">Open source</a></li>
-          <li><a href="../pages/work.html#research">Research</a></li>
-          <li><a href="../pages/work.html#academics">Academics</a></li>
-          <li><a href="../pages/work.html#experiment">Experiments</a></li>
+          <li><a href="../pages/work.html#research">Research areas</a></li>
+          <li><a href="../pages/work.html#research-code">Research → code</a></li>
+          <li><a href="../pages/work.html#publications">Publications</a></li>
         </ul>
       </li>
 
       <li class="dropdown">
-        <a class="dropbtn" href="../pages/writing.html">Writing</a>
+        <button class="dropbtn" type="button" aria-expanded="false">
+          Projects <span class="caret" aria-hidden="true">▾</span>
+        </button>
         <ul class="dropdown-content">
-          <li><a href="../pages/writing.html#notes">Notes & Knowledge base</a></li>
+          <li><a href="../pages/work.html#flagship">Flagship</a></li>
+          <li><a href="../pages/work.html#notable">Notable</a></li>
+          <li><a href="../pages/work.html#research-impls">Research implementations</a></li>
+          <li><a href="../pages/work.html#education-projects">Education</a></li>
+          <li><a href="../pages/work.html#experiments">Experiments & archive</a></li>
+        </ul>
+      </li>
+
+      <li class="dropdown">
+        <button class="dropbtn" type="button" aria-expanded="false">
+          Writing <span class="caret" aria-hidden="true">▾</span>
+        </button>
+        <ul class="dropdown-content">
+          <li><a href="../pages/writing.html#articles">Articles</a></li>
+          <li><a href="../pages/writing.html#knowledge">Knowledge systems</a></li>
           <li><a href="../pages/writing.html#documentation">Documentation</a></li>
-          <li><a href="../pages/writing.html#research-notes">Research Notes</a></li>
-          <li><a href="../pages/writing.html#conference-slides">Conference slides</a></li>
-          <li><a href="../pages/writing.html#philosophy-wiki">Philosophy wiki</a></li>
+          <li><a href="../pages/writing.html#research-notes">Research notes</a></li>
+          <li><a href="../pages/writing.html#philosophy">Philosophy</a></li>
         </ul>
       </li>
 
-      <li class="dropdown">
-        <a class="dropbtn" href="../pages/now.html">Now</a>
-        <ul class="dropdown-content">
-          <li><a href="../pages/now.html#focus">Focus</a></li>
-          <li><a href="../pages/now.html#research-progress">Research Progress</a></li>
-          <li><a href="../pages/now.html#learning">Learning</a></li>
-          <li><a href="../pages/now.html#building">Building</a></li>
-          <li><a href="../pages/now.html#long-term">Long Term Goals</a></li>
-        </ul>
-      </li>
-
-      <li class="dropdown">
-        <a class="dropbtn" href="../pages/gallery.html">Gallery</a>
-        <ul class="dropdown-content">
-          <li><a href="../pages/gallery.html">All Posts</a></li>
-          <li><a href="../pages/gallery.html#research">Research</a></li>
-          <li><a href="../pages/gallery.html#teaching">Teaching</a></li>
-          <li><a href="../pages/gallery.html#projects">Projects</a></li>
-        </ul>
-      </li>
-
-      <li><a href="../pages/contact.html">Contact</a></li>
-
+      <li><a href="../pages/now.html" data-nav="now">Now</a></li>
+      <li><a href="../pages/gallery.html" data-nav="gallery">Gallery</a></li>
+      <li><a href="../pages/contact.html" data-nav="contact">Contact</a></li>
     </ul>
   </nav>
 
-  <div id="search" class="search-box"></div>
-
+  <div class="header-tools">
+    <div id="search" class="search-box" role="search"></div>
+    <button
+      class="icon-btn theme-toggle"
+      type="button"
+      aria-label="Toggle color theme"
+      title="Toggle color theme"
+    ><span aria-hidden="true" class="theme-icon">🌙</span></button>
+    <button
+      class="icon-btn menu-toggle"
+      type="button"
+      aria-label="Toggle navigation menu"
+      aria-controls="site-nav"
+      aria-expanded="false"
+    ><span aria-hidden="true" class="hamburger">☰</span></button>
+  </div>
 </header>
-
