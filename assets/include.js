@@ -46,6 +46,9 @@
     await loadComponent("header-placeholder", PREFIX + "header.html");
     await loadComponent("footer-placeholder", PREFIX + "footer.html");
 
+    // Let main.js re-init header-dependent UI now that components exist.
+    window.dispatchEvent(new CustomEvent("ck:components"));
+
     // Pagefind search (only when the UI scripts are present)
     if (document.getElementById("search") && window.PagefindUI) {
       new window.PagefindUI({

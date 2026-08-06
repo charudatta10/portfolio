@@ -1,6 +1,10 @@
 /* -------------------------------------------------------------------------
    Portfolio interactions: theme toggle, nav, scroll reveal, pointer fx.
    Loaded on every page. Respects prefers-reduced-motion.
+
+   The header/footer are injected asynchronously by include.js, so all
+   header-dependent click handlers use event delegation on document and the
+   active-nav marking re-runs on the "ck:components" event.
    ------------------------------------------------------------------------- */
 (function () {
   "use strict";
@@ -10,15 +14,19 @@
   /* ----------------------------- Theme ---------------------------------- */
   var THEME_KEY = "ck-theme";
 
+  function currentTheme() {
+    return document.documentElement.getAttribute("data-theme") || "light";
+  }
+
   function applyTheme(theme) {
     document.documentElement.setAttribute("data-theme", theme);
-    var btn = document.querySelector(".theme-toggle .theme-icon");
-    if (btn) btn.textContent = theme === "dark" ? "☀️" : "🌙";
     try {
       localStorage.setItem(THEME_KEY, theme);
     } catch (e) {
       /* ignore */
     }
+    var icon = document.querySelector(".theme-toggle .theme-icon");
+    if (icon) icon.textContent = theme === "dark" ? "☀️" : "🌙";
   }
 
   function initTheme() {
@@ -34,50 +42,10 @@
         : "light";
     }
     applyTheme(stored);
-    var toggle = document.querySelector(".theme-toggle");
-    if (toggle) {
-      toggle.addEventListener("click", function () {
-        applyTheme(
-          document.documentElement.getAttribute("data-theme") === "dark"
-            ? "light"
-            : "dark"
-        );
-      });
-    }
   }
 
   /* ------------------------------ Nav ----------------------------------- */
-  function initNav() {
-    var toggle = document.querySelector(".menu-toggle");
-    var nav = document.getElementById("site-nav");
-
-    if (toggle && nav) {
-      toggle.addEventListener("click", function () {
-        var open = nav.classList.toggle("open");
-        toggle.setAttribute("aria-expanded", open ? "true" : "false");
-      });
-    }
-
-    document.querySelectorAll(".dropdown > .dropbtn").forEach(function (btn) {
-      btn.addEventListener("click", function (e) {
-        var li = this.parentElement;
-        if (window.innerWidth <= 860) {
-          e.preventDefault();
-          var open = li.classList.toggle("open");
-          this.setAttribute("aria-expanded", open ? "true" : "false");
-        }
-      });
-    });
-
-    // Close mobile nav after selecting an item
-    document.querySelectorAll("#site-nav a").forEach(function (a) {
-      a.addEventListener("click", function () {
-        if (nav) nav.classList.remove("open");
-        if (toggle) toggle.setAttribute("aria-expanded", "false");
-      });
-    });
-
-    // Mark the active top-level section
+  function markActive() {
     var path = window.location.pathname;
     var current = path.endsWith("work.html")
       ? "work"
@@ -111,6 +79,55 @@
       if (home) home.setAttribute("aria-current", "page");
     }
   }
+
+  function closeMobileNav() {
+    var nav = document.getElementById("site-nav");
+    if (nav) nav.classList.remove("open");
+    var toggle = document.querySelector(".menu-toggle");
+    if (toggle) toggle.setAttribute("aria-expanded", "false");
+  }
+
+  // Delegated handlers: header may be injected after this script runs.
+  document.addEventListener("click", function (e) {
+    var target = e.target;
+
+    var themeBtn = target.closest(".theme-toggle");
+    if (themeBtn) {
+      applyTheme(currentTheme() === "dark" ? "light" : "dark");
+      return;
+    }
+
+    var menuBtn = target.closest(".menu-toggle");
+    if (menuBtn) {
+      var nav = document.getElementById("site-nav");
+      if (nav) {
+        var open = nav.classList.toggle("open");
+        menuBtn.setAttribute("aria-expanded", open ? "true" : "false");
+      }
+      return;
+    }
+
+    var dropBtn = target.closest(".dropdown > .dropbtn");
+    if (dropBtn) {
+      if (window.innerWidth <= 860) {
+        e.preventDefault();
+        var li = dropBtn.parentElement;
+        var open = li.classList.toggle("open");
+        dropBtn.setAttribute("aria-expanded", open ? "true" : "false");
+      }
+      return;
+    }
+
+    if (target.closest("#site-nav a")) {
+      closeMobileNav();
+    }
+  });
+
+  // Header/footer injected asynchronously — re-run header-dependent bits.
+  document.addEventListener("ck:components", function () {
+    markActive();
+    applyTheme(currentTheme());
+  });
 
   /* ------------------------- Scroll reveal ------------------------------ */
   function initReveal() {
@@ -181,7 +198,7 @@
 
   document.addEventListener("DOMContentLoaded", function () {
     initTheme();
-    initNav();
+    markActive();
     initReveal();
     initPointer();
     initAnimatedSvg();
