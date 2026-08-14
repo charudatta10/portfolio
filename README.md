@@ -1,5 +1,10 @@
 # Charudatta Korde — Portfolio
 
+<p align="center">
+  <img src="assets/cover.png" alt="portfolio" width="800"/>
+</p>
+
+
 Research, engineering and teaching portfolio of [Charudatta Korde](https://github.com/charudatta10)
 — resource-efficient AI, FPGA acceleration, cybersecurity and open-source
 software.
