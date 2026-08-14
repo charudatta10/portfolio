@@ -6,6 +6,8 @@ software.
 
 **Live:** https://charudatta10.github.io/portfolio/
 
+![Version](https://img.shields.io/github/v/release/charudatta10/portfolio)
+
 ## Highlights
 
 - **Research** — hardware-optimised GAN architectures for FPGA-based edge
