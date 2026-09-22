@@ -1,10 +1,5 @@
 # Charudatta Korde — Portfolio
 
-<p align="center">
-  <img src="assets/cover.png" alt="portfolio" width="800"/>
-</p>
-
-
 Research, engineering and teaching portfolio of [Charudatta Korde](https://github.com/charudatta10)
 — resource-efficient AI, FPGA acceleration, cybersecurity and open-source
 software.
@@ -15,9 +10,10 @@ software.
 
 ## Highlights
 
+- **Single-file site** — the entire portfolio lives in one self-contained
+  `index.html` (inline CSS + JS, no build step).
 - **Research** — hardware-optimised GAN architectures for FPGA-based edge
-  devices; all nine publications verified against ORCID and Crossref on
-  `pages/work.html`.
+  devices; all nine publications verified against ORCID and Crossref.
 - **Projects** — every card links to its exact repository or live site, no
   generic "view profile" links.
 - **Design** — hand-crafted SVG/CSS diagrams, dark/light themes, scroll
@@ -27,23 +23,10 @@ software.
 
 ```
 .
-├── index.html                  # Homepage
-├── pages/
-│   ├── header.html             # Shared header (injected at runtime)
-│   ├── footer.html             # Shared footer (injected at runtime)
-│   ├── work.html               # Research areas, 9 publications, projects
-│   ├── about.html              # Mission, education, experience, skills
-│   ├── writing.html            # Articles, knowledge systems, docs
-│   ├── now.html                # Current focus
-│   ├── contact.html            # Channels + collaboration
-│   └── gallery.html            # Research visualizations (inline SVG)
+├── index.html                  # The entire site (markup + CSS + JS)
 ├── assets/
-│   ├── css/style.css           # Design system
-│   ├── js/main.js              # Theme, nav, reveal, animation
-│   ├── include.js              # Header/footer loader + search boot
 │   ├── images/svg/favicon.svg
 │   └── CharudattaKorde.pdf     # CV
-├── pagefind/                   # Pagefind search index (committed)
 ├── sitemap.xml
 ├── robots.txt
 └── .github/workflows/pages.yml # Deploys the repo root to GitHub Pages
@@ -55,13 +38,6 @@ Serve locally:
 
 ```sh
 python -m http.server 8000
-```
-
-Search uses [Pagefind](https://pagefind.app). After changing page content,
-rebuild the index and commit it:
-
-```sh
-npx pagefind --site .
 ```
 
 ## Deployment
