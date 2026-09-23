@@ -1,0 +1,31 @@
+[project]
+name = "personal-portfolio"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10.6"
+dependencies = [
+    "mkdocs-glightbox>=0.5.2",
+    "mkdocs-material>=9.7.1",
+]
+
+[tool.poe.tasks.commit]
+help = "Add all files and commit"
+cmd = "git add . && git commit -m '${message:-init}'"
+
+[tool.poe.tasks.quit]
+help = "Print copyright"
+cmd = "echo 'Copyright © 2024 Charudatta'"
+
+[tool.poe.tasks.test]
+help = "Run unit tests"
+cmd = "python -m unittest discover -s tests"
+
+[tool.poe.tasks.build]
+help = "Build the portfolio using MkDocs"
+cmd = "python -m mkdocs build"
+
+[tool.poe.tasks.serve]
+help = "Serve the portfolio locally using MkDocs"
+cmd = "python -m mkdocs serve"
+
