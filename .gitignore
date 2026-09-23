@@ -1,0 +1,9 @@
+# Logs
+*.log
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+
+# Generated site build
+site/
