@@ -45,6 +45,12 @@ python -m http.server 8000
 Pushing to `main` triggers the `pages.yml` workflow, which publishes the repo
 root to GitHub Pages.
 
+## Merged repos
+
+- **`personal-portfolio`** (MkDocs Material variant) was merged into this repo
+  on 23 Sep 2026. Its content lives under [`_archive/personal-portfolio/`](_archive/personal-portfolio/),
+  history preserved via `git subtree add --squash`.
+
 ## License
 
 The site content and design are © Charudatta Korde. Third-party trademarks
