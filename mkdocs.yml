@@ -1,0 +1,162 @@
+site_name: My Portfolio Website
+site_url: https://github.com/charudatta10/myblog
+theme:
+  name: material
+  custom_dir: overrides
+  palette:
+    - scheme: default
+      primary: blue
+      accent: light blue
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    - scheme: slate
+      primary: blue
+      accent: light blue
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+  font:
+    text: Roboto
+  language: en
+  logo: assets/logo.ico
+  features:
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.prune
+    - navigation.indexes
+    - toc.follow
+    - toc.integrate
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - search.share
+    - navigation.footer
+plugins:
+  - search
+  - blog:
+      enabled: true
+      blog_dir: blog
+      blog_toc: true
+      archive: false
+      categories: true
+      pagination: true
+      pagination_per_page: 1
+      pagination_format: "~2~"
+  - offline
+  - tags:
+      enabled: true
+  - glightbox:
+      touchNavigation: true
+      loop: false
+      effect: zoom
+      slide_effect: slide
+      width: "64"
+      height: "64"
+      zoomable: true
+      draggable: true
+      skip_classes:
+        - custom-skip-class-name
+      auto_caption: true
+      caption_position: bottom
+      background: white
+      shadow: true
+      manual: false
+
+nav:
+  - Home: index.html
+  - Profile:
+      - About: md/about.md
+      - Achievements: md/achievements.md
+      - Education: md/education.md
+      - Autodidac: md/autodidac.md
+      - Skills: md/skills.md
+      - Experience: md/experience.md
+      - Inbox: md/inbox.md
+  - Projects:
+      - Academic: md/academic.md
+      - Publications: md/publication.md
+      - Work: md/foss.md
+  - Blog:
+      - Self-Hosted: blog/index.md
+      - Wiki: md/wiki.md
+      - Dev.to: md/devto.md
+      - Docs: md/docs.md
+  - Gallery: 
+      - Images: md/gallery.md
+      - PPT: md/ppt.md
+  - Contact: md/contact.md
+extra:
+  consent:
+    title: Cookie consent
+    description: >-
+      We use cookies to recognize your repeated visits and preferences, as well
+      as to measure the effectiveness of our documentation and whether users
+      find what they're searching for. With your consent, you're helping us to
+      make our documentation better.
+    actions:
+      - accept
+      - manage
+  copyright: >
+    Copyright &copy; 2016 - 2024 Charudatta Gurudas Korde -
+    <a href="#__consent">Change cookie settings</a>
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/charudatta10
+    - icon: fontawesome/brands/instagram
+      link: https://www.instagram.com/ryunabi326/
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/charudatta-korde
+    - icon: fontawesome/brands/discord
+      link: blueidragon10's server
+    - icon: fontawesome/brands/mastodon
+      link: https://mastodon.social/@ryunabi326
+extra_css:
+  - stylesheets/extra.css
+extra_javascript:
+  - javascripts/extra.js
+  - javascripts/custom.js
+  - javascripts/serviceWorker.js
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - meta
+  - toc:
+      permalink: true
+      title: On this page
+      permalink_title: Anchor link to this section for reference
+      toc_depth: 3
+  - tables
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.critic
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      options:
+        custom_icons:
+          - overrides/.icons
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - pymdownx.keys
+  - pymdownx.smartsymbols
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+      clickable_checkbox: true
+#disqus: my-portfolio-website
