@@ -653,31 +653,9 @@
           </ul>
         </li>
 
-        <li class="dropdown">
-          <button class="dropbtn" type="button" aria-expanded="false">
-            Projects <span class="caret" aria-hidden="true">▾</span>
-          </button>
-          <ul class="dropdown-content">
-            <li><a href="#projects">Selected open source</a></li>
-            <li><a href="#notable">Notable</a></li>
-            <li><a href="#research-impls">Research implementations</a></li>
-            <li><a href="#education-projects">Education</a></li>
-            <li><a href="#experiments">Experiments & archive</a></li>
-          </ul>
-        </li>
+        <li><a href="#projects">Projects</a></li>
 
-        <li class="dropdown">
-          <button class="dropbtn" type="button" aria-expanded="false">
-            Writing <span class="caret" aria-hidden="true">▾</span>
-          </button>
-          <ul class="dropdown-content">
-            <li><a href="#articles">Articles</a></li>
-            <li><a href="#knowledge">Knowledge systems</a></li>
-            <li><a href="#documentation">Documentation</a></li>
-            <li><a href="#research-notes">Research notes</a></li>
-            <li><a href="#philosophy">Philosophy</a></li>
-          </ul>
-        </li>
+        <li><a href="#writing">Writing</a></li>
 
         <li><a href="#now">Now</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -1056,16 +1034,16 @@
       <div class="container">
         <div class="section-head reveal">
           <span class="eyebrow">Projects</span>
-          <h2 class="section-title" id="projects-title">Selected open source</h2>
+          <h2 class="section-title" id="projects-title">Projects</h2>
           <p class="section-sub">
-            Flagship projects from the
-            <a href="https://github.com/charudatta10" rel="noopener" target="_blank">charudatta10</a>
-            profile. Every card links to its exact repository or live site — no
+            Open-source tools, research implementations and degree projects from
+            the <a href="https://github.com/charudatta10" rel="noopener" target="_blank">charudatta10</a>
+            profile — every card links to its exact repository or live site, no
             generic profile links.
           </p>
         </div>
 
-        <div class="grid grid-3">
+        <div class="grid grid-3 fold-list" data-show="4">
           <article class="card project-card card-pad reveal">
             <div class="project-icon" aria-hidden="true">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
@@ -1163,201 +1141,150 @@
               <a href="https://charudatta10.github.io/link-net/" rel="noopener" target="_blank">Live →</a>
             </div>
           </article>
-        </div>
 
-        <!-- Notable -->
-        <div id="notable" style="padding-top: 72px">
-          <div class="section-head reveal">
-            <h2 class="section-title">Notable projects</h2>
-            <p class="section-sub">
-              Automation, AI tooling, security and knowledge systems built for
-              research workflows and teaching.
+          <article class="card card-pad reveal">
+            <span class="project-status">Automation</span>
+            <h3 class="card-title">task-runner-SDLC</h3>
+            <p class="card-body">
+              Automates init, deploy, licence, readme and maintenance tasks
+              across projects (now maintained as PowerShell modules).
             </p>
-          </div>
+            <div class="card-footer project-actions">
+              <a href="https://github.com/charudatta10/task-runner-SDLC" rel="noopener" target="_blank">Source →</a>
+            </div>
+          </article>
 
-          <div class="grid grid-3 fold-list" data-show="4">
-            <article class="card card-pad reveal">
-              <span class="project-status">Automation</span>
-              <h3 class="card-title">task-runner-SDLC</h3>
-              <p class="card-body">
-                Automates init, deploy, licence, readme and maintenance tasks
-                across projects (now maintained as PowerShell modules).
-              </p>
-              <div class="card-footer project-actions">
-                <a href="https://github.com/charudatta10/task-runner-SDLC" rel="noopener" target="_blank">Source →</a>
-              </div>
-            </article>
-
-            <article class="card card-pad reveal">
-              <span class="project-status">AI tooling</span>
-              <h3 class="card-title">ai-orb · ai-rag · ai-translate</h3>
-              <p class="card-body">
-                Agent framework, retrieval-augmented generation and code
-                translation, each running on local models.
-              </p>
-              <div class="card-footer project-actions">
-                <a href="https://github.com/charudatta10/ai-orb" rel="noopener" target="_blank">ai-orb →</a>
-                <a href="https://github.com/charudatta10/ai-rag" rel="noopener" target="_blank">ai-rag →</a>
-                <a href="https://github.com/charudatta10/ai-translate" rel="noopener" target="_blank">ai-translate →</a>
-              </div>
-            </article>
-
-            <article class="card card-pad reveal">
-              <span class="project-status">AI tooling</span>
-              <h3 class="card-title">ai-doc-gen · ai-igen · ai_chat</h3>
-              <p class="card-body">
-                Generate project documentation with a local LLM, produce
-                illustrations locally, and a lightweight local chat interface.
-              </p>
-              <div class="card-footer project-actions">
-                <a href="https://github.com/charudatta10/ai-doc-gen" rel="noopener" target="_blank">ai-doc-gen →</a>
-                <a href="https://charudatta10.github.io/ai-doc-gen/" rel="noopener" target="_blank">Docs →</a>
-                <a href="https://github.com/charudatta10/ai-igen" rel="noopener" target="_blank">ai-igen →</a>
-                <a href="https://github.com/charudatta10/ai_chat" rel="noopener" target="_blank">ai_chat →</a>
-              </div>
-            </article>
-
-            <article class="card card-pad reveal">
-              <span class="project-status">Security</span>
-              <h3 class="card-title">one-time-share · sandLua</h3>
-              <p class="card-body">
-                Secure single-download file sharing, and a Lua reverse-engineering
-                sandbox with static and dynamic analysis.
-              </p>
-              <div class="card-footer project-actions">
-                <a href="https://github.com/charudatta10/one-time-share" rel="noopener" target="_blank">one-time-share →</a>
-                <a href="https://github.com/charudatta10/sandLua" rel="noopener" target="_blank">sandLua →</a>
-              </div>
-            </article>
-
-            <article class="card card-pad reveal">
-              <span class="project-status">Knowledge</span>
-              <h3 class="card-title">wiki-notes · ibrain</h3>
-              <p class="card-body">
-                Foam + Raito personal knowledge graph, and a Docsify-powered notes
-                &amp; wiki site.
-              </p>
-              <div class="card-footer project-actions">
-                <a href="https://github.com/charudatta10/wiki-notes" rel="noopener" target="_blank">wiki-notes →</a>
-                <a href="https://charudatta10.github.io/ibrain/" rel="noopener" target="_blank">ibrain →</a>
-              </div>
-            </article>
-
-            <article class="card card-pad reveal">
-              <span class="project-status">Dev tools</span>
-              <h3 class="card-title">project-tile · pypwa · file-tagger</h3>
-              <p class="card-body">
-                Showcase projects as tiles, ship any Python script as a
-                single-file PWA, and organise files by tags.
-              </p>
-              <div class="card-footer project-actions">
-                <a href="https://charudatta10.github.io/project-tile/" rel="noopener" target="_blank">project-tile →</a>
-                <a href="https://github.com/charudatta10/pypwa" rel="noopener" target="_blank">pypwa →</a>
-                <a href="https://github.com/charudatta10/file-tagger" rel="noopener" target="_blank">file-tagger →</a>
-              </div>
-            </article>
-          </div>
-        </div>
-
-        <!-- Research implementations -->
-        <div id="research-impls" style="padding-top: 72px">
-          <div class="section-head reveal">
-            <h2 class="section-title">Research implementations</h2>
-            <p class="section-sub">
-              Code directly tied to the publication record — the same lines of
-              work from the earliest papers to the doctoral GAN research.
+          <article class="card card-pad reveal">
+            <span class="project-status">AI tooling</span>
+            <h3 class="card-title">ai-orb · ai-rag · ai-translate</h3>
+            <p class="card-body">
+              Agent framework, retrieval-augmented generation and code
+              translation, each running on local models.
             </p>
-          </div>
+            <div class="card-footer project-actions">
+              <a href="https://github.com/charudatta10/ai-orb" rel="noopener" target="_blank">ai-orb →</a>
+              <a href="https://github.com/charudatta10/ai-rag" rel="noopener" target="_blank">ai-rag →</a>
+              <a href="https://github.com/charudatta10/ai-translate" rel="noopener" target="_blank">ai-translate →</a>
+            </div>
+          </article>
 
-          <div class="grid grid-3">
-            <article class="card card-pad reveal">
-              <span class="project-status">Research · academic</span>
-              <h3 class="card-title">Devanagari Recognizer</h3>
-              <p class="card-body">
-                Handwritten Devanagari script recognition system from the
-                Bachelor's project (2015) — the same line of work as the ISVLSI
-                publication on FPGA pre-processing.
-              </p>
-              <div class="chips" style="margin-bottom: 14px">
-                <span class="chip">MATLAB</span>
-                <span class="chip">OCR</span>
-                <span class="chip">ML</span>
-              </div>
-              <div class="card-footer project-actions">
-                <a href="https://github.com/charudatta10/devanagari-handwriting-recognizer" rel="noopener" target="_blank">Source →</a>
-              </div>
-            </article>
-
-            <article class="card card-pad reveal">
-              <span class="project-status">Research</span>
-              <h3 class="card-title">PGAN-DNN</h3>
-              <p class="card-body">
-                2019 GAN research implementation (perceptual adversarial training
-                experiments) — part of the doctoral exploration into stable GAN
-                training that led to the INDICON publication.
-              </p>
-              <div class="chips" style="margin-bottom: 14px">
-                <span class="chip">PyTorch</span>
-                <span class="chip">GAN</span>
-                <span class="chip">Research</span>
-              </div>
-              <div class="card-footer project-actions">
-                <a href="https://github.com/charudatta10/PGAN-DNN" rel="noopener" target="_blank">Source →</a>
-              </div>
-            </article>
-          </div>
-        </div>
-
-        <!-- Education projects -->
-        <div id="education-projects" style="padding-top: 72px">
-          <div class="section-head reveal">
-            <h2 class="section-title">Education projects</h2>
-            <p class="section-sub">
-              Degree projects that started the research lines now published.
+          <article class="card card-pad reveal">
+            <span class="project-status">AI tooling</span>
+            <h3 class="card-title">ai-doc-gen · ai-igen · ai_chat</h3>
+            <p class="card-body">
+              Generate project documentation with a local LLM, produce
+              illustrations locally, and a lightweight local chat interface.
             </p>
-          </div>
+            <div class="card-footer project-actions">
+              <a href="https://github.com/charudatta10/ai-doc-gen" rel="noopener" target="_blank">ai-doc-gen →</a>
+              <a href="https://charudatta10.github.io/ai-doc-gen/" rel="noopener" target="_blank">Docs →</a>
+              <a href="https://github.com/charudatta10/ai-igen" rel="noopener" target="_blank">ai-igen →</a>
+              <a href="https://github.com/charudatta10/ai_chat" rel="noopener" target="_blank">ai_chat →</a>
+            </div>
+          </article>
 
-          <div class="content-block card card-pad reveal">
-            <ul class="feature-list">
-              <li>
-                <strong>Handwritten Devanagari Script Recognition (2015)</strong> —
-                Machine learning-based character recognition system with FPGA
-                pre-processing (Bachelor's Project, GEC Goa). Published at ISVLSI.
-              </li>
-              <li>
-                <strong>Total Electron Content as Seismic Precursor (2017)</strong> —
-                MFDFA-based ionospheric pattern analysis for earthquake detection
-                (Master's Project, GEC Goa &amp; IIT Bombay). Presented at IAMG.
-              </li>
-              <li>
-                <strong>Hybrid Evolutionary Optimization of GANs (2019)</strong> —
-                Evolutionary + backprop training framework for improved GAN
-                convergence (PhD Work, NIT Goa). Published at INDICON.
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Experiments & archive -->
-        <div id="experiments" style="padding-top: 72px">
-          <div class="section-head reveal">
-            <h2 class="section-title">Experiments &amp; archive</h2>
-            <p class="section-sub">
-              Exploratory and laboratory work — some published, some living on
-              the profile, all listed without invented links.
+          <article class="card card-pad reveal">
+            <span class="project-status">Security</span>
+            <h3 class="card-title">one-time-share · sandLua</h3>
+            <p class="card-body">
+              Secure single-download file sharing, and a Lua reverse-engineering
+              sandbox with static and dynamic analysis.
             </p>
-          </div>
+            <div class="card-footer project-actions">
+              <a href="https://github.com/charudatta10/one-time-share" rel="noopener" target="_blank">one-time-share →</a>
+              <a href="https://github.com/charudatta10/sandLua" rel="noopener" target="_blank">sandLua →</a>
+            </div>
+          </article>
 
-          <div class="content-block card card-pad reveal">
-            <ul class="feature-list fold-list" data-show="4">
-              <li>AI Grand Challenge — PS12 (Underwater Acoustic Systems).</li>
-              <li>P2P Distributed Blockchain for Postmortem Reason-of-Death Prediction.</li>
-              <li>Blockchain-based Malware Detection Research.</li>
-              <li>Decentralized Federated Learning Infrastructure Lab Setup.</li>
-              <li>Experimental Rust blockchain — DAO-driven educational governance.</li>
-              <li>Federated LLM architecture — torrent-based decentralised training.</li>
-            </ul>
-          </div>
+          <article class="card card-pad reveal">
+            <span class="project-status">Knowledge</span>
+            <h3 class="card-title">wiki-notes · ibrain</h3>
+            <p class="card-body">
+              Foam + Raito personal knowledge graph, and a Docsify-powered notes
+              &amp; wiki site.
+            </p>
+            <div class="card-footer project-actions">
+              <a href="https://github.com/charudatta10/wiki-notes" rel="noopener" target="_blank">wiki-notes →</a>
+              <a href="https://charudatta10.github.io/ibrain/" rel="noopener" target="_blank">ibrain →</a>
+            </div>
+          </article>
+
+          <article class="card card-pad reveal">
+            <span class="project-status">Dev tools</span>
+            <h3 class="card-title">project-tile · pypwa · file-tagger</h3>
+            <p class="card-body">
+              Showcase projects as tiles, ship any Python script as a
+              single-file PWA, and organise files by tags.
+            </p>
+            <div class="card-footer project-actions">
+              <a href="https://charudatta10.github.io/project-tile/" rel="noopener" target="_blank">project-tile →</a>
+              <a href="https://github.com/charudatta10/pypwa" rel="noopener" target="_blank">pypwa →</a>
+              <a href="https://github.com/charudatta10/file-tagger" rel="noopener" target="_blank">file-tagger →</a>
+            </div>
+          </article>
+
+          <article class="card card-pad reveal">
+            <span class="project-status">Research · academic</span>
+            <h3 class="card-title">Devanagari Recognizer</h3>
+            <p class="card-body">
+              Handwritten Devanagari script recognition system from the
+              Bachelor's project (2015) — the same line of work as the ISVLSI
+              publication on FPGA pre-processing.
+            </p>
+            <div class="chips" style="margin-bottom: 14px">
+              <span class="chip">MATLAB</span>
+              <span class="chip">OCR</span>
+              <span class="chip">ML</span>
+            </div>
+            <div class="card-footer project-actions">
+              <a href="https://github.com/charudatta10/devanagari-handwriting-recognizer" rel="noopener" target="_blank">Source →</a>
+            </div>
+          </article>
+
+          <article class="card card-pad reveal">
+            <span class="project-status">Research</span>
+            <h3 class="card-title">PGAN-DNN</h3>
+            <p class="card-body">
+              2019 GAN research implementation (perceptual adversarial training
+              experiments) — part of the doctoral exploration into stable GAN
+              training that led to the INDICON publication.
+            </p>
+            <div class="chips" style="margin-bottom: 14px">
+              <span class="chip">PyTorch</span>
+              <span class="chip">GAN</span>
+              <span class="chip">Research</span>
+            </div>
+            <div class="card-footer project-actions">
+              <a href="https://github.com/charudatta10/PGAN-DNN" rel="noopener" target="_blank">Source →</a>
+            </div>
+          </article>
+
+          <article class="card card-pad reveal">
+            <span class="project-status">Education · 2015</span>
+            <h3 class="card-title">Devanagari Script Recognition (Bachelor's)</h3>
+            <p class="card-body">
+              Machine learning-based character recognition system with FPGA
+              pre-processing (GEC Goa). Published at ISVLSI.
+            </p>
+          </article>
+
+          <article class="card card-pad reveal">
+            <span class="project-status">Education · 2017</span>
+            <h3 class="card-title">TEC as Seismic Precursor (Master's)</h3>
+            <p class="card-body">
+              MFDFA-based ionospheric pattern analysis for earthquake detection
+              (GEC Goa &amp; IIT Bombay). Presented at IAMG.
+            </p>
+          </article>
+
+          <article class="card card-pad reveal">
+            <span class="project-status">Education · 2019</span>
+            <h3 class="card-title">Hybrid Evolutionary Optimization of GANs (PhD Work)</h3>
+            <p class="card-body">
+              Evolutionary + backprop training framework for improved GAN
+              convergence (NIT Goa). Published at INDICON.
+            </p>
+          </article>
         </div>
       </div>
     </section>
@@ -1367,7 +1294,7 @@
       <div class="container">
         <div class="section-head reveal">
           <span class="eyebrow">Publications</span>
-          <h2 class="section-title" id="pubs-title">All nine publications</h2>
+          <h2 class="section-title" id="pubs-title">Publications</h2>
           <p class="section-sub">
             Every entry verified against ORCID and Crossref. DOIs resolve to the
             publisher; the two conference papers without DOIs link to their
@@ -1503,51 +1430,6 @@
       </div>
     </section>
 
-    <!-- ========================= TEACHING ============================== -->
-    <section class="section" id="teaching" aria-labelledby="teaching-title">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="eyebrow">Teaching</span>
-          <h2 class="section-title" id="teaching-title">Research-led teaching</h2>
-          <p class="section-sub">
-            Teaching is treated as research: build the simplest system that
-            makes a hard idea clear, then let students break it and rebuild it.
-          </p>
-        </div>
-
-        <div class="grid grid-3">
-          <article class="card card-pad reveal">
-            <span class="project-status">2024 — present</span>
-            <h3 class="card-title">Lecturer, National Forensic Sciences University</h3>
-            <p class="card-body">
-              Incident Response and Vulnerability Assessment &amp; Penetration
-              Testing (VAPT) — applied cybersecurity practice with system-level
-              analysis and research-informed instruction.
-            </p>
-          </article>
-
-          <article class="card card-pad reveal">
-            <span class="project-status">2017 — 2026</span>
-            <h3 class="card-title">Research Scholar &amp; Teaching Assistant, NIT Goa</h3>
-            <p class="card-body">
-              Doctoral research in FPGA-based AI acceleration. Mentored
-              students and guided laboratory work; 6 postgraduate theses
-              supervised across AI and hardware-accelerated architectures.
-            </p>
-          </article>
-
-          <article class="card card-pad reveal">
-            <span class="project-status">2024</span>
-            <h3 class="card-title">Visiting Faculty, Goa Polytechnic College</h3>
-            <p class="card-body">
-              Laboratory instruction in Basic Electronics — circuit
-              fundamentals, measurement techniques and applied engineering.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
     <!-- ========================= WRITING =============================== -->
     <section class="section" id="writing" aria-labelledby="writing-title">
       <div class="container">
@@ -1624,99 +1506,6 @@
           </div>
         </div>
 
-        <div id="knowledge" style="padding-top: 48px">
-          <div class="section-head reveal">
-            <h2 class="section-title" style="font-size: 1.4rem">Living knowledge bases</h2>
-          </div>
-          <div class="grid grid-2">
-            <article class="card card-pad reveal">
-              <h3 class="card-title">Personal knowledge graph</h3>
-              <ul class="link-list">
-                <li>
-                  <a href="https://charudatta10.github.io/ibrain/" rel="noopener" target="_blank">
-                    <span>Personal knowledge base (Docsify)</span><span class="chev" aria-hidden="true">→</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="https://github.com/charudatta10/wiki-notes" rel="noopener" target="_blank">
-                    <span>Foam + Raito knowledge graph</span><span class="chev" aria-hidden="true">→</span>
-                  </a>
-                </li>
-              </ul>
-            </article>
-
-            <article class="card card-pad reveal">
-              <h3 class="card-title">Curated hubs</h3>
-              <ul class="link-list">
-                <li>
-                  <a href="https://charudatta10.github.io/forensic-fathers-library/" rel="noopener" target="_blank">
-                    <span>Forensic fathers — RAG library</span><span class="chev" aria-hidden="true">→</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="https://charudatta10.github.io/link-net/" rel="noopener" target="_blank">
-                    <span>Link-net — aggregated resources</span><span class="chev" aria-hidden="true">→</span>
-                  </a>
-                </li>
-              </ul>
-            </article>
-          </div>
-        </div>
-
-        <div id="documentation" style="padding-top: 48px">
-          <div class="section-head reveal">
-            <h2 class="section-title" style="font-size: 1.4rem">Project documentation sites</h2>
-          </div>
-          <div class="grid grid-2">
-            <article class="card card-pad reveal">
-              <h3 class="card-title">project-tile</h3>
-              <p class="card-body">Showcase projects as tiles — documentation and usage guide.</p>
-              <div class="card-footer project-actions">
-                <a href="https://charudatta10.github.io/project-tile/" rel="noopener" target="_blank">Docs →</a>
-              </div>
-            </article>
-
-            <article class="card card-pad reveal">
-              <h3 class="card-title">ai-doc-gen · ai_chat</h3>
-              <p class="card-body">Local AI documentation generation and a lightweight chat interface.</p>
-              <div class="card-footer project-actions">
-                <a href="https://charudatta10.github.io/ai-doc-gen/" rel="noopener" target="_blank">ai-doc-gen →</a>
-                <a href="https://charudatta10.github.io/ai_chat/" rel="noopener" target="_blank">ai_chat →</a>
-              </div>
-            </article>
-          </div>
-        </div>
-
-        <div id="research-notes" style="padding-top: 48px">
-          <div class="section-head reveal">
-            <h2 class="section-title" style="font-size: 1.4rem">Research notes</h2>
-          </div>
-          <div class="grid grid-2">
-            <article class="card card-pad reveal">
-              <h3 class="card-title">Conference slides</h3>
-              <ul class="feature-list">
-                <li>GAN Optimization Architectures — slide deck (coming soon)</li>
-                <li>FPGA Acceleration for Neural Networks — slide deck (coming soon)</li>
-                <li>Edge Computing Optimization — poster &amp; slides (coming soon)</li>
-              </ul>
-            </article>
-          </div>
-        </div>
-
-        <div id="philosophy" style="padding-top: 48px">
-          <div class="section-head reveal">
-            <h2 class="section-title" style="font-size: 1.4rem">Philosophy wiki</h2>
-          </div>
-          <div class="card card-pad reveal">
-            <ul class="feature-list fold-list" data-show="4">
-              <li>Licensing in open systems</li>
-              <li>Minimal software design</li>
-              <li>Abstract system thinking</li>
-              <li>Comprehensive architecture</li>
-              <li>Simple vs complex engineering</li>
-            </ul>
-          </div>
-        </div>
       </div>
     </section>
 
@@ -1733,42 +1522,20 @@
 
         <div class="grid grid-2">
           <article class="card card-pad reveal">
-            <h3 class="card-title">Current focus</h3>
+            <h3 class="card-title">Research</h3>
             <ul class="feature-list">
-              <li>Designing a custom Rust blockchain for DAO-driven educational systems</li>
-              <li>Building a torrent-based federated LLM training architecture</li>
-              <li>Research on wavelet-based GAN discriminators</li>
-              <li>Optimizing decentralized governance mechanisms</li>
+              <li>Wavelet- and evolutionary-based GAN discriminator improvements for training stability</li>
+              <li>Hardware-aware neural architecture refinements for edge deployment</li>
+              <li>Federated node synchronization protocols for distributed training</li>
             </ul>
           </article>
 
           <article class="card card-pad reveal">
-            <h3 class="card-title">Active research</h3>
+            <h3 class="card-title">Building &amp; learning</h3>
             <ul class="feature-list">
-              <li>Federated node synchronization protocols (WIP)</li>
-              <li>Evolutionary optimization improvements for GAN stability</li>
-              <li>Hardware-aware neural architecture refinements</li>
-              <li>P2P model parameter exchange experiments</li>
-            </ul>
-          </article>
-
-          <article class="card card-pad reveal">
-            <h3 class="card-title">Currently learning</h3>
-            <ul class="feature-list">
-              <li>Advanced Rust for distributed systems</li>
-              <li>Consensus algorithms &amp; cryptoeconomic modeling</li>
-              <li>Scalable system design patterns</li>
-              <li>Low-level performance optimization</li>
-            </ul>
-          </article>
-
-          <article class="card card-pad reveal">
-            <h3 class="card-title">Building this month</h3>
-            <ul class="feature-list">
-              <li>Modular blockchain node prototype</li>
-              <li>Federated AI experiment logging system</li>
-              <li>Research log publication pipeline</li>
-              <li>Structured knowledge archive expansion</li>
+              <li>Rust blockchain prototype for DAO-driven educational governance</li>
+              <li>Torrent-based federated LLM training architecture</li>
+              <li>Advanced Rust, consensus algorithms and cryptoeconomic modeling</li>
             </ul>
           </article>
         </div>
@@ -1821,7 +1588,7 @@
 
         <div id="education" style="padding-top: 72px">
           <div class="section-head reveal">
-            <h2 class="section-title">Academic background</h2>
+            <h2 class="section-title">Academics</h2>
           </div>
           <div class="card card-pad reveal">
             <ul class="timeline">
@@ -1854,7 +1621,7 @@
 
         <div id="experience" style="padding-top: 72px">
           <div class="section-head reveal">
-            <h2 class="section-title">Where the work happens</h2>
+            <h2 class="section-title">Experience</h2>
           </div>
           <div class="card card-pad reveal">
             <ul class="timeline">
@@ -2042,27 +1809,6 @@
           </a>
         </div>
 
-        <div id="collaboration" style="padding-top: 48px">
-          <div class="grid grid-2">
-            <article class="card card-pad reveal">
-              <h3 class="card-title">Research &amp; systems</h3>
-              <ul class="feature-list">
-                <li>Decentralized AI infrastructure</li>
-                <li>Hardware-accelerated ML systems</li>
-                <li>Federated learning &amp; governance models</li>
-              </ul>
-            </article>
-
-            <article class="card card-pad reveal">
-              <h3 class="card-title">Teaching &amp; advising</h3>
-              <ul class="feature-list">
-                <li>Research supervision &amp; mentorship</li>
-                <li>Academic speaking engagements</li>
-                <li>Systems design consulting</li>
-              </ul>
-            </article>
-          </div>
-        </div>
       </div>
     </section>
   </main>
