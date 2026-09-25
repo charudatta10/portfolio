@@ -539,6 +539,10 @@
     .channel-card .channel-name { font-weight: 650; font-size: 0.98rem; }
     .channel-card .channel-desc { font-size: 0.84rem; color: var(--text-3); }
 
+    /* --- Foldable "see more" sections --- */
+    .fold-list > .fold-hidden { display: none; }
+    .fold-toggle { margin-top: 16px; }
+
     /* --- Footer --- */
     .site-footer { border-top: 1px solid var(--border); margin-top: 96px; padding: 40px 0 120px; }
     .site-footer .container { display: flex; flex-wrap: wrap; gap: 24px; justify-content: space-between; align-items: flex-start; color: var(--text-3); font-size: 0.88rem; }
@@ -1171,7 +1175,7 @@
             </p>
           </div>
 
-          <div class="grid grid-3">
+          <div class="grid grid-3 fold-list" data-show="4">
             <article class="card card-pad reveal">
               <span class="project-status">Automation</span>
               <h3 class="card-title">task-runner-SDLC</h3>
@@ -1345,7 +1349,7 @@
           </div>
 
           <div class="content-block card card-pad reveal">
-            <ul class="feature-list">
+            <ul class="feature-list fold-list" data-show="4">
               <li>AI Grand Challenge — PS12 (Underwater Acoustic Systems).</li>
               <li>P2P Distributed Blockchain for Postmortem Reason-of-Death Prediction.</li>
               <li>Blockchain-based Malware Detection Research.</li>
@@ -1371,7 +1375,7 @@
           </p>
         </div>
 
-        <ul class="pub-list">
+        <ul class="pub-list fold-list" data-show="4">
           <li class="pub-item reveal">
             <span class="pub-year">2026</span>
             <div>
@@ -1579,7 +1583,7 @@
 
             <article class="card card-pad reveal">
               <h3 class="card-title">Note-taking &amp; knowledge engineering</h3>
-              <ul class="link-list">
+              <ul class="link-list fold-list" data-show="4">
                 <li>
                   <a href="https://dev.to/charudatta10/introduction-to-digital-note-taking-a-beginners-guide-9p2" rel="noopener" target="_blank">
                     <span>Introduction to Digital Note-Taking</span><span class="chev" aria-hidden="true">→</span>
@@ -1689,15 +1693,6 @@
           </div>
           <div class="grid grid-2">
             <article class="card card-pad reveal">
-              <h3 class="card-title">Experiment logs (WIP)</h3>
-              <ul class="feature-list">
-                <li>Wavelet-based GAN discriminator experiments</li>
-                <li>Federated LLM training architecture logs</li>
-                <li>Blockchain governance model iterations</li>
-              </ul>
-            </article>
-
-            <article class="card card-pad reveal">
               <h3 class="card-title">Conference slides</h3>
               <ul class="feature-list">
                 <li>GAN Optimization Architectures — slide deck (coming soon)</li>
@@ -1713,7 +1708,7 @@
             <h2 class="section-title" style="font-size: 1.4rem">Philosophy wiki</h2>
           </div>
           <div class="card card-pad reveal">
-            <ul class="feature-list">
+            <ul class="feature-list fold-list" data-show="4">
               <li>Licensing in open systems</li>
               <li>Minimal software design</li>
               <li>Abstract system thinking</li>
@@ -1943,7 +1938,7 @@
             <h2 class="section-title">Achievements &amp; mentorship</h2>
           </div>
           <div class="card card-pad reveal">
-            <ul class="feature-list">
+            <ul class="feature-list fold-list" data-show="4">
               <li>
                 <strong>Guided 6 postgraduate students in thesis writing</strong> —
                 mentored research scholars across problem formulation, experimental
@@ -1988,7 +1983,7 @@
           </p>
         </div>
 
-        <div class="channel-grid reveal">
+        <div class="channel-grid reveal fold-list" data-show="4">
           <a class="card channel-card card-hover" href="mailto:charudatta.korde@nfsu.edu.in" style="text-decoration: none">
             <div class="project-icon" aria-hidden="true">✉</div>
             <div>
@@ -2215,10 +2210,41 @@
         });
       }
 
+      function initFoldable() {
+        var groups = document.querySelectorAll(".fold-list");
+        groups.forEach(function (list) {
+          var showCount = parseInt(list.getAttribute("data-show"), 10) || 4;
+          var items = Array.prototype.slice.call(list.children);
+          if (items.length <= showCount) return;
+
+          var hiddenItems = items.slice(showCount);
+          hiddenItems.forEach(function (el) {
+            el.classList.add("fold-hidden");
+          });
+
+          var remaining = hiddenItems.length;
+          var btn = document.createElement("button");
+          btn.type = "button";
+          btn.className = "btn btn-ghost btn-sm fold-toggle";
+          btn.textContent = "Show " + remaining + " more";
+
+          btn.addEventListener("click", function () {
+            var expanded = list.classList.toggle("expanded");
+            hiddenItems.forEach(function (el) {
+              el.classList.toggle("fold-hidden", !expanded);
+            });
+            btn.textContent = expanded ? "Show less" : "Show " + remaining + " more";
+          });
+
+          list.insertAdjacentElement("afterend", btn);
+        });
+      }
+
       document.addEventListener("DOMContentLoaded", function () {
         initTheme();
         initReveal();
         initAnimatedSvg();
+        initFoldable();
       });
     })();
   </script>
