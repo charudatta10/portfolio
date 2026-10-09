@@ -3,45 +3,50 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Charudatta Korde — Researcher · Engineer · Educator</title>
+  <title>Charudatta Korde — Researcher, Engineer and Educator</title>
 
-  <meta name="description" content="Research and engineering portfolio of Charudatta Korde — resource-efficient AI, FPGA acceleration, GAN hardware architectures, cybersecurity teaching and open-source software." />
+  <meta name="description" content="Charudatta Korde: research on FPGA-accelerated generative AI, cybersecurity teaching and open-source software." />
   <meta name="author" content="Charudatta Korde" />
   <link rel="canonical" href="https://charudatta10.github.io/portfolio/" />
 
-  <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Charudatta Korde" />
-  <meta property="og:title" content="Charudatta Korde — Researcher · Engineer · Educator" />
-  <meta property="og:description" content="Efficient AI, FPGA acceleration, cybersecurity, teaching and open-source software." />
+  <meta property="og:title" content="Charudatta Korde — Researcher, Engineer and Educator" />
+  <meta property="og:description" content="FPGA-accelerated generative AI, cybersecurity teaching and open-source software." />
   <meta property="og:url" content="https://charudatta10.github.io/portfolio/" />
   <meta property="og:image" content="https://charudatta10.github.io/portfolio/assets/images/svg/favicon.svg" />
-
-  <!-- Twitter -->
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Charudatta Korde — Researcher · Engineer · Educator" />
-  <meta name="twitter:description" content="Efficient AI, FPGA acceleration, cybersecurity, teaching and open-source software." />
+  <meta name="twitter:title" content="Charudatta Korde — Researcher, Engineer and Educator" />
+  <meta name="twitter:description" content="FPGA-accelerated generative AI, cybersecurity teaching and open-source software." />
 
   <link rel="icon" type="image/svg+xml" href="assets/images/svg/favicon.svg" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet" />
 
-  <script>document.documentElement.classList.add('js');</script>
+  <script>
+    (function () {
+      var t = null;
+      try { t = localStorage.getItem("ck-theme"); } catch (e) {}
+      if (!t) t = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      document.documentElement.setAttribute("data-theme", t);
+    })();
+  </script>
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Charudatta Korde",
-    "jobTitle": "Researcher · Engineer · Educator",
+    "jobTitle": "Research Scholar and Contract Lecturer",
     "url": "https://charudatta10.github.io/portfolio/",
+    "worksFor": { "@type": "CollegeOrUniversity", "name": "National Forensic Sciences University" },
     "sameAs": [
       "https://github.com/charudatta10",
       "https://www.linkedin.com/in/charudatta-korde/",
       "https://orcid.org/0000-0003-0055-4997",
-      "https://scholar.google.com/citations?user=wdLkz5MAAAAJ&hl",
+      "https://scholar.google.com/citations?user=wdLkz5MAAAAJ&hl=en",
       "https://www.scopus.com/authid/detail.uri?authorId=57209272684",
       "https://www.webofscience.com/wos/author/record/PMW-8170-2026"
     ],
@@ -53,1944 +58,669 @@
   </script>
 
   <style>
-    /* =========================================================================
-       Charudatta Korde — portfolio design system (single-file build)
-       ========================================================================= */
     :root {
-      --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto,
-        "Helvetica Neue", Arial, sans-serif;
-      --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas,
-        monospace;
-
-      --radius: 18px;
-      --radius-sm: 12px;
-      --radius-xs: 8px;
-      --max-width: 1120px;
-      --header-h: 64px;
-
-      --bg: #f5f6fb;
-      --bg-glow-1: rgba(79, 70, 229, 0.09);
-      --bg-glow-2: rgba(8, 145, 178, 0.08);
-      --surface: #ffffff;
-      --surface-2: #f8f9fe;
-      --surface-3: #f0f2fa;
-      --border: rgba(15, 23, 42, 0.09);
-      --border-strong: rgba(15, 23, 42, 0.16);
-      --text-1: #0f172a;
-      --text-2: #46546a;
-      --text-3: #6b7890;
-      --primary: #4f46e5;
-      --primary-strong: #4338ca;
-      --primary-soft: #eef0ff;
-      --primary-contrast: #ffffff;
-      --secondary: #0e7490;
-      --secondary-soft: #ecfeff;
-      --good: #047857;
-      --good-soft: #ecfdf5;
-      --warn: #b45309;
-      --warn-soft: #fffbeb;
-      --shadow-1: 0 1px 2px rgba(15, 23, 42, 0.05),
-        0 1px 3px rgba(15, 23, 42, 0.06);
-      --shadow-2: 0 2px 4px rgba(15, 23, 42, 0.05),
-        0 8px 24px rgba(15, 23, 42, 0.08);
-      --shadow-3: 0 4px 8px rgba(15, 23, 42, 0.06),
-        0 16px 40px rgba(15, 23, 42, 0.12);
-      --ring: 0 0 0 3px rgba(79, 70, 229, 0.25);
-      --tile: 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
-      --tile-fast: 0.25s ease;
-      --grid-lines: linear-gradient(var(--border) 1px, transparent 1px),
-        linear-gradient(90deg, var(--border) 1px, transparent 1px);
-      --grid-size: 44px;
+      --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+      --sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+      --bg: #fbfbfd;
+      --ink: #15171c;
+      --muted: #4a5163;
+      --faint: #5f6778;
+      --rule: #dfe2ea;
+      --accent: #3b3fb6;
+      --on-accent: #ffffff;
+      --header-h: 60px;
       color-scheme: light;
     }
-
     html[data-theme="dark"] {
-      --bg: #0a0f1d;
-      --bg-glow-1: rgba(129, 140, 248, 0.12);
-      --bg-glow-2: rgba(34, 211, 238, 0.1);
-      --surface: #111827;
-      --surface-2: #162032;
-      --surface-3: #1c2840;
-      --border: rgba(148, 163, 184, 0.14);
-      --border-strong: rgba(148, 163, 184, 0.28);
-      --text-1: #e7ebf4;
-      --text-2: #b6bfd0;
-      --text-3: #8b95aa;
-      --primary: #8b93ff;
-      --primary-strong: #a8afff;
-      --primary-soft: rgba(129, 140, 248, 0.14);
-      --primary-contrast: #0a0f1d;
-      --secondary: #38d2ee;
-      --secondary-soft: rgba(34, 211, 238, 0.12);
-      --good: #34d399;
-      --good-soft: rgba(52, 211, 153, 0.14);
-      --warn: #fbbf24;
-      --warn-soft: rgba(251, 191, 36, 0.14);
-      --shadow-1: 0 1px 2px rgba(0, 0, 0, 0.35), 0 1px 3px rgba(0, 0, 0, 0.4);
-      --shadow-2: 0 2px 4px rgba(0, 0, 0, 0.35), 0 10px 28px rgba(0, 0, 0, 0.45);
-      --shadow-3: 0 4px 10px rgba(0, 0, 0, 0.4), 0 20px 48px rgba(0, 0, 0, 0.55);
-      --ring: 0 0 0 3px rgba(139, 147, 255, 0.35);
-      --grid-lines: linear-gradient(var(--border) 1px, transparent 1px),
-        linear-gradient(90deg, var(--border) 1px, transparent 1px);
-      --grid-size: 44px;
+      --bg: #0e1117;
+      --ink: #e9ecf3;
+      --muted: #b0b8c8;
+      --faint: #8d97aa;
+      --rule: #262c38;
+      --accent: #a3acff;
+      --on-accent: #0e1117;
       color-scheme: dark;
     }
 
     *, *::before, *::after { box-sizing: border-box; }
-
-    html {
-      scroll-behavior: smooth;
-      scroll-padding-top: calc(var(--header-h) + 24px);
-      -webkit-text-size-adjust: 100%;
-    }
-
+    html { scroll-behavior: smooth; scroll-padding-top: calc(var(--header-h) + 16px); -webkit-text-size-adjust: 100%; }
     body {
       margin: 0;
-      font-family: var(--font-sans);
-      font-size: 1rem;
-      line-height: 1.65;
-      color: var(--text-1);
+      font: 400 1rem/1.7 var(--sans);
+      color: var(--ink);
       background: var(--bg);
       -webkit-font-smoothing: antialiased;
-      text-rendering: optimizeLegibility;
-      transition: background-color 0.35s ease, color 0.35s ease;
     }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; text-underline-offset: 3px; }
+    :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 3px; }
+    p { margin: 0 0 1em; color: var(--muted); }
+    ul { list-style: none; margin: 0; padding: 0; }
+    h1, h2, h3 { font-family: var(--serif); font-weight: 600; margin: 0; color: var(--ink); }
 
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      z-index: -2;
-      background:
-        radial-gradient(42rem 30rem at 12% -6%, var(--bg-glow-1), transparent 60%),
-        radial-gradient(36rem 26rem at 92% 12%, var(--bg-glow-2), transparent 55%);
-      pointer-events: none;
-    }
+    .skip { position: absolute; left: 12px; top: -48px; padding: 8px 14px; background: var(--ink); color: var(--bg); border-radius: 6px; z-index: 100; }
+    .skip:focus { top: 12px; }
 
-    body::after {
-      content: "";
-      position: fixed;
-      inset: 0;
-      z-index: -1;
-      background-image: var(--grid-lines);
-      background-size: var(--grid-size) var(--grid-size);
-      -webkit-mask-image: radial-gradient(60rem 40rem at 70% 0%, #000 0%, transparent 70%);
-      mask-image: radial-gradient(60rem 40rem at 70% 0%, #000 0%, transparent 70%);
-      pointer-events: none;
-      opacity: 0.5;
-    }
+    .wrap { max-width: 980px; margin: 0 auto; padding: 0 28px; }
 
-    img, svg, video { max-width: 100%; height: auto; display: block; }
-
-    a { color: var(--primary); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-
-    h1, h2, h3, h4 {
-      line-height: 1.18;
-      letter-spacing: -0.02em;
-      margin: 0 0 0.5em;
-      font-weight: 650;
-    }
-
-    p { margin: 0 0 1em; color: var(--text-2); }
-
-    :focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; border-radius: 4px; }
-    ::selection { background: var(--primary-soft); color: var(--primary-strong); }
-
-    .container { max-width: var(--max-width); margin: 0 auto; padding: 0 24px; }
-    main { padding-bottom: 40px; }
-    section { scroll-margin-top: calc(var(--header-h) + 16px); }
-
-    /* --- Top bar / navigation --- */
+    /* Header */
     .site-header {
-      position: sticky;
-      top: 0;
-      z-index: 60;
-      height: var(--header-h);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-      padding: 0 22px;
-      background: color-mix(in srgb, var(--bg) 72%, transparent);
-      -webkit-backdrop-filter: blur(14px) saturate(140%);
-      backdrop-filter: blur(14px) saturate(140%);
-      border-bottom: 1px solid var(--border);
+      position: sticky; top: 0; z-index: 50; height: var(--header-h);
+      background: color-mix(in srgb, var(--bg) 88%, transparent);
+      -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--rule);
     }
-
-    .logo {
-      font-size: 1.02rem;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      color: var(--text-1);
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      white-space: nowrap;
-      text-decoration: none;
-    }
-    .logo:hover { text-decoration: none; }
-    .logo-mark {
-      width: 30px;
-      height: 30px;
-      border-radius: 9px;
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
-      color: #fff;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      font-family: var(--font-mono);
-      font-size: 0.78rem;
-      font-weight: 800;
-      box-shadow: var(--shadow-1);
-    }
-
-    .nav { display: flex; align-items: center; gap: 4px; }
-    .menu { list-style: none; display: flex; align-items: center; gap: 2px; margin: 0; padding: 0; }
-
-    .menu a, .dropbtn {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 8px 12px;
-      border-radius: 10px;
-      font-size: 0.9rem;
-      font-weight: 550;
-      color: var(--text-2);
-      background: none;
-      border: none;
-      cursor: pointer;
-      font-family: inherit;
-      text-decoration: none;
-      transition: background-color var(--tile-fast), color var(--tile-fast);
-    }
-
-    .menu a:hover, .dropbtn:hover, .menu a[aria-current="page"] {
-      color: var(--text-1);
-      background: var(--surface-2);
-      text-decoration: none;
-    }
-
-    .menu li { position: relative; }
-
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      top: calc(100% + 8px);
-      left: 0;
-      min-width: 208px;
-      padding: 8px;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      box-shadow: var(--shadow-3);
-      list-style: none;
-      margin: 0;
-      z-index: 70;
-    }
-    .dropdown-content li { margin: 0; }
-    .dropdown-content a {
-      display: flex;
-      width: 100%;
-      padding: 9px 12px;
-      font-weight: 500;
-      font-size: 0.88rem;
-      border-radius: 9px;
-      color: var(--text-2);
-    }
-    .dropdown-content a:hover { background: var(--surface-2); color: var(--text-1); }
-    .dropdown:hover .dropdown-content, .dropdown:focus-within .dropdown-content, .dropdown.open .dropdown-content { display: block; }
-
-    .dropbtn .caret { transition: transform var(--tile-fast); }
-    .dropdown:hover .caret, .dropdown.open .caret { transform: rotate(180deg); }
-
-    .header-tools { display: flex; align-items: center; gap: 10px; }
-
+    .site-header .wrap { height: 100%; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { font-family: var(--serif); font-weight: 600; font-size: 1.05rem; color: var(--ink); }
+    .brand:hover { text-decoration: none; }
+    .nav ul { display: flex; gap: 26px; }
+    .nav a { color: var(--muted); font-size: 0.9rem; font-weight: 500; }
+    .nav a:hover { color: var(--ink); text-decoration: none; }
+    .tools { display: flex; align-items: center; gap: 8px; }
     .icon-btn {
-      width: 38px;
-      height: 38px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 11px;
-      border: 1px solid var(--border);
-      background: var(--surface);
-      color: var(--text-2);
-      cursor: pointer;
-      font-size: 1rem;
-      transition: color var(--tile-fast), border-color var(--tile-fast),
-        transform var(--tile-fast);
+      width: 36px; height: 36px; display: inline-flex; align-items: center; justify-content: center;
+      background: none; border: 1px solid var(--rule); border-radius: 8px; color: var(--muted);
+      cursor: pointer; font-size: 0.95rem;
     }
-    .icon-btn:hover { color: var(--primary); border-color: var(--border-strong); transform: translateY(-1px); }
+    .icon-btn:hover { color: var(--ink); border-color: var(--faint); }
     .menu-toggle { display: none; }
 
-    /* --- Buttons & chips --- */
+    /* Hero */
+    .hero { padding: 104px 0 88px; }
+    .hero h1 { font-size: clamp(2.6rem, 6vw, 3.9rem); line-height: 1.05; letter-spacing: -0.02em; margin-bottom: 14px; }
+    .role { font-family: var(--serif); font-size: 1.25rem; color: var(--muted); margin: 0 0 28px; }
+    .hero .lede { max-width: 38em; font-size: 1.08rem; color: var(--ink); margin-bottom: 14px; }
+    .affil { font-size: 0.92rem; color: var(--faint); margin-bottom: 32px; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 28px; }
     .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 10px 18px;
-      border-radius: 999px;
-      font-weight: 600;
-      font-size: 0.9rem;
-      font-family: inherit;
-      border: 1px solid transparent;
-      cursor: pointer;
-      transition: transform var(--tile-fast), box-shadow var(--tile-fast),
-        background-color var(--tile-fast), border-color var(--tile-fast);
-      text-decoration: none;
-      white-space: nowrap;
+      display: inline-flex; align-items: center; padding: 10px 20px; border-radius: 8px;
+      font: 500 0.92rem var(--sans); border: 1px solid var(--rule); color: var(--ink); background: none; cursor: pointer;
     }
-    .btn:hover { text-decoration: none; transform: translateY(-2px); }
-    .btn:active { transform: translateY(0); }
-    .btn-primary { background: var(--primary); color: var(--primary-contrast); box-shadow: 0 6px 18px rgba(79, 70, 229, 0.3); }
-    .btn-primary:hover { box-shadow: 0 10px 26px rgba(79, 70, 229, 0.4); }
-    .btn-ghost { background: var(--surface); color: var(--text-1); border-color: var(--border); box-shadow: var(--shadow-1); }
-    .btn-ghost:hover { border-color: var(--border-strong); box-shadow: var(--shadow-2); }
-    .btn-sm { padding: 7px 14px; font-size: 0.82rem; }
+    .btn:hover { text-decoration: none; border-color: var(--faint); }
+    .btn-primary { background: var(--accent); color: var(--on-accent); border-color: var(--accent); }
+    .btn-primary:hover { border-color: var(--accent); opacity: 0.92; }
+    .inline-links { display: flex; flex-wrap: wrap; gap: 8px 22px; font-size: 0.92rem; }
 
-    .chip {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 5px 12px;
-      border-radius: 999px;
-      font-size: 0.78rem;
-      font-weight: 550;
-      color: var(--text-2);
-      background: var(--surface-2);
-      border: 1px solid var(--border);
-      white-space: nowrap;
-    }
-    .chip-primary { color: var(--primary-strong); background: var(--primary-soft); border-color: transparent; }
-    .chip-good { color: var(--good); background: var(--good-soft); border-color: transparent; }
-    .chip-mono { font-family: var(--font-mono); font-size: 0.72rem; }
+    /* Sections */
+    .section { border-top: 1px solid var(--rule); padding: 64px 0; }
+    .section .wrap { display: grid; grid-template-columns: 180px minmax(0, 1fr); gap: 40px; }
+    .section h2 { font-size: 1.5rem; line-height: 1.25; }
+    .section h3 { font-size: 1.1rem; margin-bottom: 14px; }
+    .section-body > .lede { max-width: 40em; color: var(--ink); margin-bottom: 32px; }
+    .subhead { margin-top: 48px; }
 
-    /* --- Sections --- */
-    .section { padding: 88px 0 24px; }
-    .section-head { max-width: 760px; margin-bottom: 40px; }
+    /* Research entries and rows */
+    .entry { padding: 22px 0; border-top: 1px solid var(--rule); }
+    .entry:first-of-type { border-top: 0; padding-top: 0; }
+    .entry h3 { margin-bottom: 8px; }
+    .entry p { max-width: 40em; margin-bottom: 8px; }
+    .entry .result { color: var(--ink); font-size: 0.95rem; font-variant-numeric: tabular-nums; }
+    .entry .source { font-size: 0.92rem; }
 
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-family: var(--font-mono);
-      font-size: 0.78rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--primary);
-      font-weight: 600;
-      margin-bottom: 14px;
-    }
-    .eyebrow::before { content: ""; width: 26px; height: 2px; border-radius: 2px; background: var(--primary); }
-    .section-title { font-size: clamp(1.6rem, 3.4vw, 2.1rem); margin-bottom: 12px; }
-    .section-sub { color: var(--text-2); font-size: 1.02rem; }
+    .plain-list li { position: relative; padding: 0 0 8px 18px; color: var(--muted); max-width: 40em; }
+    .plain-list li::before { content: ""; position: absolute; left: 0; top: 0.78em; width: 6px; height: 1px; background: var(--faint); }
 
-    /* --- Hero --- */
-    .hero {
-      position: relative;
-      min-height: calc(100svh - var(--header-h));
-      display: flex;
-      align-items: center;
-      padding: 72px 0 48px;
-      overflow: hidden;
-    }
-    .hero-bg { position: absolute; inset: 0; z-index: -1; pointer-events: none; }
-    .hero-bg svg { filter: blur(6px) saturate(0.9); opacity: 0.65; }
-    .hero-inner { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 48px; align-items: center; width: 100%; }
-    .hero-name { font-size: clamp(2.6rem, 6.4vw, 4.3rem); letter-spacing: -0.04em; line-height: 1.04; margin-bottom: 18px; }
-    .hero-name .accent {
-      background: linear-gradient(120deg, var(--primary), var(--secondary));
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-    }
-    .hero-roles { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 22px; }
-    .hero-tagline { font-size: clamp(1.02rem, 1.6vw, 1.15rem); color: var(--text-2); max-width: 560px; margin-bottom: 28px; }
-    .hero-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 26px; }
-    .hero-meta { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
-    .hero-figure {
-      border-radius: 24px;
-      padding: 20px;
-      background: color-mix(in srgb, var(--surface) 82%, transparent);
-      -webkit-backdrop-filter: blur(10px);
-      backdrop-filter: blur(10px);
-      border: 1px solid var(--border);
-      box-shadow: var(--shadow-3);
-    }
+    /* Publications */
+    .pubs li { display: grid; grid-template-columns: 56px minmax(0, 1fr); gap: 16px; padding: 18px 0; border-top: 1px solid var(--rule); }
+    .pubs li:first-child { border-top: 0; padding-top: 0; }
+    .yr { color: var(--faint); font-size: 0.9rem; font-variant-numeric: tabular-nums; padding-top: 2px; }
+    .pt { font-weight: 600; color: var(--ink); margin: 0 0 2px; line-height: 1.45; }
+    .pa { font-size: 0.9rem; color: var(--faint); margin: 0 0 2px; }
+    .pa strong { color: var(--muted); font-weight: 600; }
+    .pm { font-size: 0.9rem; margin: 0; }
 
-    /* --- Cards & grids --- */
-    .grid { display: grid; gap: 22px; }
-    .grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    .grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-    .grid-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    details { margin-top: 18px; }
+    summary { cursor: pointer; color: var(--accent); font-weight: 500; font-size: 0.95rem; list-style: none; padding: 6px 0; }
+    summary::-webkit-details-marker { display: none; }
+    summary::before { content: "+"; display: inline-block; width: 1.1em; }
+    details[open] > summary::before { content: "\2212"; }
+    details > ul, details > div { margin-top: 12px; }
 
-    .card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow-1);
-      transition: transform var(--tile), box-shadow var(--tile), border-color var(--tile);
-    }
-    .card-hover:hover { transform: translateY(-5px); box-shadow: var(--shadow-2); border-color: var(--border-strong); }
-    .card-pad { padding: 26px; }
-    .card-title { font-size: 1.08rem; margin-bottom: 8px; }
-    .card-body { color: var(--text-2); font-size: 0.94rem; margin-bottom: 16px; }
-    .card-footer { margin-top: auto; display: flex; flex-wrap: wrap; gap: 8px; }
+    .more-link { margin-top: 24px; font-size: 0.92rem; display: flex; flex-wrap: wrap; gap: 6px 22px; }
 
-    .research-card { display: flex; flex-direction: column; overflow: hidden; }
-    .research-art {
-      background: linear-gradient(160deg,
-        color-mix(in srgb, var(--primary-soft) 70%, var(--surface)),
-        var(--surface));
-      border-bottom: 1px solid var(--border);
-      padding: 12px 12px 0;
-    }
-    .research-card .card-pad { flex: 1; display: flex; flex-direction: column; }
-    .research-metrics { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 16px; }
-    .research-links { display: flex; flex-wrap: wrap; gap: 14px; margin-top: auto; }
-    .research-links a { font-size: 0.88rem; font-weight: 600; }
+    /* Projects */
+    .featured { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 40px; }
+    .project { padding: 20px 0; border-top: 1px solid var(--rule); }
+    .project h3 { font-size: 1.05rem; margin-bottom: 6px; }
+    .project p { font-size: 0.95rem; margin-bottom: 8px; }
+    .links { display: flex; flex-wrap: wrap; gap: 4px 18px; font-size: 0.9rem; }
+    .rows li { padding: 16px 0; border-top: 1px solid var(--rule); }
+    .rows li:first-child { border-top: 0; }
+    .rows .name { font-weight: 600; color: var(--ink); font-size: 0.95rem; margin: 0 0 2px; }
+    .rows p { font-size: 0.93rem; margin: 0 0 6px; }
 
-    .project-card { display: flex; flex-direction: column; }
-    .project-icon {
-      width: 46px;
-      height: 46px;
-      border-radius: 13px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      background: var(--primary-soft);
-      color: var(--primary);
-      margin-bottom: 16px;
-    }
-    .project-status { font-family: var(--font-mono); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-3); }
-    .project-actions a { font-size: 0.86rem; font-weight: 600; }
+    /* About */
+    .timeline li { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 20px; padding: 16px 0; border-top: 1px solid var(--rule); }
+    .timeline li:first-child { border-top: 0; padding-top: 0; }
+    .period { color: var(--faint); font-size: 0.9rem; font-variant-numeric: tabular-nums; }
+    .timeline .role-name { font-weight: 600; color: var(--ink); margin: 0 0 2px; }
+    .timeline p { font-size: 0.95rem; margin: 0; max-width: 38em; }
+    .skills { display: grid; grid-template-columns: 170px minmax(0, 1fr); gap: 10px 20px; margin: 0; }
+    .skills dt { color: var(--ink); font-weight: 500; font-size: 0.95rem; }
+    .skills dd { margin: 0; color: var(--muted); font-size: 0.95rem; }
 
-    .pub-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
-    .pub-item {
-      display: grid;
-      grid-template-columns: auto 1fr auto;
-      gap: 20px;
-      align-items: start;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-sm);
-      padding: 22px 24px;
-      box-shadow: var(--shadow-1);
-      transition: transform var(--tile), box-shadow var(--tile), border-color var(--tile);
-    }
-    .pub-item:hover { transform: translateY(-2px); box-shadow: var(--shadow-2); border-color: var(--border-strong); }
-    .pub-year { font-family: var(--font-mono); font-weight: 700; font-size: 0.9rem; color: var(--primary); padding: 4px 10px; border-radius: 8px; background: var(--primary-soft); min-width: 52px; text-align: center; }
-    .pub-title { font-size: 1.02rem; font-weight: 650; margin-bottom: 4px; }
-    .pub-authors { font-size: 0.86rem; color: var(--text-3); margin-bottom: 8px; }
-    .pub-meta { font-size: 0.86rem; color: var(--text-2); margin-bottom: 10px; }
-    .pub-links { display: flex; flex-wrap: wrap; gap: 12px; font-size: 0.85rem; }
-    .pub-badge { display: inline-flex; padding: 2px 10px; border-radius: 999px; font-size: 0.72rem; font-weight: 650; }
-    .pub-badge-open { color: var(--good); background: var(--good-soft); }
-    .pub-badge-conf { color: var(--secondary); background: var(--secondary-soft); }
-    .pub-badge-j { color: var(--primary); background: var(--primary-soft); }
+    /* Writing */
+    .articles li { padding: 7px 0; }
+    .articles a { font-size: 0.97rem; }
 
-    .metric-strip { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; margin: 28px 0; }
-    .metric { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 18px 20px; box-shadow: var(--shadow-1); }
-    .metric-value { font-family: var(--font-mono); font-size: 1.6rem; font-weight: 750; letter-spacing: -0.02em; color: var(--primary); line-height: 1.15; margin-bottom: 4px; }
-    .metric-label { font-size: 0.82rem; color: var(--text-3); }
+    /* Contact */
+    .email { font-family: var(--serif); font-size: clamp(1.3rem, 3.2vw, 1.8rem); font-weight: 600; word-break: break-word; }
+    .contact-links { display: flex; flex-wrap: wrap; gap: 8px 24px; margin-top: 22px; font-size: 0.95rem; }
 
-    .pipeline { display: flex; flex-wrap: wrap; align-items: stretch; justify-content: center; gap: 8px; margin: 8px 0 8px; }
-    .pipe-step { flex: 1 1 130px; min-width: 120px; text-align: center; padding: 14px 10px; border-radius: 13px; border: 1px solid var(--border); background: var(--surface); box-shadow: var(--shadow-1); }
-    .pipe-step .pipe-icon { font-size: 1.3rem; margin-bottom: 6px; }
-    .pipe-step .pipe-label { font-size: 0.82rem; font-weight: 650; }
-    .pipe-step .pipe-sub { font-size: 0.72rem; color: var(--text-3); }
-    .pipe-arrow { align-self: center; color: var(--text-3); font-size: 1rem; padding: 0 2px; }
-
-    .timeline { list-style: none; margin: 0; padding: 0; position: relative; }
-    .timeline::before { content: ""; position: absolute; left: 8px; top: 6px; bottom: 6px; width: 2px; background: var(--border-strong); border-radius: 2px; }
-    .timeline li { position: relative; padding: 0 0 26px 34px; }
-    .timeline li::before { content: ""; position: absolute; left: 3px; top: 7px; width: 12px; height: 12px; border-radius: 50%; background: var(--primary); box-shadow: 0 0 0 4px var(--primary-soft); }
-    .timeline-period { font-family: var(--font-mono); font-size: 0.78rem; color: var(--primary); font-weight: 600; }
-    .timeline-role { font-weight: 650; margin: 2px 0 4px; }
-
-    .link-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
-    .link-list a {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 12px;
-      padding: 13px 16px;
-      border-radius: 12px;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      font-weight: 550;
-      color: var(--text-1);
-      transition: border-color var(--tile-fast), transform var(--tile-fast), box-shadow var(--tile-fast);
-    }
-    .link-list a:hover { text-decoration: none; border-color: var(--border-strong); box-shadow: var(--shadow-1); transform: translateX(3px); }
-    .link-list a span:first-child { display: flex; align-items: center; gap: 10px; }
-    .link-list a .chev { color: var(--text-3); font-size: 0.85rem; }
-
-    .feature-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
-    .feature-list li { padding: 18px 20px; border-radius: var(--radius-sm); background: var(--surface); border: 1px solid var(--border); color: var(--text-2); font-size: 0.95rem; }
-
-    .content-block { color: var(--text-2); }
-    .skill-group-title { font-family: var(--font-mono); font-size: 0.76rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-3); margin: 20px 0 10px; }
-    .chips { display: flex; flex-wrap: wrap; gap: 8px; }
-
-    .channel-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
-    .channel-card { display: flex; align-items: center; gap: 16px; padding: 18px 20px; }
-    .channel-card .channel-name { font-weight: 650; font-size: 0.98rem; }
-    .channel-card .channel-desc { font-size: 0.84rem; color: var(--text-3); }
-
-    /* --- Foldable "see more" sections --- */
-    .fold-list > .fold-hidden { display: none; }
-    .fold-toggle { margin-top: 16px; }
-
-    /* --- Footer --- */
-    .site-footer { border-top: 1px solid var(--border); margin-top: 96px; padding: 40px 0 120px; }
-    .site-footer .container { display: flex; flex-wrap: wrap; gap: 24px; justify-content: space-between; align-items: flex-start; color: var(--text-3); font-size: 0.88rem; }
-    .footer-links { display: flex; flex-wrap: wrap; gap: 6px 16px; }
-    .footer-links a { color: var(--text-2); font-weight: 550; font-size: 0.86rem; }
-
-    /* --- Diagrams (inline SVG) --- */
-    .diagram { width: 100%; height: auto; display: block; }
-    .diagram-node { fill: var(--surface); stroke: var(--border-strong); stroke-width: 1.5; }
-    .diagram-node-hot { fill: var(--primary-soft); stroke: var(--primary); stroke-width: 1.5; }
-    .diagram-node-cool { fill: var(--secondary-soft); stroke: var(--secondary); stroke-width: 1.5; }
-    .diagram-line { stroke: var(--border-strong); fill: none; stroke-width: 1.5; }
-    .diagram-flow { stroke: var(--primary); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
-    .diagram-flow-2 { stroke: var(--secondary); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
-    .diagram-dot { fill: var(--primary); }
-    .diagram-dot-2 { fill: var(--secondary); }
-    .diagram-text { fill: var(--text-2); font-family: var(--font-mono); font-size: 11px; font-weight: 550; }
-    .diagram-title { fill: var(--text-1); font-family: var(--font-sans); font-weight: 650; font-size: 13px; }
-    .diagram-sub { fill: var(--text-3); font-family: var(--font-mono); font-size: 9.5px; }
-
-    /* --- Floating CTA --- */
-    .floating-cta { position: fixed; bottom: 24px; right: 24px; z-index: 50; display: flex; flex-direction: column; gap: 10px; }
-
-    /* --- Scroll reveal (only when JS is active) --- */
-    html.js .reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.7s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1); will-change: opacity, transform; }
-    html.js .reveal.visible { opacity: 1; transform: none; }
-
-    @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
-      *, *::before, *::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; }
-      html.js .reveal, html.js .reveal.visible { opacity: 1; transform: none; }
-      .hero-bg { display: none; }
-    }
-
-    /* --- Responsive --- */
-    @media (max-width: 980px) {
-      .hero-inner { grid-template-columns: 1fr; }
-      .hero-figure { max-width: 560px; }
-      .grid-3, .grid-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    }
+    .site-footer { border-top: 1px solid var(--rule); padding: 28px 0 48px; font-size: 0.88rem; color: var(--faint); }
+    .site-footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; }
+    .site-footer p { margin: 0; color: inherit; }
 
     @media (max-width: 860px) {
+      .section .wrap { grid-template-columns: 1fr; gap: 20px; }
+      .featured { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 760px) {
+      .menu-toggle { display: inline-flex; }
       .nav {
-        position: fixed;
-        inset: var(--header-h) 0 auto 0;
-        flex-direction: column;
-        align-items: stretch;
-        background: color-mix(in srgb, var(--bg) 94%, transparent);
-        -webkit-backdrop-filter: blur(16px);
-        backdrop-filter: blur(16px);
-        border-bottom: 1px solid var(--border);
-        padding: 10px 18px 16px;
-        display: none;
-        max-height: calc(100vh - var(--header-h));
-        overflow-y: auto;
-        box-shadow: var(--shadow-3);
+        display: none; position: absolute; top: var(--header-h); left: 0; right: 0;
+        background: var(--bg); border-bottom: 1px solid var(--rule); padding: 8px 28px 16px;
       }
       .nav.open { display: block; }
-      .menu { flex-direction: column; align-items: stretch; gap: 2px; }
-      .menu a, .dropbtn { width: 100%; padding: 12px 14px; }
-      .dropdown-content { position: static; box-shadow: none; border: none; background: transparent; padding: 0 0 0 14px; display: none; }
-      .dropdown.open .dropdown-content { display: block; }
-      .menu-toggle { display: inline-flex; }
-      .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
-      .pub-item { grid-template-columns: 1fr; gap: 10px; }
+      .nav ul { flex-direction: column; gap: 0; }
+      .nav a { display: block; padding: 12px 0; font-size: 1rem; }
+      .hero { padding: 64px 0 56px; }
+      .timeline li, .skills { grid-template-columns: 1fr; gap: 4px; }
+      .skills dd { margin-bottom: 10px; }
+      .pubs li { grid-template-columns: 1fr; gap: 4px; }
     }
-
-    @media (max-width: 480px) {
-      .site-header { padding: 0 14px; }
-      .floating-cta { right: 16px; bottom: 16px; }
-      .hero-name { font-size: clamp(2.2rem, 11vw, 2.9rem); }
-    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
   </style>
 </head>
 
 <body>
+  <a class="skip" href="#main">Skip to content</a>
+
   <header class="site-header">
-    <a class="logo" href="#top" aria-label="Charudatta Korde — home">
-      <span class="logo-mark" aria-hidden="true">CK</span>
-      <span>Charudatta Korde</span>
-    </a>
-
-    <nav class="nav" id="site-nav" aria-label="Primary">
-      <ul class="menu">
-        <li><a href="#top">Home</a></li>
-
-        <li class="dropdown">
-          <button class="dropbtn" type="button" aria-expanded="false">
-            About <span class="caret" aria-hidden="true">▾</span>
-          </button>
-          <ul class="dropdown-content">
-            <li><a href="#about">Mission</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#achievements">Achievements</a></li>
-          </ul>
-        </li>
-
-        <li class="dropdown">
-          <button class="dropbtn" type="button" aria-expanded="false">
-            Research <span class="caret" aria-hidden="true">▾</span>
-          </button>
-          <ul class="dropdown-content">
-            <li><a href="#research">Research highlights</a></li>
-            <li><a href="#research-code">Research → code</a></li>
-            <li><a href="#publications">Publications</a></li>
-          </ul>
-        </li>
-
-        <li><a href="#projects">Projects</a></li>
-
-        <li><a href="#writing">Writing</a></li>
-
-        <li><a href="#now">Now</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-
-    <div class="header-tools">
-      <button
-        class="icon-btn theme-toggle"
-        type="button"
-        aria-label="Toggle color theme"
-        title="Toggle color theme"
-      ><span aria-hidden="true" class="theme-icon">🌙</span></button>
-      <button
-        class="icon-btn menu-toggle"
-        type="button"
-        aria-label="Toggle navigation menu"
-        aria-controls="site-nav"
-        aria-expanded="false"
-      ><span aria-hidden="true" class="hamburger">☰</span></button>
+    <div class="wrap">
+      <a class="brand" href="#top">Charudatta Korde</a>
+      <nav class="nav" id="site-nav" aria-label="Primary">
+        <ul>
+          <li><a href="#research">Research</a></li>
+          <li><a href="#publications">Publications</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#writing">Writing</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="tools">
+        <button class="icon-btn theme-toggle" type="button" aria-label="Toggle colour theme" title="Toggle colour theme"><span class="theme-icon" aria-hidden="true">&#9790;</span></button>
+        <button class="icon-btn menu-toggle" type="button" aria-label="Toggle navigation menu" aria-controls="site-nav" aria-expanded="false"><span aria-hidden="true">&#9776;</span></button>
+      </div>
     </div>
   </header>
 
-  <main>
-    <!-- ========================= HERO =============================== -->
+  <main id="main">
+    <!-- Hero -->
     <section class="hero" id="top" aria-labelledby="hero-title">
-      <div class="hero-bg" aria-hidden="true">
-        <svg class="diagram" viewBox="0 0 540 460" data-animate aria-hidden="true">
-          <defs>
-            <linearGradient id="hero-chip" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0" stop-color="var(--primary-soft)"/>
-              <stop offset="1" stop-color="var(--secondary-soft)"/>
-            </linearGradient>
-            <radialGradient id="hero-glow" cx="0.5" cy="0.35" r="0.75">
-              <stop offset="0" stop-color="var(--primary)" stop-opacity="0.18"/>
-              <stop offset="1" stop-color="var(--primary)" stop-opacity="0"/>
-            </radialGradient>
-          </defs>
-
-          <rect x="0" y="0" width="540" height="460" rx="28" fill="url(#hero-glow)"/>
-
-          <g>
-            <path class="diagram-line" d="M80 80 L200 50 M200 50 L320 80 M320 80 L440 50 M80 80 L110 160 M200 50 L260 140 M320 80 L390 160 M440 50 L390 160 M110 160 L260 140 M260 140 L390 160 M110 160 L260 210 M390 160 L260 210"/>
-            <path class="diagram-flow" data-dash d="M110 160 L260 140 M260 140 L390 160"/>
-            <path class="diagram-flow-2" data-dash d="M200 50 L260 140 M260 210 L260 252"/>
-            <circle cx="80" cy="80" r="9" class="diagram-dot"/>
-            <circle cx="200" cy="50" r="9" class="diagram-dot-2"/>
-            <circle cx="320" cy="80" r="9" class="diagram-dot"/>
-            <circle cx="440" cy="50" r="9" class="diagram-dot-2"/>
-            <circle cx="110" cy="160" r="7" class="diagram-dot"/>
-            <circle cx="260" cy="140" r="7" class="diagram-dot-2"/>
-            <circle cx="390" cy="160" r="7" class="diagram-dot"/>
-            <circle cx="260" cy="210" r="10" class="diagram-node-hot"/>
-            <text x="274" y="215" class="diagram-sub">AI</text>
-          </g>
-
-          <g>
-            <rect x="90" y="250" width="360" height="150" rx="20" fill="var(--surface)" stroke="var(--border-strong)" stroke-width="1.5"/>
-            <rect x="110" y="270" width="320" height="110" rx="12" fill="url(#hero-chip)" opacity="0.6"/>
-            <rect x="130" y="292" width="86" height="66" rx="10" class="diagram-node-hot"/>
-            <rect x="228" y="292" width="86" height="66" rx="10" class="diagram-node"/>
-            <rect x="326" y="292" width="86" height="66" rx="10" class="diagram-node-cool"/>
-            <text x="173" y="333" class="diagram-title" text-anchor="middle">G</text>
-            <text x="271" y="333" class="diagram-title" text-anchor="middle">D</text>
-            <text x="369" y="333" class="diagram-title" text-anchor="middle">MFDFA</text>
-            <text x="270" y="280" class="diagram-sub" text-anchor="middle">AMD Kintex-7 · KC705</text>
-            <g fill="var(--border-strong)">
-              <rect x="120" y="400" width="12" height="16" rx="2"/>
-              <rect x="152" y="400" width="12" height="16" rx="2"/>
-              <rect x="184" y="400" width="12" height="16" rx="2"/>
-              <rect x="216" y="400" width="12" height="16" rx="2"/>
-              <rect x="248" y="400" width="12" height="16" rx="2"/>
-              <rect x="280" y="400" width="12" height="16" rx="2"/>
-              <rect x="312" y="400" width="12" height="16" rx="2"/>
-              <rect x="344" y="400" width="12" height="16" rx="2"/>
-              <rect x="376" y="400" width="12" height="16" rx="2"/>
-              <rect x="408" y="400" width="12" height="16" rx="2"/>
-            </g>
-          </g>
-        </svg>
+      <div class="wrap">
+        <h1 id="hero-title">Charudatta Korde</h1>
+        <p class="role">Researcher, engineer and educator</p>
+        <p class="lede">
+          I research resource-efficient artificial intelligence, with a focus on
+          generative models accelerated on FPGA-based edge hardware. I also teach
+          cybersecurity and build open-source tools for AI, security and
+          knowledge management.
+        </p>
+        <p class="affil">Ph.D. candidate at NIT Goa. Contract Lecturer at the National Forensic Sciences University.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#publications">Publications</a>
+          <a class="btn" href="assets/CharudattaKorde.pdf" download="CharudattaKorde.pdf">Download CV</a>
+        </div>
+        <div class="inline-links">
+          <a href="https://scholar.google.com/citations?user=wdLkz5MAAAAJ&amp;hl=en" rel="noopener" target="_blank">Google Scholar</a>
+          <a href="https://orcid.org/0000-0003-0055-4997" rel="noopener" target="_blank">ORCID</a>
+          <a href="https://github.com/charudatta10" rel="noopener" target="_blank">GitHub</a>
+          <a href="https://www.linkedin.com/in/charudatta-korde/" rel="noopener" target="_blank">LinkedIn</a>
+        </div>
       </div>
+    </section>
 
-      <div class="container hero-inner">
-        <div>
-          <h1 class="hero-name" id="hero-title">
-            Charudatta<br /><span class="accent">Korde</span>
-          </h1>
-
-          <div class="hero-roles" role="list">
-            <span class="chip chip-primary" role="listitem">Researcher</span>
-            <span class="chip chip-primary" role="listitem">Engineer</span>
-            <span class="chip chip-primary" role="listitem">Educator</span>
-          </div>
-
-          <p class="hero-tagline">
-            Researching resource-efficient artificial intelligence and hardware
-            acceleration — building open-source tools for AI, security,
-            education and knowledge systems.
+    <!-- Research -->
+    <section class="section" id="research" aria-labelledby="research-title">
+      <div class="wrap">
+        <h2 id="research-title">Research</h2>
+        <div class="section-body">
+          <p class="lede">
+            My doctoral research at NIT Goa investigates hardware acceleration of
+            generative adversarial networks (GANs) on FPGA-based edge devices. It
+            combines evolutionary and multifractal methods, which stabilise
+            training, with hardware-aware design that lowers latency and power.
           </p>
 
-          <div class="hero-cta">
-            <a class="btn btn-primary" href="#publications">Publications</a>
-            <a class="btn btn-primary" href="#projects">Projects</a>
-            <a class="btn btn-ghost" href="assets/CharudattaKorde.pdf" download="CharudattaKorde.pdf">Download CV</a>
+          <article class="entry">
+            <h3>MFDFA-enhanced GAN</h3>
+            <p>Embeds multifractal detrended fluctuation analysis in the discriminator. Training is more stable and the hardware implementation more efficient, without changing the core GAN architecture.</p>
+            <p class="result">Latency reduced by 92.05% and power by 86.03%.</p>
+            <p class="source"><a href="https://doi.org/10.1109/ACCESS.2026.3677066" rel="noopener" target="_blank">Read the paper</a></p>
+          </article>
+
+          <article class="entry">
+            <h3>Evolutionary-enhanced GAN with wavelet-based discrimination</h3>
+            <p>A genetic-algorithm-optimised generator paired with a wavelet-based discriminator. Synthesised on the AMD Kintex-7 KC705, it has the smallest area footprint among the implementations compared.</p>
+            <p class="result">Latency of 138 µs against 570 µs, and 24 mW against 47 mW.</p>
+            <p class="source"><a href="https://doi.org/10.1109/ACCESS.2025.3642041" rel="noopener" target="_blank">Read the paper</a></p>
+          </article>
+
+          <article class="entry">
+            <h3>2D-MFDFA GAN</h3>
+            <p>A two-dimensional multifractal discriminator for fast synthetic data generation, deployed on the Kintex-7 KC705 through the NNGen framework, with results verified on hardware.</p>
+            <p class="result">FID improved by 85%, with 94% faster generation and 81% lower power.</p>
+            <p class="source"><a href="https://doi.org/10.1109/ACCESS.2025.3603332" rel="noopener" target="_blank">Read the paper</a></p>
+          </article>
+
+          <h3 class="subhead">Current work</h3>
+          <ul class="plain-list">
+            <li>Wavelet and evolutionary refinements to GAN discriminators for training stability</li>
+            <li>Hardware-aware neural architecture design for edge deployment</li>
+            <li>Federated synchronisation protocols for distributed training</li>
+            <li>Rust prototypes for DAO-governed educational platforms, and torrent-based federated LLM training</li>
+          </ul>
+          <p style="margin-top: 16px; max-width: 40em">My longer-term aim is open, decentralised AI infrastructure that combines governance, distributed learning and hardware-efficient optimisation.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Publications -->
+    <section class="section" id="publications" aria-labelledby="pubs-title">
+      <div class="wrap">
+        <h2 id="pubs-title">Publications</h2>
+        <div class="section-body">
+          <p class="lede">Peer-reviewed journal and conference papers, most recent first.</p>
+
+          <ul class="pubs">
+            <li>
+              <span class="yr">2026</span>
+              <div>
+                <p class="pt">MFDFA-Enhanced GAN: A Hardware-Optimized Architecture for Efficient Synthetic Image Generation</p>
+                <p class="pa"><strong>C. G. Korde</strong>, K. G. Shreeharsha, R. K. Siddharth, M. H. Vasantha, Y. B. Nithin Kumar</p>
+                <p class="pm">IEEE Access, vol. 14, pp. 46700–46713. <a href="https://doi.org/10.1109/ACCESS.2026.3677066" rel="noopener" target="_blank">DOI</a></p>
+              </div>
+            </li>
+            <li>
+              <span class="yr">2025</span>
+              <div>
+                <p class="pt">Evolutionary-Enhanced GAN With Wavelet-Based Discrimination: A Hardware-Accelerated Architecture for Efficient Synthetic Image Generation</p>
+                <p class="pa"><strong>C. G. Korde</strong>, K. G. Shreeharsha, R. K. Siddharth, M. H. Vasantha, Y. B. Nithin Kumar</p>
+                <p class="pm">IEEE Access, vol. 13, pp. 209009–209022. <a href="https://doi.org/10.1109/ACCESS.2025.3642041" rel="noopener" target="_blank">DOI</a></p>
+              </div>
+            </li>
+            <li>
+              <span class="yr">2025</span>
+              <div>
+                <p class="pt">Generating Synthetic Data Using 2D Multifractal Detrended Fluctuation Analysis Generative Adversarial Networks</p>
+                <p class="pa"><strong>C. G. Korde</strong>, K. G. Shreeharsha, R. K. Siddharth, M. H. Vasantha, Y. B. Nithin Kumar</p>
+                <p class="pm">IEEE Access, vol. 13, pp. 150794–150805. <a href="https://doi.org/10.1109/ACCESS.2025.3603332" rel="noopener" target="_blank">DOI</a></p>
+              </div>
+            </li>
+            <li>
+              <span class="yr">2024</span>
+              <div>
+                <p class="pt">An Exponential Variation Based PSO for Analog Circuit Sizing in Constrained Environment</p>
+                <p class="pa">K. G. Shreeharsha, R. K. Siddharth, <strong>C. G. Korde</strong>, M. H. Vasantha, Y. B. Nithin Kumar</p>
+                <p class="pm">AEU — International Journal of Electronics and Communications, vol. 187, art. 155531. <a href="https://doi.org/10.1016/j.aeue.2024.155531" rel="noopener" target="_blank">DOI</a></p>
+              </div>
+            </li>
+          </ul>
+
+          <details>
+            <summary>Earlier publications</summary>
+            <ul class="pubs">
+              <li>
+                <span class="yr">2021</span>
+                <div>
+                  <p class="pt">Training of Generative Adversarial Networks using Particle Swarm Optimization Algorithm</p>
+                  <p class="pa">K. G. Shreeharsha, <strong>C. G. Korde</strong>, M. H. Vasantha, Y. B. Nithin Kumar</p>
+                  <p class="pm">IEEE iSES, pp. 127–130. <a href="https://doi.org/10.1109/iSES52644.2021.00038" rel="noopener" target="_blank">DOI</a></p>
+                </div>
+              </li>
+              <li>
+                <span class="yr">2019</span>
+                <div>
+                  <p class="pt">Training of Generative Adversarial Networks with Hybrid Evolutionary Optimization Technique</p>
+                  <p class="pa"><strong>C. G. Korde</strong>, K. Manikantta Reddy, M. H. Vasantha, Y. B. Nithin Kumar</p>
+                  <p class="pm">IEEE INDICON, pp. 1–4. <a href="https://doi.org/10.1109/INDICON47234.2019.9030352" rel="noopener" target="_blank">DOI</a></p>
+                </div>
+              </li>
+              <li>
+                <span class="yr">2018</span>
+                <div>
+                  <p class="pt">FPGA Implementation of Square and Cube Architecture Using Vedic Mathematics</p>
+                  <p class="pa">S. Barve, S. Raveendran, <strong>C. Korde</strong>, T. Panigrahi, Y. B. Nithin Kumar, M. H. Vasantha</p>
+                  <p class="pm">IEEE iSES, pp. 6–10. <a href="https://doi.org/10.1109/iSES.2018.00012" rel="noopener" target="_blank">DOI</a></p>
+                </div>
+              </li>
+              <li>
+                <span class="yr">2017</span>
+                <div>
+                  <p class="pt">Multifractal Analysis of Ionospheric Disturbances Triggered by Earthquakes</p>
+                  <p class="pa"><strong>C. G. Korde</strong></p>
+                  <p class="pm">IAMG conference. No DOI; see the <a href="https://orcid.org/0000-0003-0055-4997/163576204" rel="noopener" target="_blank">ORCID record</a>.</p>
+                </div>
+              </li>
+              <li>
+                <span class="yr">2015</span>
+                <div>
+                  <p class="pt">Implementation of FPGA Based Pre-Processing Algorithms for Devnagri Script Recognition System</p>
+                  <p class="pa"><strong>C. G. Korde</strong></p>
+                  <p class="pm">IEEE ISVLSI. No DOI; see the <a href="https://orcid.org/0000-0003-0055-4997/163576194" rel="noopener" target="_blank">ORCID record</a>.</p>
+                </div>
+              </li>
+            </ul>
+          </details>
+
+          <p class="more-link">
+            <span>Full record:</span>
+            <a href="https://orcid.org/0000-0003-0055-4997" rel="noopener" target="_blank">ORCID</a>
+            <a href="https://scholar.google.com/citations?user=wdLkz5MAAAAJ&amp;hl=en" rel="noopener" target="_blank">Google Scholar</a>
+            <a href="https://www.scopus.com/authid/detail.uri?authorId=57209272684" rel="noopener" target="_blank">Scopus</a>
+            <a href="https://www.webofscience.com/wos/author/record/PMW-8170-2026" rel="noopener" target="_blank">Web of Science</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <div class="wrap">
+        <h2 id="projects-title">Projects</h2>
+        <div class="section-body">
+          <p class="lede">Open-source software for AI, security, education and knowledge management. Each entry links to its own repository or site.</p>
+
+          <div class="featured">
+            <article class="project">
+              <h3>orbit</h3>
+              <p>A minimalist LLM framework for Lua in roughly 160 lines. It has no dependencies or vendor lock-in, and supports agents, workflows and retrieval-augmented generation.</p>
+              <div class="links">
+                <a href="https://github.com/charudatta10/orbit" rel="noopener" target="_blank">Source</a>
+                <a href="https://charudatta10.github.io/orbit/" rel="noopener" target="_blank">Documentation</a>
+              </div>
+            </article>
+            <article class="project">
+              <h3>forensic-fathers-library</h3>
+              <p>A static site with a chatbot on the founders of forensic science. Retrieval and generation run entirely in the browser with WebLLM, so there is no server and no API key.</p>
+              <div class="links">
+                <a href="https://github.com/charudatta10/forensic-fathers-library" rel="noopener" target="_blank">Source</a>
+                <a href="https://charudatta10.github.io/forensic-fathers-library/" rel="noopener" target="_blank">Live site</a>
+              </div>
+            </article>
+            <article class="project">
+              <h3>license (MPLS)</h3>
+              <p>A composable, SPDX-compatible licensing framework that assembles modular legal clauses, with monetisation options built in.</p>
+              <div class="links">
+                <a href="https://github.com/charudatta10/license" rel="noopener" target="_blank">Source</a>
+              </div>
+            </article>
+            <article class="project">
+              <h3>link-net</h3>
+              <p>A curated, categorised hub of useful links, with custom icons and a quick setup.</p>
+              <div class="links">
+                <a href="https://github.com/charudatta10/link-net" rel="noopener" target="_blank">Source</a>
+                <a href="https://charudatta10.github.io/link-net/" rel="noopener" target="_blank">Live site</a>
+              </div>
+            </article>
           </div>
 
-          <ul class="hero-meta">
-            <li><a class="btn btn-ghost btn-sm" href="https://github.com/charudatta10" rel="noopener" target="_blank">GitHub</a></li>
-            <li><a class="btn btn-ghost btn-sm" href="https://scholar.google.com/citations?user=wdLkz5MAAAAJ&hl" rel="noopener" target="_blank">Google Scholar</a></li>
-            <li><a class="btn btn-ghost btn-sm" href="https://orcid.org/0000-0003-0055-4997" rel="noopener" target="_blank">ORCID</a></li>
-            <li><a class="btn btn-ghost btn-sm" href="https://www.linkedin.com/in/charudatta-korde/" rel="noopener" target="_blank">LinkedIn</a></li>
+          <details>
+            <summary>More projects</summary>
+            <ul class="rows">
+              <li>
+                <p class="name">task-runner-SDLC</p>
+                <p>Automates project initialisation, deployment, licensing, README generation and maintenance, now as PowerShell modules.</p>
+                <div class="links"><a href="https://github.com/charudatta10/task-runner-SDLC" rel="noopener" target="_blank">Source</a></div>
+              </li>
+              <li>
+                <p class="name">ai-orb, ai-rag and ai-translate</p>
+                <p>An agent framework, retrieval-augmented generation and code translation, each running on local models.</p>
+                <div class="links">
+                  <a href="https://github.com/charudatta10/ai-orb" rel="noopener" target="_blank">ai-orb</a>
+                  <a href="https://github.com/charudatta10/ai-rag" rel="noopener" target="_blank">ai-rag</a>
+                  <a href="https://github.com/charudatta10/ai-translate" rel="noopener" target="_blank">ai-translate</a>
+                </div>
+              </li>
+              <li>
+                <p class="name">ai-doc-gen, ai-igen and ai_chat</p>
+                <p>Project documentation written by a local LLM, local illustration generation, and a lightweight chat interface.</p>
+                <div class="links">
+                  <a href="https://github.com/charudatta10/ai-doc-gen" rel="noopener" target="_blank">ai-doc-gen</a>
+                  <a href="https://charudatta10.github.io/ai-doc-gen/" rel="noopener" target="_blank">ai-doc-gen docs</a>
+                  <a href="https://github.com/charudatta10/ai-igen" rel="noopener" target="_blank">ai-igen</a>
+                  <a href="https://github.com/charudatta10/ai_chat" rel="noopener" target="_blank">ai_chat</a>
+                </div>
+              </li>
+              <li>
+                <p class="name">one-time-share and sandLua</p>
+                <p>Secure single-download file sharing, and a Lua reverse-engineering sandbox with static and dynamic analysis.</p>
+                <div class="links">
+                  <a href="https://github.com/charudatta10/one-time-share" rel="noopener" target="_blank">one-time-share</a>
+                  <a href="https://github.com/charudatta10/sandLua" rel="noopener" target="_blank">sandLua</a>
+                </div>
+              </li>
+              <li>
+                <p class="name">wiki-notes and ibrain</p>
+                <p>A personal knowledge graph built with Foam and Raito, and a Docsify notes and wiki site.</p>
+                <div class="links">
+                  <a href="https://github.com/charudatta10/wiki-notes" rel="noopener" target="_blank">wiki-notes</a>
+                  <a href="https://charudatta10.github.io/ibrain/" rel="noopener" target="_blank">ibrain</a>
+                </div>
+              </li>
+              <li>
+                <p class="name">project-tile, pypwa and file-tagger</p>
+                <p>Project showcase tiles, single-file PWA packaging for Python scripts, and tag-based file organisation.</p>
+                <div class="links">
+                  <a href="https://charudatta10.github.io/project-tile/" rel="noopener" target="_blank">project-tile</a>
+                  <a href="https://github.com/charudatta10/pypwa" rel="noopener" target="_blank">pypwa</a>
+                  <a href="https://github.com/charudatta10/file-tagger" rel="noopener" target="_blank">file-tagger</a>
+                </div>
+              </li>
+              <li>
+                <p class="name">devanagari-handwriting-recognizer</p>
+                <p>Handwritten Devanagari recognition from my 2015 bachelor's project, related to the ISVLSI paper on FPGA pre-processing.</p>
+                <div class="links"><a href="https://github.com/charudatta10/devanagari-handwriting-recognizer" rel="noopener" target="_blank">Source</a></div>
+              </li>
+              <li>
+                <p class="name">PGAN-DNN</p>
+                <p>Perceptual adversarial training experiments from 2019, which preceded the INDICON paper on stable GAN training.</p>
+                <div class="links"><a href="https://github.com/charudatta10/PGAN-DNN" rel="noopener" target="_blank">Source</a></div>
+              </li>
+            </ul>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="wrap">
+        <h2 id="about-title">About</h2>
+        <div class="section-body">
+          <p class="lede">
+            I am an engineer, researcher and educator working where hardware,
+            machine learning and security meet. My research targets
+            resource-efficient AI for edge systems, my teaching covers incident
+            response and penetration testing, and my software favours small,
+            dependency-light tools. I am especially interested in decentralised
+            technology and open knowledge. Outside work I play chess, run, garden
+            and read.
+          </p>
+
+          <h3>Education</h3>
+          <ul class="timeline">
+            <li>
+              <span class="period">2017 – 2026 (expected)</span>
+              <div>
+                <p class="role-name">Ph.D., VLSI and Reconfigurable Computing</p>
+                <p>National Institute of Technology Goa. Hardware acceleration of GANs on FPGA-based edge devices.</p>
+              </div>
+            </li>
+            <li>
+              <span class="period">2015 – 2017</span>
+              <div>
+                <p class="role-name">M.Tech., Microelectronics</p>
+                <p>Thesis on multifractal analysis of ionospheric TEC as a seismic precursor, with GEC Goa and IIT Bombay.</p>
+              </div>
+            </li>
+            <li>
+              <span class="period">2011 – 2015</span>
+              <div>
+                <p class="role-name">B.E., Electrical and Electronics Engineering</p>
+                <p>Project on handwritten Devanagari recognition with FPGA pre-processing, at GEC Goa.</p>
+              </div>
+            </li>
+          </ul>
+
+          <h3 class="subhead">Experience</h3>
+          <ul class="timeline">
+            <li>
+              <span class="period">2024 – present</span>
+              <div>
+                <p class="role-name">Contract Lecturer, National Forensic Sciences University (Dharwad Campus)</p>
+                <p>Teaches incident response and vulnerability assessment and penetration testing (VAPT), pairing hands-on practice with system-level analysis.</p>
+              </div>
+            </li>
+            <li>
+              <span class="period">2024</span>
+              <div>
+                <p class="role-name">Visiting Faculty, Goa Polytechnic College</p>
+                <p>Led laboratory instruction in basic electronics, covering circuit fundamentals and measurement techniques.</p>
+              </div>
+            </li>
+            <li>
+              <span class="period">2019</span>
+              <div>
+                <p class="role-name">Software Validation Engineer, Intel</p>
+                <p>Validated Quartus tool flows and contributed to verification processes and software quality assurance.</p>
+              </div>
+            </li>
+            <li>
+              <span class="period">2018 – present</span>
+              <div>
+                <p class="role-name">Research Scholar and Teaching Assistant, National Institute of Technology Goa</p>
+                <p>Doctoral research on FPGA-based AI acceleration and hardware-software co-design, alongside laboratory guidance and mentoring.</p>
+              </div>
+            </li>
+            <li>
+              <span class="period">2015 – present</span>
+              <div>
+                <p class="role-name">Independent research and open-source development</p>
+                <p>Projects in medical signal analysis, data-intensive systems and automation, plus open-source tools for documentation, file organisation and programmatic graphics.</p>
+              </div>
+            </li>
+          </ul>
+
+          <h3 class="subhead">Skills</h3>
+          <dl class="skills">
+            <dt>Core</dt>
+            <dd>Python, FPGA design, GAN architectures, edge AI, distributed systems, peer-to-peer blockchain</dd>
+            <dt>Languages and hardware</dt>
+            <dd>Verilog, VHDL, C, CUDA, MATLAB, LaTeX</dd>
+            <dt>AI and machine learning</dt>
+            <dd>PyTorch, TensorFlow, NumPy, scikit-learn, Stable Diffusion, LLM integration</dd>
+            <dt>Security</dt>
+            <dd>Malware analysis, VAPT, incident response, cryptography, secure architectures</dd>
+          </dl>
+
+          <h3 class="subhead">Recognition and mentoring</h3>
+          <ul class="plain-list">
+            <li>Mentored six postgraduate students through thesis work in AI, GAN optimisation and hardware-accelerated architectures.</li>
+            <li>Cleared Stage 1 of the national AI Grand Challenge (PS12, Underwater Acoustic Systems).</li>
+            <li>Presented a poster on edge computing optimisation.</li>
           </ul>
         </div>
-
-        <div class="hero-figure reveal">
-          <svg class="diagram" viewBox="0 0 520 380" data-animate aria-hidden="true">
-            <defs>
-              <linearGradient id="hw-g" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0" stop-color="var(--primary)"/>
-                <stop offset="1" stop-color="var(--secondary)"/>
-              </linearGradient>
-            </defs>
-            <rect x="10" y="10" width="500" height="360" rx="24" fill="var(--surface-2)"/>
-            <rect x="10" y="10" width="500" height="360" rx="24" fill="none" stroke="var(--border)" stroke-width="1.5"/>
-
-            <text x="260" y="48" class="diagram-title" text-anchor="middle">Hardware-accelerated GAN pipeline</text>
-
-            <rect x="30" y="150" width="72" height="60" rx="12" class="diagram-node-cool"/>
-            <text x="66" y="183" class="diagram-text" text-anchor="middle">latent z</text>
-
-            <rect x="136" y="150" width="76" height="60" rx="12" class="diagram-node-hot"/>
-            <text x="174" y="173" class="diagram-title" text-anchor="middle">G</text>
-            <text x="174" y="189" class="diagram-sub" text-anchor="middle">generator</text>
-
-            <rect x="246" y="150" width="72" height="60" rx="12" class="diagram-node-cool"/>
-            <text x="282" y="183" class="diagram-text" text-anchor="middle">image</text>
-
-            <rect x="352" y="120" width="86" height="120" rx="12" class="diagram-node"/>
-            <text x="395" y="168" class="diagram-title" text-anchor="middle">D</text>
-            <text x="395" y="184" class="diagram-sub" text-anchor="middle">wavelet /</text>
-            <text x="395" y="198" class="diagram-sub" text-anchor="middle">MFDFA</text>
-
-            <rect x="246" y="258" width="72" height="60" rx="12" class="diagram-node-cool"/>
-            <text x="282" y="291" class="diagram-text" text-anchor="middle">real</text>
-
-            <path class="diagram-flow" data-dash d="M102 180 L136 180"/>
-            <path class="diagram-flow" data-dash d="M212 180 L246 180"/>
-            <path class="diagram-flow" data-dash d="M318 180 L352 180"/>
-            <path class="diagram-flow-2" data-dash d="M282 258 L282 210"/>
-            <path class="diagram-flow-2" d="M282 210 L352 180" opacity="0.5"/>
-            <path class="diagram-flow" d="M395 120 C 395 70, 60 70, 174 148" opacity="0.35" stroke-dasharray="4 5"/>
-
-            <text x="60" y="345" class="diagram-sub">training signal</text>
-            <text x="398" y="345" class="diagram-sub" text-anchor="end">real / fake</text>
-          </svg>
-        </div>
       </div>
     </section>
 
-    <!-- ========================= RESEARCH ============================= -->
-    <section class="section" id="research" aria-labelledby="research-title">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="eyebrow">Research</span>
-          <h2 class="section-title" id="research-title">Resource-efficient AI on edge hardware</h2>
-          <p class="section-sub">
-            Doctoral research (NIT Goa) on hardware acceleration of Generative
-            Adversarial Networks for FPGA-based edge devices — evolutionary and
-            multifractal methods to stabilise training, and hardware-aware
-            design for low-latency, low-power inference.
-          </p>
-        </div>
-
-        <div class="metric-strip reveal">
-          <div class="metric">
-            <div class="metric-value">92.05%</div>
-            <div class="metric-label">latency reduction · MFDFA GAN</div>
-          </div>
-          <div class="metric">
-            <div class="metric-value">86.03%</div>
-            <div class="metric-label">power reduction · MFDFA GAN</div>
-          </div>
-          <div class="metric">
-            <div class="metric-value">85%</div>
-            <div class="metric-label">FID improvement · 2D-MFDFA GAN</div>
-          </div>
-          <div class="metric">
-            <div class="metric-value">138&nbsp;µs</div>
-            <div class="metric-label">inference latency @ Kintex-7 (vs 570 µs)</div>
-          </div>
-        </div>
-
-        <div class="grid grid-3">
-          <article class="card research-card reveal">
-            <div class="research-art">
-              <svg class="diagram" viewBox="0 0 400 190" data-animate aria-hidden="true">
-                <rect x="12" y="12" width="376" height="166" rx="14" fill="none" stroke="var(--border)" stroke-width="1.5"/>
-                <path class="diagram-flow-2" data-dash d="M40 150 L70 118 L100 134 L130 84 L160 102 L190 60 L220 96 L250 76 L280 104 L310 66 L340 88 L360 70"/>
-                <path class="diagram-flow" data-dash d="M40 176 L70 168 L100 172 L130 164 L160 170 L190 162 L220 168 L250 160 L280 166 L310 158 L340 164 L360 156" opacity="0.35"/>
-                <text x="60" y="30" class="diagram-title">Multifractal spectrum</text>
-                <path class="diagram-line" d="M70 120 L70 140 M200 120 L200 140 M330 120 L330 140"/>
-                <text x="70" y="116" class="diagram-sub" text-anchor="middle">q&lt;0</text>
-                <text x="200" y="116" class="diagram-sub" text-anchor="middle">q=0</text>
-                <text x="330" y="116" class="diagram-sub" text-anchor="middle">q&gt;0</text>
-              </svg>
-            </div>
-            <div class="card-pad">
-              <h3 class="card-title">MFDFA-Enhanced GAN</h3>
-              <p class="card-body">
-                Multifractal Detrended Fluctuation Analysis embedded in the
-                discriminator for stable, hardware-optimised synthetic image
-                generation — without changing the core GAN architecture.
-              </p>
-              <div class="research-metrics">
-                <span class="chip chip-good chip-mono">−92.05% latency</span>
-                <span class="chip chip-good chip-mono">−86.03% power</span>
-              </div>
-              <div class="chips" style="margin-bottom: 14px">
-                <span class="chip">GAN</span>
-                <span class="chip">MFDFA</span>
-                <span class="chip">FPGA</span>
-                <span class="chip">Edge AI</span>
-              </div>
-              <div class="research-links">
-                <a href="https://doi.org/10.1109/ACCESS.2026.3677066" rel="noopener" target="_blank">Paper →</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="card research-card reveal">
-            <div class="research-art">
-              <svg class="diagram" viewBox="0 0 400 190" data-animate aria-hidden="true">
-                <rect x="12" y="12" width="376" height="166" rx="14" fill="none" stroke="var(--border)" stroke-width="1.5"/>
-                <rect x="28" y="80" width="60" height="50" rx="10" class="diagram-node-cool"/>
-                <text x="58" y="109" class="diagram-sub" text-anchor="middle">z</text>
-                <rect x="112" y="80" width="60" height="50" rx="10" class="diagram-node-hot"/>
-                <text x="142" y="109" class="diagram-title" text-anchor="middle">G</text>
-                <rect x="196" y="80" width="60" height="50" rx="10" class="diagram-node-cool"/>
-                <text x="226" y="109" class="diagram-sub" text-anchor="middle">img</text>
-                <rect x="296" y="62" width="80" height="86" rx="10" class="diagram-node"/>
-                <text x="336" y="98" class="diagram-title" text-anchor="middle">D</text>
-                <text x="336" y="114" class="diagram-sub" text-anchor="middle">wavelet</text>
-                <path class="diagram-flow" data-dash d="M88 105 L112 105 M172 105 L196 105 M256 105 L296 105"/>
-                <text x="58" y="168" class="diagram-sub">genetic algorithm</text>
-                <path class="diagram-flow" d="M112 130 C 112 160, 50 160, 56 130" opacity="0.4"/>
-              </svg>
-            </div>
-            <div class="card-pad">
-              <h3 class="card-title">Evolutionary-Enhanced GAN</h3>
-              <p class="card-body">
-                Genetic-algorithm-optimised generator with wavelet-based
-                discrimination, synthesised on the AMD Kintex-7 KC705 with the
-                lowest area footprint among compared implementations.
-              </p>
-              <div class="research-metrics">
-                <span class="chip chip-good chip-mono">138 µs vs 570 µs</span>
-                <span class="chip chip-good chip-mono">24 mW vs 47 mW</span>
-              </div>
-              <div class="chips" style="margin-bottom: 14px">
-                <span class="chip">GAN</span>
-                <span class="chip">Wavelet</span>
-                <span class="chip">FPGA</span>
-                <span class="chip">Edge AI</span>
-              </div>
-              <div class="research-links">
-                <a href="https://doi.org/10.1109/ACCESS.2025.3642041" rel="noopener" target="_blank">Paper →</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="card research-card reveal">
-            <div class="research-art">
-              <svg class="diagram" viewBox="0 0 400 190" data-animate aria-hidden="true">
-                <rect x="12" y="12" width="376" height="166" rx="14" fill="none" stroke="var(--border)" stroke-width="1.5"/>
-                <rect x="24" y="74" width="62" height="52" rx="10" class="diagram-node-cool"/>
-                <text x="55" y="103" class="diagram-sub" text-anchor="middle">image</text>
-                <rect x="112" y="74" width="62" height="52" rx="10" class="diagram-node"/>
-                <text x="143" y="96" class="diagram-sub" text-anchor="middle">quantise</text>
-                <rect x="200" y="74" width="62" height="52" rx="10" class="diagram-node"/>
-                <text x="231" y="96" class="diagram-sub" text-anchor="middle">tiling</text>
-                <rect x="288" y="74" width="80" height="52" rx="10" class="diagram-node-hot"/>
-                <text x="328" y="96" class="diagram-title" text-anchor="middle">DSP</text>
-                <path class="diagram-flow" data-dash d="M86 100 L112 100 M174 100 L200 100 M262 100 L288 100"/>
-                <text x="60" y="160" class="diagram-sub">NNGen deployment · KC705</text>
-              </svg>
-            </div>
-            <div class="card-pad">
-              <h3 class="card-title">2D-MFDFA GAN</h3>
-              <p class="card-body">
-                A 2D multifractal discriminator for fast synthetic-data
-                generation, deployed on the Kintex-7 KC705 through the NNGen
-                framework with verified hardware results.
-              </p>
-              <div class="research-metrics">
-                <span class="chip chip-good chip-mono">+85% FID</span>
-                <span class="chip chip-good chip-mono">94% faster</span>
-                <span class="chip chip-good chip-mono">−81% power</span>
-              </div>
-              <div class="chips" style="margin-bottom: 14px">
-                <span class="chip">MFDFA</span>
-                <span class="chip">GAN</span>
-                <span class="chip">NNGen</span>
-                <span class="chip">FPGA</span>
-              </div>
-              <div class="research-links">
-                <a href="https://doi.org/10.1109/ACCESS.2025.3603332" rel="noopener" target="_blank">Paper →</a>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========================= RESEARCH → CODE ====================== -->
-    <section class="section" id="research-code" aria-labelledby="rc-title">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="eyebrow">Research → code</span>
-          <h2 class="section-title" id="rc-title">From publication to implementation</h2>
-          <p class="section-sub">
-            Research and software are treated as one pipeline. Each paper is
-            linked to its method, implementation and (where it exists) source
-            code.
-          </p>
-        </div>
-
-        <div class="card card-pad reveal">
-          <div class="pipeline" role="list">
-            <div class="pipe-step" role="listitem">
-              <div class="pipe-icon" aria-hidden="true">🔬</div>
-              <div class="pipe-label">Research problem</div>
-              <div class="pipe-sub">GAN instability on edge hardware</div>
-            </div>
-            <div class="pipe-arrow" aria-hidden="true">→</div>
-            <div class="pipe-step" role="listitem">
-              <div class="pipe-icon" aria-hidden="true">🧬</div>
-              <div class="pipe-label">Method</div>
-              <div class="pipe-sub">evolutionary · wavelet · MFDFA</div>
-            </div>
-            <div class="pipe-arrow" aria-hidden="true">→</div>
-            <div class="pipe-step" role="listitem">
-              <div class="pipe-icon" aria-hidden="true">⚙️</div>
-              <div class="pipe-label">Implementation</div>
-              <div class="pipe-sub">PyTorch · Python · HDL</div>
-            </div>
-            <div class="pipe-arrow" aria-hidden="true">→</div>
-            <div class="pipe-step" role="listitem">
-              <div class="pipe-icon" aria-hidden="true">📊</div>
-              <div class="pipe-label">Results</div>
-              <div class="pipe-sub">latency · power · FID</div>
-            </div>
-            <div class="pipe-arrow" aria-hidden="true">→</div>
-            <div class="pipe-step" role="listitem">
-              <div class="pipe-icon" aria-hidden="true">📄</div>
-              <div class="pipe-label">Publication</div>
-              <div class="pipe-sub">IEEE Access · iSES · INDICON</div>
-            </div>
-            <div class="pipe-arrow" aria-hidden="true">→</div>
-            <div class="pipe-step" role="listitem">
-              <div class="pipe-icon" aria-hidden="true">🧑‍💻</div>
-              <div class="pipe-label">Source code</div>
-              <div class="pipe-sub">open research repos</div>
-            </div>
-          </div>
-          <p style="margin: 18px 0 0; font-size: 0.9rem">
-            Some publications have no public code yet — those are listed as
-            paper-only rather than inventing links. Verified implementations are
-            shown with their exact repository.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========================= PROJECTS ============================= -->
-    <section class="section" id="projects" aria-labelledby="projects-title">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="eyebrow">Projects</span>
-          <h2 class="section-title" id="projects-title">Projects</h2>
-          <p class="section-sub">
-            Open-source tools, research implementations and degree projects from
-            the <a href="https://github.com/charudatta10" rel="noopener" target="_blank">charudatta10</a>
-            profile — every card links to its exact repository or live site, no
-            generic profile links.
-          </p>
-        </div>
-
-        <div class="grid grid-3 fold-list" data-show="4">
-          <article class="card project-card card-pad reveal">
-            <div class="project-icon" aria-hidden="true">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                <rect x="4" y="4" width="16" height="16" rx="4"/>
-                <path d="M9 9v6M15 9v6M9 12h6"/>
-              </svg>
-            </div>
-            <span class="project-status">Flagship · pinned</span>
-            <h3 class="card-title">orbit</h3>
-            <p class="card-body">
-              A ~160-line minimalist LLM framework for Lua. Zero dependencies,
-              zero vendor lock-in; agents, workflows and RAG in one file.
-            </p>
-            <div class="chips" style="margin-bottom: 14px">
-              <span class="chip">Lua</span>
-              <span class="chip">LLM</span>
-              <span class="chip">Agents</span>
-            </div>
-            <div class="card-footer project-actions">
-              <a href="https://github.com/charudatta10/orbit" rel="noopener" target="_blank">Source →</a>
-              <a href="https://charudatta10.github.io/orbit/" rel="noopener" target="_blank">Docs →</a>
-            </div>
-          </article>
-
-          <article class="card project-card card-pad reveal">
-            <div class="project-icon" aria-hidden="true">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                <circle cx="12" cy="12" r="9"/>
-                <path d="M8 12l3 3 5-6"/>
-              </svg>
-            </div>
-            <span class="project-status">Flagship · pinned</span>
-            <h3 class="card-title">forensic-fathers-library</h3>
-            <p class="card-body">
-              Static site with a client-only RAG chatbot over the founding
-              figures of forensic science — WebLLM in the browser, no server,
-              no API keys.
-            </p>
-            <div class="chips" style="margin-bottom: 14px">
-              <span class="chip">HTML</span>
-              <span class="chip">RAG</span>
-              <span class="chip">WebLLM</span>
-            </div>
-            <div class="card-footer project-actions">
-              <a href="https://github.com/charudatta10/forensic-fathers-library" rel="noopener" target="_blank">Source →</a>
-              <a href="https://charudatta10.github.io/forensic-fathers-library/" rel="noopener" target="_blank">Live →</a>
-            </div>
-          </article>
-
-          <article class="card project-card card-pad reveal">
-            <div class="project-icon" aria-hidden="true">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                <path d="M12 3l7 4v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V7z"/>
-                <path d="M9 12l2 2 4-4"/>
-              </svg>
-            </div>
-            <span class="project-status">Notable · pinned</span>
-            <h3 class="card-title">license · MPLS</h3>
-            <p class="card-body">
-              A composable, SPDX-compatible licensing framework — modular legal
-              clauses instead of rewriting licenses, with monetisation built in.
-            </p>
-            <div class="chips" style="margin-bottom: 14px">
-              <span class="chip">Python</span>
-              <span class="chip">Licensing</span>
-              <span class="chip">Open source</span>
-            </div>
-            <div class="card-footer project-actions">
-              <a href="https://github.com/charudatta10/license" rel="noopener" target="_blank">Source →</a>
-            </div>
-          </article>
-
-          <article class="card project-card card-pad reveal">
-            <div class="project-icon" aria-hidden="true">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                <circle cx="6" cy="6" r="2.5"/>
-                <circle cx="18" cy="6" r="2.5"/>
-                <circle cx="12" cy="18" r="2.5"/>
-                <path d="M8 7l2.5 8.5M16 7l-2.5 8.5M6 8.5v.5a3 3 0 0 0 3 3h6a3 3 0 0 0 3-3v-.5"/>
-              </svg>
-            </div>
-            <span class="project-status">Knowledge · pinned</span>
-            <h3 class="card-title">link-net</h3>
-            <p class="card-body">
-              Aggregated link hub — a curated, categorised collection of useful
-              resources with custom link icons and fast setup.
-            </p>
-            <div class="chips" style="margin-bottom: 14px">
-              <span class="chip">Python</span>
-              <span class="chip">Flask</span>
-              <span class="chip">Jinja2</span>
-            </div>
-            <div class="card-footer project-actions">
-              <a href="https://github.com/charudatta10/link-net" rel="noopener" target="_blank">Source →</a>
-              <a href="https://charudatta10.github.io/link-net/" rel="noopener" target="_blank">Live →</a>
-            </div>
-          </article>
-
-          <article class="card card-pad reveal">
-            <span class="project-status">Automation</span>
-            <h3 class="card-title">task-runner-SDLC</h3>
-            <p class="card-body">
-              Automates init, deploy, licence, readme and maintenance tasks
-              across projects (now maintained as PowerShell modules).
-            </p>
-            <div class="card-footer project-actions">
-              <a href="https://github.com/charudatta10/task-runner-SDLC" rel="noopener" target="_blank">Source →</a>
-            </div>
-          </article>
-
-          <article class="card card-pad reveal">
-            <span class="project-status">AI tooling</span>
-            <h3 class="card-title">ai-orb · ai-rag · ai-translate</h3>
-            <p class="card-body">
-              Agent framework, retrieval-augmented generation and code
-              translation, each running on local models.
-            </p>
-            <div class="card-footer project-actions">
-              <a href="https://github.com/charudatta10/ai-orb" rel="noopener" target="_blank">ai-orb →</a>
-              <a href="https://github.com/charudatta10/ai-rag" rel="noopener" target="_blank">ai-rag →</a>
-              <a href="https://github.com/charudatta10/ai-translate" rel="noopener" target="_blank">ai-translate →</a>
-            </div>
-          </article>
-
-          <article class="card card-pad reveal">
-            <span class="project-status">AI tooling</span>
-            <h3 class="card-title">ai-doc-gen · ai-igen · ai_chat</h3>
-            <p class="card-body">
-              Generate project documentation with a local LLM, produce
-              illustrations locally, and a lightweight local chat interface.
-            </p>
-            <div class="card-footer project-actions">
-              <a href="https://github.com/charudatta10/ai-doc-gen" rel="noopener" target="_blank">ai-doc-gen →</a>
-              <a href="https://charudatta10.github.io/ai-doc-gen/" rel="noopener" target="_blank">Docs →</a>
-              <a href="https://github.com/charudatta10/ai-igen" rel="noopener" target="_blank">ai-igen →</a>
-              <a href="https://github.com/charudatta10/ai_chat" rel="noopener" target="_blank">ai_chat →</a>
-            </div>
-          </article>
-
-          <article class="card card-pad reveal">
-            <span class="project-status">Security</span>
-            <h3 class="card-title">one-time-share · sandLua</h3>
-            <p class="card-body">
-              Secure single-download file sharing, and a Lua reverse-engineering
-              sandbox with static and dynamic analysis.
-            </p>
-            <div class="card-footer project-actions">
-              <a href="https://github.com/charudatta10/one-time-share" rel="noopener" target="_blank">one-time-share →</a>
-              <a href="https://github.com/charudatta10/sandLua" rel="noopener" target="_blank">sandLua →</a>
-            </div>
-          </article>
-
-          <article class="card card-pad reveal">
-            <span class="project-status">Knowledge</span>
-            <h3 class="card-title">wiki-notes · ibrain</h3>
-            <p class="card-body">
-              Foam + Raito personal knowledge graph, and a Docsify-powered notes
-              &amp; wiki site.
-            </p>
-            <div class="card-footer project-actions">
-              <a href="https://github.com/charudatta10/wiki-notes" rel="noopener" target="_blank">wiki-notes →</a>
-              <a href="https://charudatta10.github.io/ibrain/" rel="noopener" target="_blank">ibrain →</a>
-            </div>
-          </article>
-
-          <article class="card card-pad reveal">
-            <span class="project-status">Dev tools</span>
-            <h3 class="card-title">project-tile · pypwa · file-tagger</h3>
-            <p class="card-body">
-              Showcase projects as tiles, ship any Python script as a
-              single-file PWA, and organise files by tags.
-            </p>
-            <div class="card-footer project-actions">
-              <a href="https://charudatta10.github.io/project-tile/" rel="noopener" target="_blank">project-tile →</a>
-              <a href="https://github.com/charudatta10/pypwa" rel="noopener" target="_blank">pypwa →</a>
-              <a href="https://github.com/charudatta10/file-tagger" rel="noopener" target="_blank">file-tagger →</a>
-            </div>
-          </article>
-
-          <article class="card card-pad reveal">
-            <span class="project-status">Research · academic</span>
-            <h3 class="card-title">Devanagari Recognizer</h3>
-            <p class="card-body">
-              Handwritten Devanagari script recognition system from the
-              Bachelor's project (2015) — the same line of work as the ISVLSI
-              publication on FPGA pre-processing.
-            </p>
-            <div class="chips" style="margin-bottom: 14px">
-              <span class="chip">MATLAB</span>
-              <span class="chip">OCR</span>
-              <span class="chip">ML</span>
-            </div>
-            <div class="card-footer project-actions">
-              <a href="https://github.com/charudatta10/devanagari-handwriting-recognizer" rel="noopener" target="_blank">Source →</a>
-            </div>
-          </article>
-
-          <article class="card card-pad reveal">
-            <span class="project-status">Research</span>
-            <h3 class="card-title">PGAN-DNN</h3>
-            <p class="card-body">
-              2019 GAN research implementation (perceptual adversarial training
-              experiments) — part of the doctoral exploration into stable GAN
-              training that led to the INDICON publication.
-            </p>
-            <div class="chips" style="margin-bottom: 14px">
-              <span class="chip">PyTorch</span>
-              <span class="chip">GAN</span>
-              <span class="chip">Research</span>
-            </div>
-            <div class="card-footer project-actions">
-              <a href="https://github.com/charudatta10/PGAN-DNN" rel="noopener" target="_blank">Source →</a>
-            </div>
-          </article>
-
-          <article class="card card-pad reveal">
-            <span class="project-status">Education · 2015</span>
-            <h3 class="card-title">Devanagari Script Recognition (Bachelor's)</h3>
-            <p class="card-body">
-              Machine learning-based character recognition system with FPGA
-              pre-processing (GEC Goa). Published at ISVLSI.
-            </p>
-          </article>
-
-          <article class="card card-pad reveal">
-            <span class="project-status">Education · 2017</span>
-            <h3 class="card-title">TEC as Seismic Precursor (Master's)</h3>
-            <p class="card-body">
-              MFDFA-based ionospheric pattern analysis for earthquake detection
-              (GEC Goa &amp; IIT Bombay). Presented at IAMG.
-            </p>
-          </article>
-
-          <article class="card card-pad reveal">
-            <span class="project-status">Education · 2019</span>
-            <h3 class="card-title">Hybrid Evolutionary Optimization of GANs (PhD Work)</h3>
-            <p class="card-body">
-              Evolutionary + backprop training framework for improved GAN
-              convergence (NIT Goa). Published at INDICON.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========================= PUBLICATIONS ========================== -->
-    <section class="section" id="publications" aria-labelledby="pubs-title">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="eyebrow">Publications</span>
-          <h2 class="section-title" id="pubs-title">Publications</h2>
-          <p class="section-sub">
-            Every entry verified against ORCID and Crossref. DOIs resolve to the
-            publisher; the two conference papers without DOIs link to their
-            ORCID records.
-          </p>
-        </div>
-
-        <ul class="pub-list fold-list" data-show="4">
-          <li class="pub-item reveal">
-            <span class="pub-year">2026</span>
-            <div>
-              <h3 class="pub-title">MFDFA-Enhanced GAN: A Hardware-Optimized Architecture for Efficient Synthetic Image Generation</h3>
-              <p class="pub-authors">C. G. Korde, K. G. Shreeharsha, R. K. Siddharth, M. H. Vasantha, Y. B. Nithin Kumar</p>
-              <p class="pub-meta"><span class="pub-badge pub-badge-open">IEEE Access</span>&nbsp; vol. 14, pp. 46700–46713 · −92.05% latency, −86.03% power</p>
-              <div class="pub-links">
-                <a href="https://doi.org/10.1109/ACCESS.2026.3677066" rel="noopener" target="_blank">DOI</a>
-                <a href="https://orcid.org/0000-0003-0055-4997/209572201" rel="noopener" target="_blank">ORCID</a>
-              </div>
-            </div>
-          </li>
-
-          <li class="pub-item reveal">
-            <span class="pub-year">2025</span>
-            <div>
-              <h3 class="pub-title">Evolutionary-Enhanced GAN With Wavelet-Based Discrimination: A Hardware-Accelerated Architecture for Efficient Synthetic Image Generation</h3>
-              <p class="pub-authors">C. G. Korde, K. G. Shreeharsha, R. K. Siddharth, M. H. Vasantha, Y. B. Nithin Kumar</p>
-              <p class="pub-meta"><span class="pub-badge pub-badge-open">IEEE Access</span>&nbsp; vol. 13, pp. 209009–209022 · 138 µs vs 570 µs, 24 mW vs 47 mW</p>
-              <div class="pub-links">
-                <a href="https://doi.org/10.1109/ACCESS.2025.3642041" rel="noopener" target="_blank">DOI</a>
-                <a href="https://orcid.org/0000-0003-0055-4997/199197765" rel="noopener" target="_blank">ORCID</a>
-              </div>
-            </div>
-          </li>
-
-          <li class="pub-item reveal">
-            <span class="pub-year">2025</span>
-            <div>
-              <h3 class="pub-title">Generating Synthetic Data Using 2D Multifractal Detrended Fluctuation Analysis Generative Adversarial Networks</h3>
-              <p class="pub-authors">C. G. Korde, K. G. Shreeharsha, R. K. Siddharth, M. H. Vasantha, Y. B. Nithin Kumar</p>
-              <p class="pub-meta"><span class="pub-badge pub-badge-open">IEEE Access</span>&nbsp; vol. 13, pp. 150794–150805 · 85% FID gain, 94% faster, −81% power</p>
-              <div class="pub-links">
-                <a href="https://doi.org/10.1109/ACCESS.2025.3603332" rel="noopener" target="_blank">DOI</a>
-                <a href="https://orcid.org/0000-0003-0055-4997/195282685" rel="noopener" target="_blank">ORCID</a>
-              </div>
-            </div>
-          </li>
-
-          <li class="pub-item reveal">
-            <span class="pub-year">2024</span>
-            <div>
-              <h3 class="pub-title">An Exponential Variation Based PSO for Analog Circuit Sizing in Constrained Environment</h3>
-              <p class="pub-authors">K. G. Shreeharsha, R. K. Siddharth, C. G. Korde, M. H. Vasantha, Y. B. Nithin Kumar</p>
-              <p class="pub-meta"><span class="pub-badge pub-badge-j">AEU — Int. J. Electron. Commun.</span>&nbsp; vol. 187, art. 155531</p>
-              <div class="pub-links">
-                <a href="https://doi.org/10.1016/j.aeue.2024.155531" rel="noopener" target="_blank">DOI</a>
-                <a href="https://orcid.org/0000-0003-0055-4997/206549799" rel="noopener" target="_blank">ORCID</a>
-              </div>
-            </div>
-          </li>
-
-          <li class="pub-item reveal">
-            <span class="pub-year">2021</span>
-            <div>
-              <h3 class="pub-title">Training of Generative Adversarial Networks using Particle Swarm Optimization Algorithm</h3>
-              <p class="pub-authors">K. G. Shreeharsha, C. G. Korde, M. H. Vasantha, Y. B. Nithin Kumar</p>
-              <p class="pub-meta"><span class="pub-badge pub-badge-conf">IEEE iSES</span>&nbsp; pp. 127–130 · ~5× fewer iterations to plausible MNIST images</p>
-              <div class="pub-links">
-                <a href="https://doi.org/10.1109/iSES52644.2021.00038" rel="noopener" target="_blank">DOI</a>
-                <a href="https://orcid.org/0000-0003-0055-4997/206549795" rel="noopener" target="_blank">ORCID</a>
-              </div>
-            </div>
-          </li>
-
-          <li class="pub-item reveal">
-            <span class="pub-year">2019</span>
-            <div>
-              <h3 class="pub-title">Training of Generative Adversarial Networks with Hybrid Evolutionary Optimization Technique</h3>
-              <p class="pub-authors">C. G. Korde, K. Manikantta Reddy, M. H. Vasantha, Y. B. Nithin Kumar</p>
-              <p class="pub-meta"><span class="pub-badge pub-badge-conf">IEEE INDICON</span>&nbsp; pp. 1–4</p>
-              <div class="pub-links">
-                <a href="https://doi.org/10.1109/INDICON47234.2019.9030352" rel="noopener" target="_blank">DOI</a>
-                <a href="https://orcid.org/0000-0003-0055-4997/206549796" rel="noopener" target="_blank">ORCID</a>
-              </div>
-            </div>
-          </li>
-
-          <li class="pub-item reveal">
-            <span class="pub-year">2018</span>
-            <div>
-              <h3 class="pub-title">FPGA Implementation of Square and Cube Architecture Using Vedic Mathematics</h3>
-              <p class="pub-authors">S. Barve, S. Raveendran, C. Korde, T. Panigrahi, Y. B. Nithin Kumar, M. H. Vasantha</p>
-              <p class="pub-meta"><span class="pub-badge pub-badge-conf">IEEE iSES</span>&nbsp; pp. 6–10</p>
-              <div class="pub-links">
-                <a href="https://doi.org/10.1109/iSES.2018.00012" rel="noopener" target="_blank">DOI</a>
-                <a href="https://orcid.org/0000-0003-0055-4997/206549797" rel="noopener" target="_blank">ORCID</a>
-              </div>
-            </div>
-          </li>
-
-          <li class="pub-item reveal">
-            <span class="pub-year">2017</span>
-            <div>
-              <h3 class="pub-title">Multifractal Analysis of Ionospheric Disturbances Triggered by Earthquakes</h3>
-              <p class="pub-authors">C. G. Korde (IAMG Conference paper)</p>
-              <p class="pub-meta"><span class="pub-badge pub-badge-conf">IAMG Conference</span>&nbsp; paper-only · no DOI</p>
-              <div class="pub-links">
-                <a href="https://orcid.org/0000-0003-0055-4997/163576204" rel="noopener" target="_blank">ORCID record</a>
-                <a href="https://scholar.google.com/citations?user=wdLkz5MAAAAJ&hl" rel="noopener" target="_blank">Google Scholar</a>
-              </div>
-            </div>
-          </li>
-
-          <li class="pub-item reveal">
-            <span class="pub-year">2015</span>
-            <div>
-              <h3 class="pub-title">Implementation of FPGA Based Pre-Processing Algorithms for Devnagri Script Recognition System</h3>
-              <p class="pub-authors">C. G. Korde (ISVLSI Conference paper)</p>
-              <p class="pub-meta"><span class="pub-badge pub-badge-conf">IEEE ISVLSI</span>&nbsp; paper-only · no DOI</p>
-              <div class="pub-links">
-                <a href="https://orcid.org/0000-0003-0055-4997/163576194" rel="noopener" target="_blank">ORCID record</a>
-                <a href="https://scholar.google.com/citations?user=wdLkz5MAAAAJ&hl" rel="noopener" target="_blank">Google Scholar</a>
-              </div>
-            </div>
-          </li>
-        </ul>
-
-        <p class="reveal" style="margin-top: 24px">
-          <a href="https://orcid.org/0000-0003-0055-4997" rel="noopener" target="_blank">ORCID</a>
-          · <a href="https://scholar.google.com/citations?user=wdLkz5MAAAAJ&hl" rel="noopener" target="_blank">Google Scholar</a>
-          · <a href="https://www.scopus.com/authid/detail.uri?authorId=57209272684" rel="noopener" target="_blank">Scopus</a>
-          · <a href="https://www.webofscience.com/wos/author/record/PMW-8170-2026" rel="noopener" target="_blank">Web of Science</a>
-        </p>
-      </div>
-    </section>
-
-    <!-- ========================= WRITING =============================== -->
+    <!-- Writing -->
     <section class="section" id="writing" aria-labelledby="writing-title">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="eyebrow">Writing</span>
-          <h2 class="section-title" id="writing-title">Notes, articles &amp; knowledge systems</h2>
-          <p class="section-sub">
-            Writing to make complex topics learnable — for students, for the
-            open-source community and for myself.
-          </p>
-        </div>
+      <div class="wrap">
+        <h2 id="writing-title">Writing</h2>
+        <div class="section-body">
+          <p class="lede">Articles on developer tooling and digital note-taking, published on dev.to.</p>
 
-        <div id="articles">
-          <div class="section-head reveal">
-            <h2 class="section-title" style="font-size: 1.4rem">Published on dev.to</h2>
-          </div>
-          <div class="grid grid-2">
-            <article class="card card-pad reveal">
-              <h3 class="card-title">Technical explorations</h3>
-              <ul class="link-list">
-                <li>
-                  <a href="https://dev.to/charudatta10/exploring-the-legendary-dollop-repository-an-svg-generator-4388" rel="noopener" target="_blank">
-                    <span>Exploring the Legendary Dollop Repository — an SVG Generator</span><span class="chev" aria-hidden="true">→</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="https://dev.to/charudatta10/improved-barnacle-repository-the-cleanup-python-script-172d" rel="noopener" target="_blank">
-                    <span>Improved-Barnacle Repository — the Cleanup Python Script</span><span class="chev" aria-hidden="true">→</span>
-                  </a>
-                </li>
-              </ul>
-            </article>
+          <h3>Developer tooling</h3>
+          <ul class="articles">
+            <li><a href="https://dev.to/charudatta10/exploring-the-legendary-dollop-repository-an-svg-generator-4388" rel="noopener" target="_blank">Exploring the Dollop repository, an SVG generator</a></li>
+            <li><a href="https://dev.to/charudatta10/improved-barnacle-repository-the-cleanup-python-script-172d" rel="noopener" target="_blank">The Improved-Barnacle repository: a cleanup script in Python</a></li>
+          </ul>
 
-            <article class="card card-pad reveal">
-              <h3 class="card-title">Note-taking &amp; knowledge engineering</h3>
-              <ul class="link-list fold-list" data-show="4">
-                <li>
-                  <a href="https://dev.to/charudatta10/introduction-to-digital-note-taking-a-beginners-guide-9p2" rel="noopener" target="_blank">
-                    <span>Introduction to Digital Note-Taking</span><span class="chev" aria-hidden="true">→</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="https://dev.to/charudatta10/organization-schemes-for-note-taking-j18" rel="noopener" target="_blank">
-                    <span>Organization Schemes for Note Taking</span><span class="chev" aria-hidden="true">→</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="https://dev.to/charudatta10/vs-code-for-note-taking-324b" rel="noopener" target="_blank">
-                    <span>VS Code for Note-Taking</span><span class="chev" aria-hidden="true">→</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="https://dev.to/charudatta10/vscode-setup-with-foam-and-logseq-for-digital-note-taking-2953" rel="noopener" target="_blank">
-                    <span>VS Code Setup with Foam and Logseq</span><span class="chev" aria-hidden="true">→</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="https://dev.to/charudatta10/collaborative-note-taking-with-ai-tools-that-facilitate-teamwork-and-knowledge-sharing-2i3p" rel="noopener" target="_blank">
-                    <span>Collaborative Note-Taking with AI</span><span class="chev" aria-hidden="true">→</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="https://dev.to/charudatta10/visual-note-taking-apps-unleashing-creativity-with-ai-driven-mind-maps-and-doodles-hfp" rel="noopener" target="_blank">
-                    <span>Visual Note-Taking Apps &amp; AI Mind Maps</span><span class="chev" aria-hidden="true">→</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="https://dev.to/charudatta10/why-obsidian-falls-short-as-a-note-taking-tool-3ef2" rel="noopener" target="_blank">
-                    <span>Why Obsidian Falls Short as a Note-Taking Tool</span><span class="chev" aria-hidden="true">→</span>
-                  </a>
-                </li>
-              </ul>
-            </article>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ========================= NOW =================================== -->
-    <section class="section" id="now" aria-labelledby="now-title">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="eyebrow">Now</span>
-          <h2 class="section-title" id="now-title">What I'm working on now</h2>
-          <p class="section-sub">
-            A snapshot of current focus — research, learning and building.
-          </p>
-        </div>
-
-        <div class="grid grid-2">
-          <article class="card card-pad reveal">
-            <h3 class="card-title">Research</h3>
-            <ul class="feature-list">
-              <li>Wavelet- and evolutionary-based GAN discriminator improvements for training stability</li>
-              <li>Hardware-aware neural architecture refinements for edge deployment</li>
-              <li>Federated node synchronization protocols for distributed training</li>
-            </ul>
-          </article>
-
-          <article class="card card-pad reveal">
-            <h3 class="card-title">Building &amp; learning</h3>
-            <ul class="feature-list">
-              <li>Rust blockchain prototype for DAO-driven educational governance</li>
-              <li>Torrent-based federated LLM training architecture</li>
-              <li>Advanced Rust, consensus algorithms and cryptoeconomic modeling</li>
-            </ul>
-          </article>
-        </div>
-
-        <div class="content-block card card-pad reveal" style="margin-top: 22px">
-          <h3 class="card-title">Long-term direction</h3>
-          <p class="content-block" style="margin: 0">
-            Building decentralized AI infrastructure that integrates governance,
-            distributed learning, and hardware-efficient optimization into a
-            scalable open research ecosystem.
-          </p>
+          <h3 class="subhead">Note-taking and knowledge systems</h3>
+          <ul class="articles">
+            <li><a href="https://dev.to/charudatta10/introduction-to-digital-note-taking-a-beginners-guide-9p2" rel="noopener" target="_blank">Introduction to digital note-taking</a></li>
+            <li><a href="https://dev.to/charudatta10/organization-schemes-for-note-taking-j18" rel="noopener" target="_blank">Organisation schemes for note-taking</a></li>
+            <li><a href="https://dev.to/charudatta10/vs-code-for-note-taking-324b" rel="noopener" target="_blank">VS Code for note-taking</a></li>
+            <li><a href="https://dev.to/charudatta10/vscode-setup-with-foam-and-logseq-for-digital-note-taking-2953" rel="noopener" target="_blank">A VS Code setup with Foam and Logseq</a></li>
+            <li><a href="https://dev.to/charudatta10/collaborative-note-taking-with-ai-tools-that-facilitate-teamwork-and-knowledge-sharing-2i3p" rel="noopener" target="_blank">Collaborative note-taking with AI tools</a></li>
+            <li><a href="https://dev.to/charudatta10/visual-note-taking-apps-unleashing-creativity-with-ai-driven-mind-maps-and-doodles-hfp" rel="noopener" target="_blank">Visual note-taking apps and AI mind maps</a></li>
+            <li><a href="https://dev.to/charudatta10/why-obsidian-falls-short-as-a-note-taking-tool-3ef2" rel="noopener" target="_blank">Why Obsidian falls short as a note-taking tool</a></li>
+          </ul>
         </div>
       </div>
     </section>
 
-    <!-- ========================= ABOUT ================================= -->
-    <section class="section" id="about" aria-labelledby="about-title">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="eyebrow">About</span>
-          <h2 class="section-title" id="about-title">Researcher · Engineer · Educator</h2>
-          <p class="section-sub">
-            I build systems with logic, explore ideas with curiosity, and live
-            with awareness. The concrete facts — education, experience, skills
-            and achievements.
-          </p>
-        </div>
-
-        <div id="mission">
-          <div class="card card-pad reveal">
-            <p class="content-block">
-              I am Charudatta Gurudas Korde — an engineer, developer, researcher,
-              and educator driven by curiosity and depth. I think in systems. I
-              build with intention. I research with discipline. And I teach to
-              simplify complexity. My work lives at the intersection of
-              architecture and abstraction — where ideas become structured systems
-              and theory becomes implementation. I am drawn to decentralized
-              technologies, open knowledge, and designing solutions that are
-              minimal yet comprehensive.
-            </p>
-            <p class="content-block" style="margin-top: 14px">
-              Beyond engineering, I am a lifelong learner — anime, food, gardening,
-              reading, and coding as a creative outlet. I value rest and
-              reflection as much as productivity, and I believe technology should
-              not only advance capability but also elevate awareness. Growth for me
-              is holistic — intellectual, creative, and inner.
-            </p>
-          </div>
-        </div>
-
-        <div id="education" style="padding-top: 72px">
-          <div class="section-head reveal">
-            <h2 class="section-title">Academics</h2>
-          </div>
-          <div class="card card-pad reveal">
-            <ul class="timeline">
-              <li>
-                <div class="timeline-period">2017 — 2026 (Expected)</div>
-                <div class="timeline-role">Ph.D. in VLSI &amp; Reconfigurable Computing</div>
-                <p>Research focus: hardware acceleration of GANs on FPGA-based edge devices. National Institute of Technology Goa.</p>
-              </li>
-              <li>
-                <div class="timeline-period">2015 — 2017 · 80%</div>
-                <div class="timeline-role">M.Tech. in Microelectronics</div>
-                <p>Master's project: multifractal analysis of ionospheric TEC as a seismic precursor (GEC Goa &amp; IIT Bombay).</p>
-              </li>
-              <li>
-                <div class="timeline-period">2011 — 2015 · 76%</div>
-                <div class="timeline-role">B.E. in Electrical &amp; Electronics Engineering</div>
-                <p>Bachelor's project: handwritten Devanagari script recognition with FPGA pre-processing (GEC Goa).</p>
-              </li>
-              <li>
-                <div class="timeline-period">2009 — 2011 · 72%</div>
-                <div class="timeline-role">Higher Secondary School Certificate (HSSC)</div>
-              </li>
-              <li>
-                <div class="timeline-period">1999 — 2009 · 69%</div>
-                <div class="timeline-role">Secondary School Certificate (SSC)</div>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div id="experience" style="padding-top: 72px">
-          <div class="section-head reveal">
-            <h2 class="section-title">Experience</h2>
-          </div>
-          <div class="card card-pad reveal">
-            <ul class="timeline">
-              <li>
-                <div class="timeline-period">2024 — Present</div>
-                <div class="timeline-role">Contract Lecturer, National Forensic Sciences University</div>
-                <p>Teaching Incident Response and Vulnerability Assessment &amp; Penetration Testing (VAPT), integrating applied cybersecurity practice with system-level analysis and research-informed instruction.</p>
-              </li>
-              <li>
-                <div class="timeline-period">2024</div>
-                <div class="timeline-role">Visiting Faculty, Goa Polytechnic College</div>
-                <p>Laboratory instruction in Basic Electronics — circuit fundamentals, measurement techniques and applied engineering principles.</p>
-              </li>
-              <li>
-                <div class="timeline-period">2018 — Present</div>
-                <div class="timeline-role">Research Scholar, National Institute of Technology Goa</div>
-                <p>Doctoral research in FPGA-based AI acceleration — GAN architectures, hardware-software co-design, and resource-efficient intelligent systems. Academic mentoring and laboratory guidance as Teaching Assistant.</p>
-              </li>
-              <li>
-                <div class="timeline-period">2019</div>
-                <div class="timeline-role">Software Validation Engineer, Intel</div>
-                <p>Validated Quartus tool flows, contributing to verification processes, workflow robustness and software quality assurance.</p>
-              </li>
-              <li>
-                <div class="timeline-period">2015 — Present</div>
-                <div class="timeline-role">Independent Research &amp; Open-Source Development</div>
-                <p>Analytical and software development projects spanning medical signal analysis, data-intensive systems and automation tooling; open-source utilities for documentation generation, file-system organization and programmatic graphics.</p>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div id="skills" style="padding-top: 72px">
-          <div class="section-head reveal">
-            <h2 class="section-title">Tools and disciplines</h2>
-          </div>
-          <div class="card card-pad reveal">
-            <div class="skill-group-title">Core expertise</div>
-            <div class="chips" style="margin-bottom: 8px">
-              <span class="chip chip-primary">Python</span>
-              <span class="chip chip-primary">FPGA Design</span>
-              <span class="chip chip-primary">GAN Architectures</span>
-              <span class="chip chip-primary">Edge AI</span>
-              <span class="chip">Distributed Systems</span>
-              <span class="chip">Blockchain (P2P)</span>
-            </div>
-
-            <div class="skill-group-title">Programming &amp; hardware</div>
-            <div class="chips" style="margin-bottom: 8px">
-              <span class="chip">Verilog</span>
-              <span class="chip">VHDL</span>
-              <span class="chip">C</span>
-              <span class="chip">CUDA</span>
-              <span class="chip">MATLAB</span>
-              <span class="chip">LaTeX</span>
-            </div>
-
-            <div class="skill-group-title">AI / ML stack</div>
-            <div class="chips" style="margin-bottom: 8px">
-              <span class="chip">PyTorch</span>
-              <span class="chip">TensorFlow</span>
-              <span class="chip">NumPy</span>
-              <span class="chip">Scikit-Learn</span>
-              <span class="chip">Stable Diffusion</span>
-              <span class="chip">LLM Integration</span>
-            </div>
-
-            <div class="skill-group-title">Security &amp; systems</div>
-            <div class="chips">
-              <span class="chip">Malware Analysis</span>
-              <span class="chip">VAPT</span>
-              <span class="chip">Incident Response</span>
-              <span class="chip">Cryptography</span>
-              <span class="chip">Secure Architectures</span>
-            </div>
-          </div>
-        </div>
-
-        <div id="achievements" style="padding-top: 72px">
-          <div class="section-head reveal">
-            <h2 class="section-title">Achievements &amp; mentorship</h2>
-          </div>
-          <div class="card card-pad reveal">
-            <ul class="feature-list fold-list" data-show="4">
-              <li>
-                <strong>Guided 6 postgraduate students in thesis writing</strong> —
-                mentored research scholars across problem formulation, experimental
-                design, system implementation and academic structuring in AI, GAN
-                optimization and hardware-accelerated architectures.
-              </li>
-              <li>
-                <strong>Cleared Stage 1 — AI Grand Challenge</strong> —
-                qualified in the initial evaluation round of the national-level AI
-                Grand Challenge (PS12, Underwater Acoustic Systems).
-              </li>
-              <li>
-                <strong>Completed a 5K marathon</strong> —
-                discipline, endurance and long-term consistency, applied to
-                sustained research and systems engineering.
-              </li>
-              <li>
-                <strong>Poster presentation on edge computing optimization</strong> —
-                clarity of communication across technical and non-technical
-                audiences.
-              </li>
-              <li>
-                <strong>State-level chess tournament competitor</strong> —
-                strategic reasoning, foresight and pattern recognition transferable
-                to AI modeling and distributed systems design.
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========================= CONTACT =============================== -->
+    <!-- Contact -->
     <section class="section" id="contact" aria-labelledby="contact-title">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="eyebrow">Contact</span>
-          <h2 class="section-title" id="contact-title">Open to collaboration</h2>
-          <p class="section-sub">
-            Research collaboration, hardware-accelerated ML, security education
-            and mentorship.
-          </p>
+      <div class="wrap">
+        <h2 id="contact-title">Contact</h2>
+        <div class="section-body">
+          <p class="lede">I welcome enquiries about research collaboration, hardware-accelerated machine learning, security education and mentoring.</p>
+          <a class="email" href="mailto:charudatta.korde@nfsu.edu.in">charudatta.korde@nfsu.edu.in</a>
+          <div class="contact-links">
+            <a href="https://github.com/charudatta10" rel="noopener" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/charudatta-korde/" rel="noopener" target="_blank">LinkedIn</a>
+            <a href="https://scholar.google.com/citations?user=wdLkz5MAAAAJ&amp;hl=en" rel="noopener" target="_blank">Google Scholar</a>
+            <a href="https://orcid.org/0000-0003-0055-4997" rel="noopener" target="_blank">ORCID</a>
+            <a href="https://www.scopus.com/authid/detail.uri?authorId=57209272684" rel="noopener" target="_blank">Scopus</a>
+            <a href="https://www.webofscience.com/wos/author/record/PMW-8170-2026" rel="noopener" target="_blank">Web of Science</a>
+            <a href="https://vidwan.inflibnet.ac.in/profile/691093" rel="noopener" target="_blank">Vidwan</a>
+          </div>
         </div>
-
-        <div class="channel-grid reveal fold-list" data-show="4">
-          <a class="card channel-card card-hover" href="mailto:charudatta.korde@nfsu.edu.in" style="text-decoration: none">
-            <div class="project-icon" aria-hidden="true">✉</div>
-            <div>
-              <div class="channel-name">Email</div>
-              <div class="channel-desc">charudatta.korde@nfsu.edu.in</div>
-            </div>
-          </a>
-          <a class="card channel-card card-hover" href="https://github.com/charudatta10" rel="noopener" target="_blank" style="text-decoration: none">
-            <div class="project-icon" aria-hidden="true">⌥</div>
-            <div>
-              <div class="channel-name">GitHub</div>
-              <div class="channel-desc">github.com/charudatta10</div>
-            </div>
-          </a>
-          <a class="card channel-card card-hover" href="https://www.linkedin.com/in/charudatta-korde/" rel="noopener" target="_blank" style="text-decoration: none">
-            <div class="project-icon" aria-hidden="true">in</div>
-            <div>
-              <div class="channel-name">LinkedIn</div>
-              <div class="channel-desc">linkedin.com/in/charudatta-korde</div>
-            </div>
-          </a>
-          <a class="card channel-card card-hover" href="https://scholar.google.com/citations?user=wdLkz5MAAAAJ&hl" rel="noopener" target="_blank" style="text-decoration: none">
-            <div class="project-icon" aria-hidden="true">🎓</div>
-            <div>
-              <div class="channel-name">Google Scholar</div>
-              <div class="channel-desc">h-index 4 · 35 citations</div>
-            </div>
-          </a>
-          <a class="card channel-card card-hover" href="https://orcid.org/0000-0003-0055-4997" rel="noopener" target="_blank" style="text-decoration: none">
-            <div class="project-icon" aria-hidden="true">🆔</div>
-            <div>
-              <div class="channel-name">ORCID</div>
-              <div class="channel-desc">0000-0003-0055-4997</div>
-            </div>
-          </a>
-          <a class="card channel-card card-hover" href="https://www.scopus.com/authid/detail.uri?authorId=57209272684" rel="noopener" target="_blank" style="text-decoration: none">
-            <div class="project-icon" aria-hidden="true">✳</div>
-            <div>
-              <div class="channel-name">Scopus</div>
-              <div class="channel-desc">authorId 57209272684</div>
-            </div>
-          </a>
-          <a class="card channel-card card-hover" href="https://www.webofscience.com/wos/author/record/PMW-8170-2026" rel="noopener" target="_blank" style="text-decoration: none">
-            <div class="project-icon" aria-hidden="true">✪</div>
-            <div>
-              <div class="channel-name">Web of Science</div>
-              <div class="channel-desc">PMW-8170-2026</div>
-            </div>
-          </a>
-          <a class="card channel-card card-hover" href="https://vidwan.inflibnet.ac.in/profile/691093" rel="noopener" target="_blank" style="text-decoration: none">
-            <div class="project-icon" aria-hidden="true">◉</div>
-            <div>
-              <div class="channel-name">Vidwan</div>
-              <div class="channel-desc">profile 691093</div>
-            </div>
-          </a>
-        </div>
-
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container">
-      <div>
-        <p style="margin: 0 0 6px; font-weight: 650; color: var(--text-1)">
-          Charudatta Korde
-        </p>
-        <p style="margin: 0; font-size: 0.86rem">
-          Researcher · Engineer · Educator — built as an evolving archive.
-        </p>
-      </div>
-      <div class="footer-links">
-        <a href="https://github.com/charudatta10" rel="noopener" target="_blank">GitHub</a>
-        <a href="https://scholar.google.com/citations?user=wdLkz5MAAAAJ&hl" rel="noopener" target="_blank">Google Scholar</a>
-        <a href="https://orcid.org/0000-0003-0055-4997" rel="noopener" target="_blank">ORCID</a>
-        <a href="https://www.linkedin.com/in/charudatta-korde/" rel="noopener" target="_blank">LinkedIn</a>
-        <a href="#contact">Contact</a>
-      </div>
-      <p style="margin: 0; font-size: 0.82rem">© 2026 Charudatta Korde</p>
+    <div class="wrap">
+      <p>&copy; 2026 Charudatta Korde</p>
+      <p><a href="#top">Back to top</a></p>
     </div>
   </footer>
-
-  <!-- Floating CTA -->
-  <div class="floating-cta">
-    <a class="btn btn-primary" href="assets/CharudattaKorde.pdf" download="CharudattaKorde.pdf">Download CV</a>
-    <a class="btn btn-ghost" href="mailto:charudatta.korde@nfsu.edu.in">Contact</a>
-  </div>
 
   <script>
     (function () {
       "use strict";
+      var root = document.documentElement;
+      var icon = document.querySelector(".theme-icon");
+      var nav = document.getElementById("site-nav");
+      var menuBtn = document.querySelector(".menu-toggle");
 
-      var prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)");
-      var THEME_KEY = "ck-theme";
-
-      function currentTheme() {
-        return document.documentElement.getAttribute("data-theme") || "light";
+      function syncIcon() {
+        if (icon) icon.innerHTML = root.getAttribute("data-theme") === "dark" ? "&#9788;" : "&#9790;";
       }
+      syncIcon();
 
-      function applyTheme(theme) {
-        document.documentElement.setAttribute("data-theme", theme);
-        try { localStorage.setItem(THEME_KEY, theme); } catch (e) {}
-        var icon = document.querySelector(".theme-toggle .theme-icon");
-        if (icon) icon.textContent = theme === "dark" ? "☀️" : "🌙";
-      }
-
-      function initTheme() {
-        var stored = null;
-        try { stored = localStorage.getItem(THEME_KEY); } catch (e) {}
-        if (!stored) {
-          stored = window.matchMedia("(prefers-color-scheme: dark)").matches
-            ? "dark"
-            : "light";
-        }
-        applyTheme(stored);
-      }
-
-      document.addEventListener("click", function (e) {
-        var target = e.target;
-
-        var themeBtn = target.closest(".theme-toggle");
-        if (themeBtn) {
-          applyTheme(currentTheme() === "dark" ? "light" : "dark");
-          return;
-        }
-
-        var menuBtn = target.closest(".menu-toggle");
-        if (menuBtn) {
-          var nav = document.getElementById("site-nav");
-          if (nav) {
-            var open = nav.classList.toggle("open");
-            menuBtn.setAttribute("aria-expanded", open ? "true" : "false");
-          }
-          return;
-        }
-
-        var dropBtn = target.closest(".dropdown > .dropbtn");
-        if (dropBtn) {
-          if (window.innerWidth <= 860) {
-            e.preventDefault();
-            var li = dropBtn.parentElement;
-            var open = li.classList.toggle("open");
-            dropBtn.setAttribute("aria-expanded", open ? "true" : "false");
-          }
-          return;
-        }
-
-        if (target.closest("#site-nav a")) {
-          var nav2 = document.getElementById("site-nav");
-          if (nav2) {
-            nav2.classList.remove("open");
-            var toggle = document.querySelector(".menu-toggle");
-            if (toggle) toggle.setAttribute("aria-expanded", "false");
-          }
-        }
+      document.querySelector(".theme-toggle").addEventListener("click", function () {
+        var next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+        root.setAttribute("data-theme", next);
+        try { localStorage.setItem("ck-theme", next); } catch (e) {}
+        syncIcon();
       });
 
-      function initReveal() {
-        if (prefersReduced.matches) {
-          document.querySelectorAll(".reveal").forEach(function (el) {
-            el.classList.add("visible");
-          });
-          return;
+      menuBtn.addEventListener("click", function () {
+        var open = nav.classList.toggle("open");
+        menuBtn.setAttribute("aria-expanded", open ? "true" : "false");
+      });
+
+      nav.addEventListener("click", function (e) {
+        if (e.target.closest("a")) {
+          nav.classList.remove("open");
+          menuBtn.setAttribute("aria-expanded", "false");
         }
-        var items = document.querySelectorAll(".reveal");
-        if (!items.length) return;
-        if (!("IntersectionObserver" in window)) {
-          items.forEach(function (el) { el.classList.add("visible"); });
-          return;
-        }
-        var io = new IntersectionObserver(
-          function (entries) {
-            entries.forEach(function (entry) {
-              if (entry.isIntersecting) {
-                entry.target.classList.add("visible");
-                io.unobserve(entry.target);
-              }
-            });
-          },
-          { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
-        );
-        items.forEach(function (el) { io.observe(el); });
-      }
-
-      function initAnimatedSvg() {
-        if (prefersReduced.matches) return;
-        document.querySelectorAll("svg[data-animate]").forEach(function (svg) {
-          svg.querySelectorAll("[data-dash]").forEach(function (path) {
-            var len = path.getTotalLength();
-            path.style.strokeDasharray = len;
-            path.style.strokeDashoffset = len;
-          });
-          var paths = svg.querySelectorAll("[data-dash]");
-          if (paths.length) {
-            paths.forEach(function (p, i) {
-              p.style.transition =
-                "stroke-dashoffset 1.6s ease " + (i * 0.15).toFixed(2) + "s";
-              p.getBoundingClientRect();
-              p.style.strokeDashoffset = "0";
-            });
-          }
-        });
-      }
-
-      function initFoldable() {
-        var groups = document.querySelectorAll(".fold-list");
-        groups.forEach(function (list) {
-          var showCount = parseInt(list.getAttribute("data-show"), 10) || 4;
-          var items = Array.prototype.slice.call(list.children);
-          if (items.length <= showCount) return;
-
-          var hiddenItems = items.slice(showCount);
-          hiddenItems.forEach(function (el) {
-            el.classList.add("fold-hidden");
-          });
-
-          var remaining = hiddenItems.length;
-          var btn = document.createElement("button");
-          btn.type = "button";
-          btn.className = "btn btn-ghost btn-sm fold-toggle";
-          btn.textContent = "Show " + remaining + " more";
-
-          btn.addEventListener("click", function () {
-            var expanded = list.classList.toggle("expanded");
-            hiddenItems.forEach(function (el) {
-              el.classList.toggle("fold-hidden", !expanded);
-            });
-            btn.textContent = expanded ? "Show less" : "Show " + remaining + " more";
-          });
-
-          list.insertAdjacentElement("afterend", btn);
-        });
-      }
-
-      document.addEventListener("DOMContentLoaded", function () {
-        initTheme();
-        initReveal();
-        initAnimatedSvg();
-        initFoldable();
       });
     })();
   </script>
